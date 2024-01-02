@@ -5,11 +5,13 @@ Vue.component('main-navigation', {
         <!-- Logo -->
         <v-list-item class="px-2 non-underline">
             <v-spacer></v-spacer>
-            <v-icon color="blue-grey darken-3" x-large>mdi-alpha-f</v-icon>
-            <v-spacer></v-spacer>
-            <v-icon color="blue-grey darken-3" x-large>mdi-alpha-u</v-icon>
-            <v-spacer></v-spacer>
             <v-icon color="blue-grey darken-3" x-large>mdi-alpha-m</v-icon>
+            <v-spacer></v-spacer>
+            <v-icon color="blue-grey darken-3" x-large>mdi-alpha-e</v-icon>
+            <v-spacer></v-spacer>
+            <v-icon color="blue-grey darken-3" x-large>mdi-alpha-n</v-icon>
+            <v-spacer></v-spacer>
+            <v-icon color="blue-grey darken-3" x-large>mdi-alpha-e</v-icon>
             <v-spacer></v-spacer>
         </v-list-item>
 
