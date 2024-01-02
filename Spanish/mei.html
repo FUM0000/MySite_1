@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<!-- ▼ Head ▼ ---------------------------------------------------------------------------->
+
+<head>
+
+    <!-- Setting -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <!-- Vue -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="https://fum0000.github.io/MySite_1/common.css" rel="stylesheet" />
+    <link href="https://fum0000.github.io/MySite_1/Japanese/common_word_japanese.css" rel="stylesheet" />
+
+</head>
+<!---------------------------------------------------------------------------------------->
+
+<!-- ▼ Body ▼ ---------------------------------------------------------------------------->
+
+<body>
+
+    <!-- ▼ App ▼ ------------------------------------------------------------------------->
+    <v-app id="app">
+        <template>
+
+            <!-- ▼ Header ▼ ------------------------------------------------------------------>
+            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Mei</main-system-bar>
+            <!-------------------------------------------------------------------------------->
+
+            <!-- ▼ Navigation ▼ -------------------------------------------------------------->
+            <main-navigation :drawer="drawer" @change-drawer="Change_Drawer"></main-navigation>
+            <!-------------------------------------------------------------------------------->
+
+            <!-- ▼ Main ▼ -------------------------------------------------------------------->
+            <v-main id="main" class="blue-grey lighten-4">
+                <v-container fluid fill-height>
+                    <v-row justify="center">
+                        <v-card>
+                            <v-card-title>
+                                Mei
+                                <v-spacer></v-spacer>
+                                <v-text-field v-model="Search" append-icon="mdi-magnify" label="Búsqueda" single-line
+                                    hide-details></v-text-field>
+                            </v-card-title>
+                            <v-data-table :headers="Headers" :items="Desserts" :search="Search" item-key="spanish"
+                                multi-sort :sort-by="['parts_of_speech']" :sort-asc="[true]" show-select dense
+                                :mobile-breakpoint="0" :items-per-page="-1"></v-data-table>
+                        </v-card>
+                    </v-row>
+                </v-container>
+            </v-main>
+            <!-------------------------------------------------------------------------------->
+
+            <!-- ▼ Footer ▼ ------------------------------------------------------------------>
+            <main-footer></main-footer>
+            <!-------------------------------------------------------------------------------->
+
+        </template>
+    </v-app>
+    <!------------------------------------------------------------------------------------>
+
+    <!-- ▼ Script Load ▼ ----------------------------------------------------------------->
+    <!-- Main -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- Compornent -->
+    <script src="https://fum0000.github.io/MySite_1/common.js"></script>
+    <script src="https://fum0000.github.io/MySite_1/Component/main-system-bar.js"></script>
+    <script src="https://fum0000.github.io/MySite_1/Component/main-navigation.js"></script>
+    <script src="https://fum0000.github.io/MySite_1/Component/main-footer.js"></script>
+    <script src="https://fum0000.github.io/MySite_1/Component/Card/card-double.js"></script>
+    <!------------------------------------------------------------------------------------>
+
+    <!-- Script Content ------------------------------------------------------------------>
+    <script>
+
+        // Variable ----------------------------------------------------------------------
+        let vue = new Vue({
+            el: '#app',
+            vuetify: new Vuetify(),
+            data: {
+                // Determined
+                drawer: false,
+                // Myself
+                Search: '',
+                Headers: [
+                    { text: 'Oración', value: 'parts_of_speech', width: '110px' },
+                    { text: 'Español', value: 'spanish', width: '150px' },
+                    { text: 'Japonés', value: 'japanese', width: '150px' },
+                    { text: 'Pronuncia', value: 'pronounce', width: '150px' },
+                ],
+                Desserts: [],
+            },
+            methods: {
+                Change_Drawer(_value) {
+                    this.drawer = _value;
+                }
+            },
+            created: function () {
+                let parts_of_speech = [
+                    "Celeste",
+                    "Celeste",
+                    "Celeste",
+                    "Celeste",
+                    "Celeste",
+                    "Celeste",
+                    "Celeste",
+                    "Celeste",
+                    "Celeste",
+                    "Celeste",
+                    "Celeste",
+                    "Celeste",
+                    "Celeste",
+                    "Celeste",
+                    "Celeste",
+                    "Celeste",
+                    "Celeste",
+                    "Celeste",
+
+                    "Hedonista",
+                    "Hedonista",
+                    "Hedonista",
+                    "Hedonista",
+                    "Hedonista",
+                    "Hedonista",
+                    "Hedonista",
+                    "Hedonista",
+                    "Hedonista",
+                    "Hedonista",
+                    "Hedonista",
+                    "Hedonista",
+                ];
+                let spanish = [
+                    "caer por",
+                    "túnel",
+                    "olfato",
+                    "infinito",
+                    "silencio",
+                    "se oye",
+                    "rodeado",
+                    "infinitamente",
+                    "orilla",
+                    "soñado",
+                    "he vuelto",
+                    "sitio",
+                    "robles",
+                    "sospecho que",
+                    "nocturnos",
+                    "esconder",
+                    "acerque",
+                    "vuelva",
+
+                    "dejar",
+                    "roto",
+                    "solitarias",
+                    "hedonista",
+                    "egoísta",
+                    "despachar",
+                    "puro",
+                    "prometer",
+                    "consuelo",
+                    "fiar",
+                    "ciegamente",
+                    "quise",
+                ];
+                let japanese = [
+                    "落ちる",
+                    "トンネル",
+                    "嗅覚",
+                    "永遠の",
+                    "静寂",
+                    "聞こえる",
+                    "囲まれた",
+                    "永遠に",
+                    "岸",
+                    "夢",
+                    "また",
+                    "所",
+                    "木",
+                    "～かな",
+                    "夜行性の",
+                    "隠す",
+                    "近づく",
+                    "また",
+
+                    "捨てる",
+                    "壊れた",
+                    "独りぼっち",
+                    "楽観主義者",
+                    "わがまま",
+                    "処理する",
+                    "純粋な",
+                    "約束する",
+                    "快適な",
+                    "託す",
+                    "盲目的に",
+                    "求めた",
+                ];
+                let pronounce = [
+                    "ochiru",
+                    "tonnneru",
+                    "kyuukaku",
+                    "eiennno",
+                    "seijaku",
+                    "kikoeru",
+                    "kakomareta",
+                    "eiennni",
+                    "kishi",
+                    "yume",
+                    "mata",
+                    "tokoro",
+                    "ki",
+                    "kana",
+                    "yakouseino",
+                    "kakusu",
+                    "chikazuku",
+                    "mata",
+
+                    "suteru",
+                    "kowareta",
+                    "hitoribocchi",
+                    "rakkanshugisha",
+                    "wagamama",
+                    "shorisuru",
+                    "junnsuina",
+                    "yakusokusuru",
+                    "kaitekina",
+                    "takusu",
+                    "moumokutekini",
+                    "motometa",
+                ];
+                for (let i = 0; i < spanish.length; i++) {
+                    let row = {};
+                    row.parts_of_speech = parts_of_speech[i];
+                    row.spanish = spanish[i];
+                    row.japanese = japanese[i];
+                    row.pronounce = pronounce[i];
+                    this.Desserts.push(row);
+                }
+            },
+        })
+        // -------------------------------------------------------------------------------
+
+    </script>
+    <!------------------------------------------------------------------------------------>
+</body>
+<!---------------------------------------------------------------------------------------->
+
+</html>

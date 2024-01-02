@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+
+<!-- ▼ Head ▼ ---------------------------------------------------------------------------->
+
+<head>
+
+    <!-- Setting -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <!-- Vue -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="https://fum0000.github.io/MySite_1/common.css" rel="stylesheet" />
+    <link href="https://fum0000.github.io/MySite_1/Japanese/common_word_japanese.css" rel="stylesheet" />
+
+</head>
+<!---------------------------------------------------------------------------------------->
+
+<!-- ▼ Body ▼ ---------------------------------------------------------------------------->
+
+<body>
+
+    <!-- ▼ App ▼ ------------------------------------------------------------------------->
+    <v-app id="app">
+        <template>
+
+            <!-- ▼ Header ▼ ------------------------------------------------------------------>
+            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">DELE - A2</main-system-bar>
+            <!-------------------------------------------------------------------------------->
+
+            <!-- ▼ Navigation ▼ -------------------------------------------------------------->
+            <main-navigation :drawer="drawer" @change-drawer="Change_Drawer"></main-navigation>
+            <!-------------------------------------------------------------------------------->
+
+            <!-- ▼ Main ▼ -------------------------------------------------------------------->
+            <v-main id="main" class="blue-grey lighten-4">
+                <v-container fluid fill-height>
+                    <v-row justify="center">
+                        <v-card>
+                            <v-card-title>
+                                DELE - A2
+                                <v-spacer></v-spacer>
+                                <v-text-field v-model="Search" append-icon="mdi-magnify" label="Búsqueda" single-line
+                                    hide-details></v-text-field>
+                            </v-card-title>
+                            <v-data-table :headers="Headers" :items="Desserts" :search="Search" item-key="spanish"
+                                multi-sort :sort-by="['parts_of_speech']" :sort-asc="[true]" show-select dense
+                                :mobile-breakpoint="0" :items-per-page="-1"></v-data-table>
+                        </v-card>
+                    </v-row>
+                </v-container>
+            </v-main>
+            <!-------------------------------------------------------------------------------->
+
+            <!-- ▼ Footer ▼ ------------------------------------------------------------------>
+            <main-footer></main-footer>
+            <!-------------------------------------------------------------------------------->
+
+        </template>
+    </v-app>
+    <!------------------------------------------------------------------------------------>
+
+    <!-- ▼ Script Load ▼ ----------------------------------------------------------------->
+    <!-- Main -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- Compornent -->
+    <script src="https://fum0000.github.io/MySite_1/common.js"></script>
+    <script src="https://fum0000.github.io/MySite_1/Component/main-system-bar.js"></script>
+    <script src="https://fum0000.github.io/MySite_1/Component/main-navigation.js"></script>
+    <script src="https://fum0000.github.io/MySite_1/Component/main-footer.js"></script>
+    <script src="https://fum0000.github.io/MySite_1/Component/Card/card-double.js"></script>
+    <!------------------------------------------------------------------------------------>
+
+    <!-- Script Content ------------------------------------------------------------------>
+    <script>
+
+        // Variable ----------------------------------------------------------------------
+        let vue = new Vue({
+            el: '#app',
+            vuetify: new Vuetify(),
+            data: {
+                // Determined
+                drawer: false,
+                // Myself
+                Search: '',
+                Headers: [
+                    { text: 'Oración', value: 'parts_of_speech', width: '110px' },
+                    { text: 'Español', value: 'spanish', width: '150px' },
+                    { text: 'Japonés', value: 'japanese', width: '150px' },
+                    { text: 'Pronuncia', value: 'pronounce', width: '150px' },
+                ],
+                Desserts: [],
+            },
+            methods: {
+                Change_Drawer(_value) {
+                    this.drawer = _value;
+                }
+            },
+            created: function () {
+                let parts_of_speech = [
+                    "adverbo",
+                    "adverbo",
+                    "adverbo",
+                    "adverbo",
+                    "adverbo",
+                    "adverbo",
+                    "adverbo",
+                    "adverbo",
+                    "adverbo",
+                    "adverbo",
+                    "adverbo",
+                    "adverbo",
+                    "adverbo",
+                    "adverbo",
+                    "adverbo",
+                    "adverbo",
+                    "adjetivo_i",
+                    "adjetivo_i",
+                    "adjetivo_i",
+                    "adjetivo_i",
+                    "adjetivo_i",
+                    "adjetivo_suru",
+                    "adjetivo_suru",
+                    "adjetivo_suru",
+                    "adjetivo_suru",
+                    "adjetivo_na",
+                    "adjetivo_na",
+                    "adjetivo_na",
+                    "adjetivo_na",
+                    "adjetivo_na",
+                    "adjetivo_na",
+                    "adjetivo_na",
+                    "adjetivo_no",
+                    "adjetivo_no",
+                    "adjetivo_no",
+                    "adjetivo_no",
+                    "adjetivo_no",
+                    "adjetivo_no",
+                    "adjetivo_no",
+                    "adjetivo_no",
+                    "adjetivo_no",
+                    "adjetivo_no",
+                    "adjetivo_no",
+                    "adjetivo_no",
+                    "adjetivo_no",
+                    "adjetivo_no",
+                    "adjetivo_no",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                    "otros",
+                ];
+                let spanish = [
+                    "afortunadamente",
+                    "apenas",
+                    "casi",
+                    "dentro",
+                    "desgraciadamente",
+                    "distancia",
+                    "frecuente",
+                    "junto",
+                    "menudo",
+                    "preferiblemente",
+                    "principio",
+                    "probablemente",
+                    "proximamente",
+                    "quizá",
+                    "regularmente",
+                    "según",
+                    "agradable",
+                    "brillante",
+                    "contento",
+                    "frágil",
+                    "increíble",
+                    "amante de",
+                    "cierto",
+                    "combinado",
+                    "exclusiva",
+                    "amistoso",
+                    "clásico",
+                    "conocido",
+                    "criminal",
+                    "enorme",
+                    "fantástico",
+                    "integral",
+                    "académico",
+                    "adjunto",
+                    "amueblado",
+                    "anterior",
+                    "anticuado",
+                    "arqueológico",
+                    "artesanal",
+                    "cotidiano",
+                    "deportivo",
+                    "especializado en",
+                    "gratuito",
+                    "hace",
+                    "infantil",
+                    "inmediata",
+                    "laboral",
+                    "a causa de",
+                    "al alcance de",
+                    "a lo mejor",
+                    "a partir de",
+                    "a punto de",
+                    "bien comunicado",
+                    "buena presencia",
+                    "como de",
+                    "cuanto antes",
+                    "de acuerdo",
+                    "los demás",
+                    "de vez en cuando",
+                    "durante",
+                    "educación medioambiental",
+                    "en busca de",
+                    "en caso de",
+                    "en directo",
+                    "en marcha",
+                    "felicidades",
+                    "fuera de servicio",
+                    "incluso",
+                    "lo antes posible",
+                    "por debajo de",
+                    "por dentro",
+                    "por encima de",
+                    "por fuera",
+                    "por lo menos",
+                    "por motivo de",
+                    "por separado",
+                    "qué pena",
+                    "sin compromiso",
+                    "sin dudarlo",
+                    "venta anticipada",
+                    "visita guiada",
+                ];
+                let japanese = [
+                    "幸運にも",
+                    "ほとんどしない",
+                    "ほとんど",
+                    "中に",
+                    "不幸なことに",
+                    "遠くから",
+                    "頻繁に",
+                    "近くに",
+                    "よく",
+                    "むしろ",
+                    "最初に",
+                    "たぶん",
+                    "近々",
+                    "たぶん",
+                    "定期的に",
+                    "によって",
+                    "快い",
+                    "眩しい",
+                    "嬉しい",
+                    "脆い",
+                    "信じられない",
+                    "愛する",
+                    "ある",
+                    "連携した",
+                    "独占した",
+                    "友好的な",
+                    "クラシックな",
+                    "有名な",
+                    "危険な",
+                    "巨大な",
+                    "ファンタジーな",
+                    "総合的な",
+                    "学校の",
+                    "付属の",
+                    "家具の",
+                    "前の",
+                    "時代遅れの",
+                    "考古学の",
+                    "手芸の",
+                    "日常の",
+                    "スポーツの",
+                    "専門の",
+                    "無料の",
+                    "習慣の",
+                    "幼児の",
+                    "即時の",
+                    "労働の",
+                    "の理由で",
+                    "手の届く範囲で",
+                    "たぶん",
+                    "から",
+                    "のポイントに",
+                    "交通の便が良い",
+                    "かっこいい",
+                    "のように",
+                    "できるだけ早く",
+                    "了解",
+                    "更に",
+                    "時々",
+                    "の間に",
+                    "環境についての教育",
+                    "の検索",
+                    "の場合",
+                    "生で",
+                    "開始",
+                    "おめでとう",
+                    "故障中",
+                    "でさえ",
+                    "できるだけ早く",
+                    "下に",
+                    "中に",
+                    "上に",
+                    "外に",
+                    "少なくとも",
+                    "の動機で",
+                    "分けて",
+                    "可哀想",
+                    "自由に",
+                    "間違いなく",
+                    "前売り",
+                    "ツアー",
+                ];
+                let pronounce = [
+                    "kouunnnimo",
+                    "hotonndo shinai",
+                    "hotonndo",
+                    "naka ni",
+                    "hukounakotoni",
+                    "tooku kara",
+                    "hinpann ni",
+                    "chikaku ni",
+                    "yoku",
+                    "mushiro",
+                    "saisho ni",
+                    "tabunn",
+                    "chikajika",
+                    "tabunn",
+                    "teikiteki ni",
+                    "niyotte",
+                    "kokoroyoi",
+                    "ureshii",
+                    "ureshii",
+                    "moroi",
+                    "shinnjirarenai",
+                    "aisuru",
+                    "aru",
+                    "renkeishita",
+                    "dokusennshita",
+                    "yuukouteki na",
+                    "kurashikku na",
+                    "yuumei na",
+                    "kikenn na",
+                    "kyodai na",
+                    "fantaji- na",
+                    "sougouteki na",
+                    "gakkou no",
+                    "fuzoku no",
+                    "kagu no",
+                    "mae no",
+                    "jidaiokure no",
+                    "koukogaku no",
+                    "shugei no",
+                    "nichijou no",
+                    "supo-tsu no",
+                    "sennmonn no",
+                    "muryou no",
+                    "shuukann no",
+                    "youji no",
+                    "sokuji no",
+                    "roudou no",
+                    "no riyuu de",
+                    "tenotodoku hanni de",
+                    "tabunn",
+                    "kara",
+                    "no pointo ni",
+                    "koutsuunobenngaii",
+                    "kakkoii",
+                    "noyouni",
+                    "dekirudake hayaku",
+                    "ryoukai",
+                    "sarani",
+                    "tokidoki",
+                    "no aida ni",
+                    "kankyou nituiteno kyouiku",
+                    "no kensaku",
+                    "no baai",
+                    "nama de",
+                    "kaishi",
+                    "omedetou",
+                    "koshouchuu",
+                    "desae",
+                    "dekirudake hayaku",
+                    "shita ni",
+                    "naka ni",
+                    "ue ni",
+                    "soto ni",
+                    "sukunakutomo",
+                    "no douki de",
+                    "wakete",
+                    "kawaisou",
+                    "jiyuuni",
+                    "machigainaku",
+                    "maeuri",
+                    "tsua-",
+                ];
+                for (let i = 0; i < spanish.length; i++) {
+                    let row = {};
+                    row.parts_of_speech = parts_of_speech[i];
+                    row.spanish = spanish[i];
+                    row.japanese = japanese[i];
+                    row.pronounce = pronounce[i];
+                    this.Desserts.push(row);
+                }
+            },
+        })
+        // -------------------------------------------------------------------------------
+
+    </script>
+    <!------------------------------------------------------------------------------------>
+</body>
+<!---------------------------------------------------------------------------------------->
+
+</html>

@@ -1,90 +1,331 @@
 <!DOCTYPE html>
 <html>
+
+<!-- ▼ Head ▼ ---------------------------------------------------------------------------->
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progate</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+    <!-- Setting -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <!-- Vue -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="https://fum0000.github.io/MySite_1/common.css" rel="stylesheet" />
+
 </head>
+<!---------------------------------------------------------------------------------------->
+
+<!-- ▼ Body ▼ ---------------------------------------------------------------------------->
+
 <body>
-  <header>
-    <div class="container">
-      <div class="header-left">
-        <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
-      </div>
-      <span class="fa fa-bars menu-icon"></span>
-      <div class="header-right">
-        <a href="#">レッスン</a>
-        <a href="#">新規登録</a>
-        <a href="#" class="login">ログイン</a>
-      </div>
-    </div>
-  </header>
-  <div class="top-wrapper">
-    <div class="container">
-      <h1>LEARN TO CODE.<br>LEARN TO BE CREATIVE.</h1>
-      <p>Progateはオンラインプログラミング学習サービスです。<br>初心者にもやさしいスライドとレッスンで、ウェブサービスを作りながらプログラミングを学んでいきましょう。</p>
-      <div class="btn-wrapper">
-        <a href="#" class="btn signup">新規登録はこちら</a>
-        <p>or</p>
-        <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
-        <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
-      </div>
-    </div>
-  </div>
-  <div class="lesson-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>Learn Where to Get Started!</h2>
-      </div>
-      <div class="lessons">
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/html.png">
-            <p>HTML & CSS</p>
-          </div>
-          <p class="text-contents">ウェブページの作成に使用される言語です。HTMLとCSSを組み合わせることで、静的なページを作り上げることができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-            <p>jQuery</p>
-          </div>
-          <p class="text-contents">素敵な動きを手軽に実装できるJavaScriptライブラリです。 アニメーション効果をつけたり、Ajax（エイジャックス）を使って外部ファイルを読み込んだりと色々なことができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/ruby.png">
-            <p>Ruby</p>
-          </div>
-          <p class="text-contents">オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。大きなWebアプリケーションから小さな日用ツールまで、さまざまなソフトウェアを作ることができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/php.png">
-            <p>PHP</p>
-          </div>
-          <p class="text-contents">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。</p>
-        </div>
-      </div>
-      <div class="clear"></div>
-    </div>
-  </div>
-  <div class="message-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>さぁ、あなたもProgateでプログラミングを学んでみませんか?</h2>
-        <h3>Let's learn to code, learn to be creative!</h3>
-      </div>
-      <span class="btn message">さっそく開発する</span>
-    </div>
-  </div>
-  <footer>
-    <div class="container">
-      <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
-      <p>Learn to Code, Learn to be Creative.</p>
-    </div>
-  </footer>
+
+    <!-- ▼ App ▼ ------------------------------------------------------------------------->
+    <v-app id="app">
+        <template>
+
+            <!-- ▼ Header ▼ ------------------------------------------------------------------>
+            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Home</main-system-bar>
+            <!-------------------------------------------------------------------------------->
+
+            <!-- ▼ Navigation ▼ -------------------------------------------------------------->
+            <main-navigation :drawer="drawer" @change-drawer="Change_Drawer"></main-navigation>
+            <!-------------------------------------------------------------------------------->
+
+            <!-- ▼ Main ▼ -------------------------------------------------------------------->
+            <v-main id="main" class="blue-grey lighten-4">
+                <v-container id="main-container" class="d-flex flex-column" fluid fill-height>
+                    <!-- <v-parallax src="" class="d-flex" style="height:max-content"> -->
+                    <transition name="fade-page">
+                        <div v-show="show_page">
+                            <v-btn class="item-1" icon small>
+                                <v-icon color="#7fbfff" small>mdi-earth</v-icon>
+                            </v-btn>
+                            <v-btn class="item-2" icon small>
+                                <v-icon color="#ffffb3" small>mdi-star-shooting</v-icon>
+                            </v-btn>
+                            <v-btn class="item-3" icon>
+                                <v-icon color="#ffa3a3">mdi-pizza</v-icon>
+                            </v-btn>
+                            <v-btn class="item-4" icon>
+                                <v-icon color="#99cc99">mdi-koala</v-icon>
+                            </v-btn>
+                            <v-btn class="item-5" icon>
+                                <v-icon color="#ff9fff">mdi-cards-heart</v-icon>
+                            </v-btn>
+                            <v-btn class="item-6" icon>
+                                <v-icon color="#c9ff93">mdi-lightbulb-question-outline</v-icon>
+                            </v-btn>
+                            <v-btn class="item-7" icon>
+                                <v-icon color="#7f7fff">mdi-robot</v-icon>
+                            </v-btn>
+                            <v-btn class="item-8" icon large>
+                                <v-icon color="#ffc993" large>mdi-weather-sunset</v-icon>
+                            </v-btn>
+                            <v-btn class="item-9" icon large>
+                                <v-icon color="#70f0f0" large>mdi-jellyfish</v-icon>
+                            </v-btn>
+                            <v-btn class="item-10" icon x-large onclick="Play_Sound(6);">
+                                <audio id="sound_6" src="https://fum0000.github.io/MySite_1/Audio/sound_6.wav" pause="pause"></audio>
+                                <v-icon color="#ffa3d9" x-large>mdi-rabbit-variant</v-icon>
+                            </v-btn>
+                            <v-btn class="item-11" icon x-large onclick="Play_Sound(5);">
+                                <audio id="sound_5" src="https://fum0000.github.io/MySite_1/Audio/sound_5.wav" pause="pause"></audio>
+                                <v-icon color="#7fee7f" x-large>mdi-sprout</v-icon>
+                            </v-btn>
+                            <v-btn class="item-12" icon x-large onclick="Play_Sound(4);">
+                                <audio id="sound_4" src="https://fum0000.github.io/MySite_1/Audio/sound_4.wav" pause="pause"></audio>
+                                <v-icon color="#c993ff" x-large>mdi-alien</v-icon>
+                            </v-btn>
+                            <v-btn class="item-13" icon x-large onclick="Play_Sound(3);">
+                                <audio id="sound_3" src="https://fum0000.github.io/MySite_1/Audio/sound_3.wav" pause="pause"></audio>
+                                <v-icon color="#ffff7f" x-large>mdi-gamepad-square</v-icon>
+                            </v-btn>
+                            <v-btn class="item-14" icon x-large onclick="Play_Sound(2);">
+                                <audio id="sound_2" src="https://fum0000.github.io/MySite_1/Audio/sound_2.wav" pause="pause"></audio>
+                                <v-icon color="#5389df" x-large>mdi-lightbulb-question-outline</v-icon>
+                            </v-btn>
+                            <v-btn class="item-15" icon x-large onclick="Play_Sound(1);">
+                                <audio id="sound_1" src="https://fum0000.github.io/MySite_1/Audio/sound_1.wav" pause="pause"></audio>
+                                <v-icon color="#ff7f7f" x-large>mdi-noodles</v-icon>
+                            </v-btn>
+                        </div>
+                    </transition>
+                    <v-spacer></v-spacer>
+                    <transition name="fade-page">
+                        <v-btn href="https://fum0000.github.io/MySite_1/Japanese/word_limited_period.html" class="limited_period" color="primary" v-show="show_page"
+                            outlined>Limited period word</v-btn>
+                    </transition>
+                    <!-- </v-parallax> -->
+                </v-container>
+            </v-main>
+            <!-------------------------------------------------------------------------------->
+
+            <!-- ▼ Footer ▼ ------------------------------------------------------------------>
+            <!-- <main-footer></main-footer> -->
+            <!-------------------------------------------------------------------------------->
+
+        </template>
+    </v-app>
+    <!------------------------------------------------------------------------------------>
+
+    <!-- ▼ Style ▼ ----------------------------------------------------------------------->
+    <style>
+        /* Back Ground */
+        body {
+            background: #CFD8DC;
+        }
+
+        /* Fade */
+        .fade-page-enter-active,
+        .fade-page-leave-active {
+            transition: opacity 2s;
+        }
+
+        .fade-page-enter,
+        .fade-page-leave-to {
+            opacity: 0;
+        }
+
+        /* Style */
+        .non-underline {
+            text-decoration: none;
+        }
+
+        /* Animation */
+        @keyframes animation_katakata {
+            0% { transform: rotate(-15deg); }
+            50% { transform: rotate(15deg); }
+            100% { transform: rotate(-15deg); }
+        }
+
+        @keyframes animation_huwahuwa {
+            0% { transform: scale(1); }
+            30% { transform: scale(.97); }
+            50% { transform: scale(.97); }
+            70% { transform: scale(.97); }
+            100% { transform: scale(1); }
+        }
+    </style>
+    <!------------------------------------------------------------------------------------>
+
+    <!-- ▼ Script Load ▼ ----------------------------------------------------------------->
+    <!-- Main -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- Compornent -->
+    <script src="https://fum0000.github.io/MySite_1/common.js"></script>
+    <script src="https://fum0000.github.io/MySite_1/Component/main-system-bar.js"></script>
+    <script src="https://fum0000.github.io/MySite_1/Component/main-navigation.js"></script>
+    <script src="https://fum0000.github.io/MySite_1/Component/main-footer.js"></script>
+    <!-- Drawflow -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jerosoler/Drawflow/dist/drawflow.min.css">
+	<script src="https://cdn.jsdelivr.net/gh/jerosoler/Drawflow/dist/drawflow.min.js"></script> -->
+    <!------------------------------------------------------------------------------------>
+
+    <!-- Script Content ------------------------------------------------------------------>
+    <script>
+
+        // Variable ----------------------------------------------------------------------
+        let vue = new Vue({
+            el: '#app',
+            vuetify: new Vuetify(),
+            data: {
+                // Determined
+                drawer: false,
+                // Myself
+                show_page: false,
+                Date: "",
+            },
+            methods: {
+                Change_Drawer(_value) {
+                    this.drawer = _value;
+                }
+            },
+        })
+        // -------------------------------------------------------------------------------
+
+        // Javascript --------------------------------------------------------------------
+        $(function () {
+            // Layout
+            $("[class^='item-']").css("position", "absolute");
+            $(".limited_period").css("position", "absolute");
+            Resize();
+            $(window).ready(function () { vue.show_page = true; });
+            $(window).resize(function () { Resize(); });
+            // Animation
+            $("[class^='item-']").css("transition", "1s");
+            $("[class^='item-']").each(function () {
+                $(this).css("animation", "animation_katakata " + (Math.random() * (1.0 - 0.5) + 0.5).toFixed(2) + "s" + " infinite");
+            });
+            $(".limited_period").css("transition", "2s");
+            $(".limited_period").css("animation", "animation_huwahuwa .8s infinite")
+        });
+
+        function Resize() {
+            let container_left_center = $("#main-container").width() * 0.49;
+            let container_top_center = $("#main-container").height() * 0.35;
+            // Item
+            let radian = 0;
+            let radius = 0;
+            let target_left = container_left_center + (radius * Math.cos(radian));
+            let target_top = container_top_center + (radius * Math.sin(radian));
+            $(".item-1").css("left", target_left);
+            $(".item-1").css("top", target_top);
+            radian += Math.PI / 5;
+            radius = 55 * radian;
+            target_left = container_left_center + (radius * Math.cos(radian));
+            target_top = container_top_center + (radius * Math.sin(radian));
+            $(".item-2").css("left", target_left);
+            $(".item-2").css("top", target_top);
+            radian += Math.PI / 5;
+            radius = 50 * radian;
+            target_left = container_left_center + (radius * Math.cos(radian));
+            target_top = container_top_center + (radius * Math.sin(radian));
+            $(".item-3").css("left", target_left);
+            $(".item-3").css("top", target_top);
+            radian += Math.PI / 5;
+            radius = 45 * radian;
+            target_left = container_left_center + (radius * Math.cos(radian));
+            target_top = container_top_center + (radius * Math.sin(radian));
+            $(".item-4").css("left", target_left);
+            $(".item-4").css("top", target_top);
+            radian += Math.PI / 5;
+            radius = 40 * radian;
+            target_left = container_left_center + (radius * Math.cos(radian));
+            target_top = container_top_center + (radius * Math.sin(radian));
+            $(".item-5").css("left", target_left);
+            $(".item-5").css("top", target_top);
+            radian += Math.PI / 5;
+            radius = 35 * radian;
+            target_left = container_left_center + (radius * Math.cos(radian));
+            target_top = container_top_center + (radius * Math.sin(radian));
+            $(".item-6").css("left", target_left);
+            $(".item-6").css("top", target_top);
+            radian += Math.PI / 5;
+            radius = 30 * radian;
+            target_left = container_left_center + (radius * Math.cos(radian));
+            target_top = container_top_center + (radius * Math.sin(radian));
+            $(".item-7").css("left", target_left);
+            $(".item-7").css("top", target_top);
+            radian += Math.PI / 5;
+            radius = 26 * radian;
+            target_left = container_left_center + (radius * Math.cos(radian));
+            target_top = container_top_center + (radius * Math.sin(radian));
+            $(".item-8").css("left", target_left);
+            $(".item-8").css("top", target_top);
+            radian += Math.PI / 5;
+            radius = 24 * radian;
+            target_left = container_left_center + (radius * Math.cos(radian));
+            target_top = container_top_center + (radius * Math.sin(radian));
+            $(".item-9").css("left", target_left);
+            $(".item-9").css("top", target_top);
+            radian += Math.PI / 5;
+            radius = 23 * radian;
+            target_left = container_left_center + (radius * Math.cos(radian));
+            target_top = container_top_center + (radius * Math.sin(radian));
+            $(".item-10").css("left", target_left);
+            $(".item-10").css("top", target_top);
+            radian += Math.PI / 5;
+            radius = 23 * radian;
+            target_left = container_left_center + (radius * Math.cos(radian));
+            target_top = container_top_center + (radius * Math.sin(radian));
+            $(".item-11").css("left", target_left);
+            $(".item-11").css("top", target_top);
+            radian += Math.PI / 5;
+            radius = 23 * radian;
+            target_left = container_left_center + (radius * Math.cos(radian));
+            target_top = container_top_center + (radius * Math.sin(radian));
+            $(".item-12").css("left", target_left);
+            $(".item-12").css("top", target_top);
+            radian += Math.PI / 5;
+            radius = 23 * radian;
+            target_left = container_left_center + (radius * Math.cos(radian));
+            target_top = container_top_center + (radius * Math.sin(radian));
+            $(".item-13").css("left", target_left);
+            $(".item-13").css("top", target_top);
+            radian += Math.PI / 5;
+            radius = 23 * radian;
+            target_left = container_left_center + (radius * Math.cos(radian));
+            target_top = container_top_center + (radius * Math.sin(radian));
+            $(".item-14").css("left", target_left);
+            $(".item-14").css("top", target_top);
+            radian += Math.PI / 5;
+            radius = 23 * radian;
+            target_left = container_left_center + (radius * Math.cos(radian));
+            target_top = container_top_center + (radius * Math.sin(radian));
+            $(".item-15").css("left", target_left);
+            $(".item-15").css("top", target_top);
+            // Limited Period
+            $(".limited_period").css("left", container_left_center - $(".limited_period").width * 0.5);
+            $(".limited_period").css("top", target_top * 1.45);
+        }
+        // -------------------------------------------------------------------------------
+
+        // Sound
+        function Play_Sound(_number) {
+            let audio = $("#sound_" + _number).get(0);
+            if ( audio.paused ) audio.play();
+            else {
+                audio.pause();
+                audio.currentTime = 0;
+                audio.play();
+            }
+        }
+
+		// Drawflow
+		// var id = document.getElementById("drawflow");
+		// const editor = new Drawflow(id);
+		// editor.start();
+
+    </script>
+    <!------------------------------------------------------------------------------------>
 </body>
+<!---------------------------------------------------------------------------------------->
+
 </html>

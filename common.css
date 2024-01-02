@@ -1,0 +1,19 @@
+body {
+    background: #CFD8DC;
+}
+
+/* System Bar */
+/* Arrow */
+@keyframes animation_arrow_1 {
+    0% { transform:
+        rotate(90deg)
+        translateY(0px); }
+    50% { transform: 
+            rotate(90deg)
+            translateY(2px);
+        }
+    100% { transform: 
+        rotate(90deg)
+        translateY(0px);
+    }
+}
