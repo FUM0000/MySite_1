@@ -234,10 +234,6 @@ Vue.component('main-navigation', {
                     <v-list-item-icon />
                     <v-list-item-title>DELE - A2</v-list-item-title>
                 </v-list-item>
-                <v-list-item href="https://fum0000.github.io/MySite_1/Spanish/mei.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>Mei</v-list-item-title>
-                </v-list-item>
             </v-list-group>
 
             <v-list-group :value="false" prepend-icon="mdi-gamepad-square-outline">
