@@ -6,7 +6,10 @@ Vue.component('main-system-bar', {
         <slot></slot>
         <v-spacer></v-spacer>
         <v-icon id="arrow_1" color="red" x-small style="font-size: 10px; transform: rotate(90deg);">mdi-navigation</v-icon>
-        <v-icon v-model="drawer_local" @click.stop="drawer_local = !drawer_local">mdi-alpha-f-circle-outline</v-icon>
+        <v-icon v-model="drawer_local" @click.stop="drawer_local = !drawer_local">mdi-alpha-m</v-icon>
+        <v-icon v-model="drawer_local" @click.stop="drawer_local = !drawer_local">mdi-alpha-e</v-icon>
+        <v-icon v-model="drawer_local" @click.stop="drawer_local = !drawer_local">mdi-alpha-n</v-icon>
+        <v-icon v-model="drawer_local" @click.stop="drawer_local = !drawer_local">mdi-alpha-u</v-icon>
     </v-system-bar>
     `,
     props: ['drawer'],
