@@ -1,7 +1,7 @@
 Vue.component('main-system-bar', {
     template: `
     <v-system-bar color="#CFD8DC80" class="font-weight-black" app>
-        <audio id="audio_1" src="http://35.73.34.134/Audio/sample_1.mp3" pause="pause" loop="loop"></audio>
+        <audio id="audio_1" src="https://fum0000.github.io/MySite_1/Audio/sample_1.mp3" pause="pause" loop="loop"></audio>
         <v-icon id="speaker_1">mdi-volume-variant-off</v-icon>
         <slot></slot>
         <v-spacer></v-spacer>
