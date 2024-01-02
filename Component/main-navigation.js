@@ -308,12 +308,11 @@ Vue.component('main-navigation', {
 
             <v-list-item href="https://www.youtube.com/channel/UCCYB5BH-9JRMebgRy0sVQIQ">
                 <v-list-item-icon><v-icon>mdi-youtube</v-icon></v-list-item-icon>
-                <v-list-item-title>My Youtube</v-list-item-title>
+                <v-list-item-title>Youtube_Japanese</v-list-item-title>
             </v-list-item>
-
-            <v-list-item href="https://www.pinterest.jp/fum516/">
-                <v-list-item-icon><v-icon>mdi-pinterest</v-icon></v-list-item-icon>
-                <v-list-item-title>My Pinterest</v-list-item-title>
+            <v-list-item href="https://www.youtube.com/@FUM-Sanpo">
+                <v-list-item-icon><v-icon>mdi-youtube</v-icon></v-list-item-icon>
+                <v-list-item-title>Youtube_Walking</v-list-item-title>
             </v-list-item>
 
         </v-list>
