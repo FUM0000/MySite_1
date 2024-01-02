@@ -4,7 +4,7 @@ body {
 
 /* System Bar */
 /* Arrow */
-@keyframes animation_arrow_1 {
+/* @keyframes animation_arrow_1 {
     0% { transform:
         rotate(90deg)
         translateY(0px); }
@@ -16,4 +16,4 @@ body {
         rotate(90deg)
         translateY(0px);
     }
-}
+} */

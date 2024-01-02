@@ -19,6 +19,6 @@ $(function() {
     audio.onplaying = function() { playing = true; };
     audio.onpause = function() { playing = false; };
     // Arrow
-    let arrow = $("#arrow_1");
-    arrow.css("animation", "animation_arrow_1 .5s infinite")
+    // let arrow = $("#arrow_1");
+    // arrow.css("animation", "animation_arrow_1 .5s infinite")
 });
