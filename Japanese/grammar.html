@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<!-- ▼ Head ▼ ---------------------------------------------------------------------------->
+
+<head>
+
+    <!-- Setting -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <!-- Vue -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="http://35.73.34.134/common.css" rel="stylesheet" />
+
+</head>
+<!---------------------------------------------------------------------------------------->
+
+<!-- ▼ Body ▼ ---------------------------------------------------------------------------->
+
+<body>
+
+    <!-- ▼ App ▼ ------------------------------------------------------------------------->
+    <v-app id="app">
+        <template>
+
+            <!-- ▼ Header ▼ ------------------------------------------------------------------>
+            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Grammar</main-system-bar>
+            <!-------------------------------------------------------------------------------->
+
+            <!-- ▼ Navigation ▼ -------------------------------------------------------------->
+            <main-navigation :drawer="drawer" @change-drawer="Change_Drawer"></main-navigation>
+            <!-------------------------------------------------------------------------------->
+
+            <!-- ▼ Main ▼ -------------------------------------------------------------------->
+            <v-main id="main" class="blue-grey lighten-4">
+                <v-container fluid fill-height>
+                    <!-- Basic Grammar -->
+                    <v-row justify="center">
+                        <v-col xs="12" md="6" lg="6">
+                            <v-card>
+                                <v-system-bar>Basic Grammar</v-system-bar>
+                                <v-carousel delimiter-icon="mdi-minus" :show-arrows="false" width="100%" height="350">
+                                    <v-carousel-item>
+                                        <v-sheet height="100%" width="100%">
+                                            <v-row class="fill-height" align="center">
+                                                <v-col align="center">
+                                                    <strong>English</strong><br>
+                                                    Verb + Object<br>
+                                                    <strong>Japanese</strong><br>
+                                                    Object + を(o) + Verb
+                                                </v-col>
+                                            </v-row>
+                                        </v-sheet>
+                                    </v-carousel-item>
+                                    <v-carousel-item>
+                                        <v-sheet height="100%" width="100%">
+                                            <v-row class="fill-height" align="center">
+                                                <v-col align="center">
+                                                    <strong>English</strong><br>
+                                                    Subject + Something<br>
+                                                    <strong>Japanese</strong><br>
+                                                    Subject + は(<font color="red">wa</font>) + Something
+                                                </v-col>
+                                            </v-row>
+                                        </v-sheet>
+                                    </v-carousel-item>
+                                </v-carousel>
+                            </v-card>
+                        </v-col>
+                    </v-row>
+
+                    <!-- Connection -->
+                    <v-row justify="center">
+                        <v-col xs="12" md="6" lg="6">
+                            <v-card>
+                                <v-system-bar>Connection</v-system-bar>
+                                <v-carousel delimiter-icon="mdi-minus" :show-arrows="false" width="100%" height="350">
+                                    <v-carousel-item>
+                                        <v-sheet height="100%" width="100%">
+                                            <v-row class="fill-height" align="center">
+                                                <v-col align="center">
+                                                    <strong>English</strong><br>
+                                                    Main + of + Sub<br>
+                                                    <strong>Japanese</strong><br>
+                                                    Sub + の(no) + Main
+                                                </v-col>
+                                            </v-row>
+                                        </v-sheet>
+                                    </v-carousel-item>
+                                    <v-carousel-item>
+                                        <v-sheet height="100%" width="100%">
+                                            <v-row class="fill-height" align="center">
+                                                <v-col align="center">
+                                                    <strong>English</strong><br>
+                                                    With + Someone<br>
+                                                    <strong>Japanese</strong><br>
+                                                    Someone + と(to)
+                                                </v-col>
+                                            </v-row>
+                                        </v-sheet>
+                                    </v-carousel-item>
+                                    <v-carousel-item>
+                                        <v-sheet height="100%" width="100%">
+                                            <v-row class="fill-height" align="center">
+                                                <v-col align="center">
+                                                    <strong>English</strong><br>
+                                                    Be + in + Somewhere<br>
+                                                    <strong>Japanese</strong><br>
+                                                    Somewhere + に(ni)
+                                                </v-col>
+                                            </v-row>
+                                        </v-sheet>
+                                    </v-carousel-item>
+                                    <v-carousel-item>
+                                        <v-sheet height="100%" width="100%">
+                                            <v-row class="fill-height" align="center">
+                                                <v-col align="center">
+                                                    <strong>English</strong><br>
+                                                    Do + in + Somewhere<br>
+                                                    <strong>Japanese</strong><br>
+                                                    Somewhere + で(de)
+                                                </v-col>
+                                            </v-row>
+                                        </v-sheet>
+                                    </v-carousel-item>
+                                    <v-carousel-item>
+                                        <v-sheet height="100%" width="100%">
+                                            <v-row class="fill-height" align="center">
+                                                <v-col align="center">
+                                                    <strong>English</strong><br>
+                                                    to + Somewhere<br>
+                                                    <strong>Japanese</strong><br>
+                                                    Somewhere + に(ni)
+                                                </v-col>
+                                            </v-row>
+                                        </v-sheet>
+                                    </v-carousel-item>
+                                    <v-carousel-item>
+                                        <v-sheet height="100%" width="100%">
+                                            <v-row class="fill-height" align="center">
+                                                <v-col align="center">
+                                                    <strong>English</strong><br>
+                                                    from + Something<br>
+                                                    <strong>Japanese</strong><br>
+                                                    Something + から(kara)
+                                                </v-col>
+                                            </v-row>
+                                        </v-sheet>
+                                    </v-carousel-item>
+                                    <v-carousel-item>
+                                        <v-sheet height="100%" width="100%">
+                                            <v-row class="fill-height" align="center">
+                                                <v-col align="center">
+                                                    <strong>English</strong><br>
+                                                    for + Noun<br>
+                                                    <strong>Japanese</strong><br>
+                                                    Noun + のために(notameni)
+                                                </v-col>
+                                            </v-row>
+                                        </v-sheet>
+                                    </v-carousel-item>
+                                    <v-carousel-item>
+                                        <v-sheet height="100%" width="100%">
+                                            <v-row class="fill-height" align="center">
+                                                <v-col align="center">
+                                                    <strong>English</strong><br>
+                                                    for + Verb<br>
+                                                    <strong>Japanese</strong><br>
+                                                    Verb + ために(tameni)
+                                                </v-col>
+                                            </v-row>
+                                        </v-sheet>
+                                    </v-carousel-item>
+                                </v-carousel>
+                            </v-card>
+                        </v-col>
+                    </v-row>
+
+                    <!-- Youtube -->
+                    <v-row justify="center">
+                        <v-col xs="12" md="6" lg="6">
+                            <v-btn href="https://www.youtube.com/channel/UCCYB5BH-9JRMebgRy0sVQIQ" block outlined>
+                                My Youtube for Japanese audio
+                            </v-btn>
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </v-main>
+            <!-------------------------------------------------------------------------------->
+
+        </template>
+    </v-app>
+    <!------------------------------------------------------------------------------------>
+
+    <!-- ▼ Style ▼ ----------------------------------------------------------------------->
+    <style>
+
+    </style>
+    <!------------------------------------------------------------------------------------>
+
+    <!-- ▼ Script Load ▼ ----------------------------------------------------------------->
+    <!-- Main -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- Compornent -->
+    <script src="http://35.73.34.134/common.js"></script>
+    <script src="http://35.73.34.134/Component/main-system-bar.js"></script>
+    <script src="http://35.73.34.134/Component/main-navigation.js"></script>
+    <script src="http://35.73.34.134/Component/main-footer.js"></script>
+    <!------------------------------------------------------------------------------------>
+
+    <!-- Script Content ------------------------------------------------------------------>
+    <script>
+
+        // Variable ----------------------------------------------------------------------
+        let vue = new Vue({
+            el: '#app',
+            vuetify: new Vuetify(),
+            data: {
+                // Determined
+                drawer: false,
+                // Myself
+            },
+            methods: {
+                Change_Drawer(_value) {
+                    this.drawer = _value;
+                }
+            },
+        })
+        // -------------------------------------------------------------------------------
+
+        // Javascript --------------------------------------------------------------------
+        // -------------------------------------------------------------------------------
+
+    </script>
+    <!------------------------------------------------------------------------------------>
+</body>
+<!---------------------------------------------------------------------------------------->
+
+</html>
