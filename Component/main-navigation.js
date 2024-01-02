@@ -11,7 +11,7 @@ Vue.component('main-navigation', {
             <v-spacer></v-spacer>
             <v-icon color="blue-grey darken-3" x-large>mdi-alpha-n</v-icon>
             <v-spacer></v-spacer>
-            <v-icon color="blue-grey darken-3" x-large>mdi-alpha-e</v-icon>
+            <v-icon color="blue-grey darken-3" x-large>mdi-alpha-u</v-icon>
             <v-spacer></v-spacer>
         </v-list-item>
 
