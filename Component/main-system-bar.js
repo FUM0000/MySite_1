@@ -9,10 +9,7 @@ Vue.component('main-system-bar', {
             </v-col>
             
             <v-col cols="6" class="text-right" @click.stop="drawer_local = !drawer_local">
-                <v-icon v-model="drawer_local">mdi-alpha-m</v-icon>
-                <v-icon v-model="drawer_local">mdi-alpha-e</v-icon>
-                <v-icon v-model="drawer_local">mdi-alpha-n</v-icon>
-                <v-icon v-model="drawer_local">mdi-alpha-u</v-icon>
+                MENU
             </v-col>
         <v-row>
     </v-system-bar>
