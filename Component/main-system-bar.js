@@ -7,9 +7,9 @@ Vue.component('main-system-bar', {
                 <v-icon id="speaker_1">mdi-volume-variant-off</v-icon>
                 <slot></slot>
             </v-col>
-            <v-spacer></v-spacer>
-            // <v-icon id="arrow_1" color="red" x-small style="font-size: 10px; transform: rotate(90deg);">mdi-navigation</v-icon>
+            
             <v-col @click.stop="drawer_local = !drawer_local">
+                <v-spacer></v-spacer>
                 <v-icon v-model="drawer_local">mdi-alpha-m</v-icon>
                 <v-icon v-model="drawer_local">mdi-alpha-e</v-icon>
                 <v-icon v-model="drawer_local">mdi-alpha-n</v-icon>
@@ -18,6 +18,7 @@ Vue.component('main-system-bar', {
         <v-row>
     </v-system-bar>
     `,
+    // arrow <v-icon id="arrow_1" color="red" x-small style="font-size: 10px; transform: rotate(90deg);">mdi-navigation</v-icon>
     props: ['drawer'],
     computed: {
         drawer_local: {
