@@ -16,6 +16,7 @@
 <body>
 
     <div id="WebGL-Output"></div>
+    <audio id="audio_2" src="https://fum0000.github.io/MySite_1/Audio/bgm_2.mp3" pause="play" loop="loop"></audio>
 
     <!-- ▼ CSS ▼ ------------------------------------------------------------------------->
     <style>
@@ -289,6 +290,9 @@
             UI_Home.style.top = 20 + 'px';
             UI_Home.style.left = (window.innerWidth - 70) + 'px';
             document.body.appendChild(UI_Home);
+
+            // Audio
+            $("#audio_2").get(0).volume = 0.5;
         }
         //--------------------------------------------------------------------------------
 
