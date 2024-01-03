@@ -16,11 +16,6 @@
 <body>
 
     <div id="WebGL-Output"></div>
-    <audio controls loop autoplay>
-        <!-- BGMファイルのパスを指定 -->
-        <source src="https://fum0000.github.io/MySite_1/Audio/bgm_1.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
 
     <!-- ▼ CSS ▼ ------------------------------------------------------------------------->
     <style>
@@ -294,6 +289,13 @@
             UI_Home.style.top = 20 + 'px';
             UI_Home.style.left = (window.innerWidth - 70) + 'px';
             document.body.appendChild(UI_Home);
+
+            // Audioオブジェクトを作成
+            var bgm = new Audio();
+            bgm.src = 'https://fum0000.github.io/MySite_1/Audio/bgm_1.mp3';
+            bgm.loop = true;
+            bgm.volume = 0.5;
+            bgm.play();
         }
         //--------------------------------------------------------------------------------
 
