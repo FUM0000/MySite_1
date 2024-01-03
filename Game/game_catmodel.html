@@ -16,6 +16,11 @@
 <body>
 
     <div id="WebGL-Output"></div>
+    
+    <!-- ▼ Script Load ▼ ----------------------------------------------------------------->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!------------------------------------------------------------------------------------>
 
     <!-- Script Content ------------------------------------------------------------------>
     <script type="module">
@@ -29,6 +34,9 @@
         let Loader, Camera_Controller;
 
         let Cat = null;
+
+        // UI
+        let UI_Home;
 
         // Function
         Initialize();
@@ -85,6 +93,18 @@
                 // (xhr) => { console.log((xhr.loaded / xhr.total) * 100 + '% loaded') },
                 // (error) => { console.log(error) }
             );
+
+            // Home
+            UI_Home = document.createElement('div');
+            UI_Home.setAttribute("id", "ui-home");
+            UI_Home.style.position = 'absolute';
+            UI_Home.style.width = 100;
+            UI_Home.style.height = 100;
+            UI_Home.style.backgroundColor = "#ffffff00";
+            UI_Home.innerHTML = "<b>" + "Home" + "</b>";
+            UI_Home.style.top = 20 + 'px';
+            UI_Home.style.left = (window.innerWidth - 70) + 'px';
+            document.body.appendChild(UI_Home);
         }
         //--------------------------------------------------------------------------------
 
@@ -115,6 +135,12 @@
         // Setting------------------------------------------------------------------------
         Renderer.outputEncoding = THREE.sRGBEncoding;
         document.getElementById("WebGL-Output").appendChild(Renderer.domElement);
+        //--------------------------------------------------------------------------------
+
+        // jQuery-------------------------------------------------------------------------
+        $("#ui-home").click(function () {
+            window.location.href = '/MySite_1/';
+        });
         //--------------------------------------------------------------------------------
 
     </script>
