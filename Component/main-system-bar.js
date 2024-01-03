@@ -3,7 +3,7 @@ Vue.component('main-system-bar', {
     <v-system-bar color="#CFD8DC80" class="font-weight-black" app>
         <v-row align="center">
             <v-col cols="6">
-                <audio id="audio_1" src="https://fum0000.github.io/MySite_1/Audio/bgm_1.mp3" pause="pause" loop="loop"></audio>
+                <audio id="bgm_1" src="https://fum0000.github.io/MySite_1/Audio/bgm_1.mp3" pause="pause" loop="loop"></audio>
                 <v-icon id="speaker_1">mdi-volume-variant-off</v-icon>
                 <slot></slot>
             </v-col>
