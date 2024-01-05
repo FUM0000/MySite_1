@@ -1,5 +1,5 @@
 
-let path = "https://fum0000.github.io/MySite_1/Audio/clair_de_lune.mp3";
+let Name = "clair_de_lune.mp3";
 
 $(function() {
     //// System Bar
@@ -16,7 +16,7 @@ $(function() {
         else {
             $(this).removeClass("mdi-volume-variant-off");
             $(this).addClass("mdi-volume-source");
-            audio.src = path;
+            audio.src = "https://fum0000.github.io/MySite_1/Audio/" + Name;
             audio.play();
         }
     });
@@ -28,5 +28,5 @@ $(function() {
 });
 
 function Change_BGM_Name(_name) {
-    path = _name;
+    Name = _name;
 }
