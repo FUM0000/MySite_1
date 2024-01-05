@@ -1,5 +1,6 @@
 
-let Name = "clair_de_lune.mp3";
+let Name_Store = localStorage.getItem("BGM_Name");
+let Name = Name_Store == null ? "clair_de_lune.mp3" : Name_Store;
 
 $(function() {
     //// System Bar
@@ -29,4 +30,5 @@ $(function() {
 
 function Change_BGM_Name(_name) {
     Name = _name;
+    localStorage.setItem("BGM_Name", _name);
 }
