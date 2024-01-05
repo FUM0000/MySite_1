@@ -1,3 +1,6 @@
+
+let path = "https://fum0000.github.io/MySite_1/Audio/clair_de_lune.mp3";
+
 $(function() {
     //// System Bar
     // Audio
@@ -13,6 +16,7 @@ $(function() {
         else {
             $(this).removeClass("mdi-volume-variant-off");
             $(this).addClass("mdi-volume-source");
+            audio.src = path;
             audio.play();
         }
     });
@@ -22,3 +26,7 @@ $(function() {
     // let arrow = $("#arrow_1");
     // arrow.css("animation", "animation_arrow_1 .5s infinite")
 });
+
+function Change_BGM_Name(_name) {
+    path = _name;
+}
