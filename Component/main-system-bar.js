@@ -1,7 +1,7 @@
 Vue.component('main-system-bar', {
     template: `
     <v-system-bar color="#CFD8DC80" class="font-weight-black" app>
-        <v-row>
+        <v-row aline="center">
             <v-col cols="6">
                 <audio id="bgm_1" src="https://fum0000.github.io/MySite_1/Audio/bgm_1.mp3" pause="pause" loop="loop"></audio>
                 <v-icon id="speaker_1">mdi-volume-variant-off</v-icon>
@@ -9,7 +9,7 @@ Vue.component('main-system-bar', {
             </v-col>
             
             <v-col cols="6" class="text-right" @click.stop="drawer_local = !drawer_local">
-                <v-btn rounded elevation="2">MENU</v-btn>
+                <v-btn rounded small plain elevation="2">MENU</v-btn>
             </v-col>
         <v-row>
     </v-system-bar>
