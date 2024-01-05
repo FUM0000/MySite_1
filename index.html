@@ -338,8 +338,8 @@
 
         // Sound
         function Change_BGM(_number) {
-            let audio = $("#current_bgm").get(0);
-            audio.attr("src", "https://fum0000.github.io/MySite_1/Audio/" + List_BGM[_number]);
+            $("#current_bgm")[0].src = "https://fum0000.github.io/MySite_1/Audio/" + List_BGM[_number];
+            let audio = $("#current_bgm")[0];
             audio.currentTime = 0;
             if ( audio.play ) audio.play();
         }
