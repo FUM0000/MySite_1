@@ -9,7 +9,7 @@ Vue.component('main-system-bar', {
             </v-col>
             
             <v-col cols="6" class="text-right" @click.stop="drawer_local = !drawer_local">
-                <v-btn elevation="2">MENU</v-btn>
+                <v-btn rounded elevation="2">MENU</v-btn>
             </v-col>
         <v-row>
     </v-system-bar>
