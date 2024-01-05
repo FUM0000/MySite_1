@@ -3,18 +3,18 @@ Vue.component('main-system-bar', {
     <v-system-bar color="#CFD8DC80" class="font-weight-black" app>
         <v-row aline="center">
             <v-col cols="6">
-                <audio id="bgm_1" src="https://fum0000.github.io/MySite_1/Audio/bgm_1.mp3" pause="pause" loop="loop"></audio>
+                <audio id="current_bgm" src="https://fum0000.github.io/MySite_1/Audio/clair_de_lune.mp3" pause="pause" loop="loop"></audio>
                 <v-icon id="speaker_1">mdi-volume-variant-off</v-icon>
                 <slot></slot>
             </v-col>
             
             <v-col cols="6" class="text-right" @click.stop="drawer_local = !drawer_local">
-                <v-btn rounded small plain elevation="2">MENU</v-btn>
+                <!-- <v-icon id="arrow_1" color="red" x-small style="font-size: 10px; transform: rotate(90deg);">mdi-navigation</v-icon> -->
+                <v-btn rounded small plain>MENU</v-btn>
             </v-col>
-        <v-row>
+        </v-row>
     </v-system-bar>
     `,
-    // arrow <v-icon id="arrow_1" color="red" x-small style="font-size: 10px; transform: rotate(90deg);">mdi-navigation</v-icon>
     props: ['drawer'],
     computed: {
         drawer_local: {

@@ -1,7 +1,7 @@
 $(function() {
     //// System Bar
     // Audio
-    let audio = $("#bgm_1").get(0);
+    let audio = $("#current_bgm").get(0);
     let playing = false;
     audio.volume = 0.5;
     $("#speaker_1").on("click", function () {
