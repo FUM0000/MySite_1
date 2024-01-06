@@ -46,9 +46,9 @@ Vue.component('main-navigation', {
                     <v-list-item-icon />
                     <v-list-item-title>Grammar</v-list-item-title>
                 </v-list-item>
-                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/verb_type.html">
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/asking.html">
                     <v-list-item-icon />
-                    <v-list-item-title>Verb Type</v-list-item-title>
+                    <v-list-item-title>Asking</v-list-item-title>
                 </v-list-item>
             </v-list-group>
 
@@ -209,6 +209,20 @@ Vue.component('main-navigation', {
                     <v-list-item-title>Italian</v-list-item-title>
                 </v-list-item>
             </v-list-group>
+
+
+            <v-list-group :value="false" prepend-icon="mdi-library-outline">
+                <template v-slot:activator>
+                    <v-list-item-title>Verb - Detail</v-list-item-title>
+                </template>
+
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/verb_type.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Verb Type</v-list-item-title>
+                </v-list-item>
+            </v-list-group>
+            
+            
 
             <v-list-group :value="false" prepend-icon="mdi-library-outline">
                 <template v-slot:activator>

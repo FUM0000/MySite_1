@@ -16,6 +16,7 @@
 
     <!-- CSS -->
     <link href="https://fum0000.github.io/MySite_1/common.css" rel="stylesheet" />
+    <link href="https://fum0000.github.io/MySite_1/Japanese/common_word_japanese.css" rel="stylesheet" />
 
 </head>
 <!---------------------------------------------------------------------------------------->
@@ -29,7 +30,7 @@
         <template>
 
             <!-- ▼ Header ▼ ------------------------------------------------------------------>
-            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Grammar</main-system-bar>
+            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Word - Asking</main-system-bar>
             <!-------------------------------------------------------------------------------->
 
             <!-- ▼ Navigation ▼ -------------------------------------------------------------->
@@ -39,20 +40,30 @@
             <!-- ▼ Main ▼ -------------------------------------------------------------------->
             <v-main id="main" class="blue-grey lighten-4">
                 <v-container fluid fill-height>
-                    <!-- Basic Grammar -->
+                    <v-row no-gutters><v-col cols="2" md="1" lg="1"></v-col><v-spacer></v-spacer><v-col cols="5" md="2" lg="2"><v-switch v-model="Switch" :label="`All Change`" inset hide-details="false"/></v-col></v-row>
+                    <v-row justify="center" class="ma-0">
+                        <v-col cols="12" md="3" lg="3" v-for="list in List" :key="list.id">
+                            <card-double :all_show="Switch">
+                                <template v-slot:first>{{ list.japanese }}<br>
+                                    <font size="5">{{ list.reading }}</font>
+                                </template>
+                                <template v-slot:second>{{ list.english }}</template>
+                            </card-double>
+                        </v-col>
+                    </v-row>
+
+                    <!-- Explanation -->
                     <v-row justify="center">
                         <v-col xs="12" md="6" lg="6">
                             <v-card>
-                                <v-system-bar>Basic Grammar</v-system-bar>
+                                <v-system-bar>Explanation</v-system-bar>
                                 <v-carousel delimiter-icon="mdi-minus" :show-arrows="false" width="100%" height="350">
                                     <v-carousel-item>
                                         <v-sheet height="100%" width="100%">
                                             <v-row class="fill-height" align="center">
                                                 <v-col align="center">
-                                                    <strong>English</strong><br>
-                                                    Subject(About Nature/Condition) + Something<br>
-                                                    <strong>Japanese</strong><br>
-                                                    Subject + は(<font color="red">wa</font>) + Something
+                                                    Unlike English, Japanese 5w1h is replaced by the grammatical part of each object.<br>
+                                                    Here are some examples. <font color="red"><strong>()</strong></font> indicate the grammar that is meant.<br>
                                                 </v-col>
                                             </v-row>
                                         </v-sheet>
@@ -61,10 +72,9 @@
                                         <v-sheet height="100%" width="100%">
                                             <v-row class="fill-height" align="center">
                                                 <v-col align="center">
-                                                    <strong>English</strong><br>
-                                                    Subject(About View) + Something<br>
-                                                    <strong>Japanese</strong><br>
-                                                    Subject + が(ga) + Something
+                                                    あなたは何(object)<font color="red"><strong>を</strong></font>たべる？<br>
+                                                    anata wa nani <font color="red"><strong>o</strong></font> taberu?<br>
+                                                    What do you eat?
                                                 </v-col>
                                             </v-row>
                                         </v-sheet>
@@ -73,10 +83,57 @@
                                         <v-sheet height="100%" width="100%">
                                             <v-row class="fill-height" align="center">
                                                 <v-col align="center">
-                                                    <strong>English</strong><br>
-                                                    Verb + Object<br>
-                                                    <strong>Japanese</strong><br>
-                                                    Object + を(o) + Verb
+                                                    いつ(when)あなたはくる？<br>
+                                                    itsu anata wa kuru?<br>
+                                                    When are you coming?
+                                                </v-col>
+                                            </v-row>
+                                        </v-sheet>
+                                    </v-carousel-item>
+                                    <v-carousel-item>
+                                        <v-sheet height="100%" width="100%">
+                                            <v-row class="fill-height" align="center">
+                                                <v-col align="center">
+                                                    あなたのいぬはどこ(where)<font color="red"><strong>に</strong></font>いる？<br>
+                                                    anata no inu wa doko <font color="red"><strong>ni</strong></font> iru?<br>
+                                                    Where is your dog?<br>
+                                                    <br>
+                                                    <v-btn rounded outlined href="https://fum0000.github.io/MySite_1/Japanese/grammar.html">Check "in" Grammar</v-btn>
+                                                </v-col>
+                                            </v-row>
+                                        </v-sheet>
+                                    </v-carousel-item>
+                                    <v-carousel-item>
+                                        <v-sheet height="100%" width="100%">
+                                            <v-row class="fill-height" align="center">
+                                                <v-col align="center">
+                                                    あなたはだれ(with)<font color="red"><strong>と</strong></font>あう？<br>
+                                                    anata wa dare <font color="red"><strong>to</strong></font> au?<br>
+                                                    Who are you meeting with?<br>
+                                                    <br>
+                                                    <v-btn rounded outlined href="https://fum0000.github.io/MySite_1/Japanese/grammar.html">Check "with" Grammar</v-btn>
+                                                </v-col>
+                                            </v-row>
+                                        </v-sheet>
+                                    </v-carousel-item>
+                                    <v-carousel-item>
+                                        <v-sheet height="100%" width="100%">
+                                            <v-row class="fill-height" align="center">
+                                                <v-col align="center">
+                                                    あなたはどれ(object)<font color="red"><strong>を</strong></font>かう？<br>
+                                                    anata wa dore <font color="red"><strong>o</strong></font> kau?<br>
+                                                    Which one will you buy?
+                                                </v-col>
+                                            </v-row>
+                                        </v-sheet>
+                                    </v-carousel-item>
+                                    <v-carousel-item>
+                                        <v-sheet height="100%" width="100%">
+                                            <v-row class="fill-height" align="center">
+                                                <v-col align="center">
+                                                    これはどう(adverb)いう？<br>
+                                                    kore wa dou iu?<br>
+                                                    How do you say this?
                                                 </v-col>
                                             </v-row>
                                         </v-sheet>
@@ -86,20 +143,18 @@
                         </v-col>
                     </v-row>
 
-                    <!-- Connection -->
+                    <!-- Conjugation -->
                     <v-row justify="center">
                         <v-col xs="12" md="6" lg="6">
                             <v-card>
-                                <v-system-bar>Connection</v-system-bar>
+                                <v-system-bar>Conjugation</v-system-bar>
                                 <v-carousel delimiter-icon="mdi-minus" :show-arrows="false" width="100%" height="350">
                                     <v-carousel-item>
                                         <v-sheet height="100%" width="100%">
                                             <v-row class="fill-height" align="center">
                                                 <v-col align="center">
-                                                    <strong>English</strong><br>
-                                                    Main + of + Sub<br>
-                                                    <strong>Japanese</strong><br>
-                                                    Sub + の(no) + Main
+                                                    Unlike in English, some Japanese words such as what and which unfortunately need to be conjugated when combined with <font color="red"><strong>nouns</strong></font>.<br>
+                                                    Here are some examples.
                                                 </v-col>
                                             </v-row>
                                         </v-sheet>
@@ -108,10 +163,9 @@
                                         <v-sheet height="100%" width="100%">
                                             <v-row class="fill-height" align="center">
                                                 <v-col align="center">
-                                                    <strong>English</strong><br>
-                                                    with + Someone<br>
-                                                    <strong>Japanese</strong><br>
-                                                    Someone + と(to)
+                                                    あなたは<font color="red"><strong>どんな</strong></font>スポーツをする？<br>
+                                                    anata wa <font color="red"><strong>donna</strong></font> supootsu o suru?<br>
+                                                    What sports do you play?
                                                 </v-col>
                                             </v-row>
                                         </v-sheet>
@@ -120,122 +174,27 @@
                                         <v-sheet height="100%" width="100%">
                                             <v-row class="fill-height" align="center">
                                                 <v-col align="center">
-                                                    <strong>English</strong><br>
-                                                    Be + in + Somewhere<br>
-                                                    <strong>Japanese</strong><br>
-                                                    Somewhere + に(ni)
-                                                </v-col>
-                                            </v-row>
-                                        </v-sheet>
-                                    </v-carousel-item>
-                                    <v-carousel-item>
-                                        <v-sheet height="100%" width="100%">
-                                            <v-row class="fill-height" align="center">
-                                                <v-col align="center">
-                                                    <strong>English</strong><br>
-                                                    Do + in + Somewhere<br>
-                                                    <strong>Japanese</strong><br>
-                                                    Somewhere + で(de)
-                                                </v-col>
-                                            </v-row>
-                                        </v-sheet>
-                                    </v-carousel-item>
-                                    <v-carousel-item>
-                                        <v-sheet height="100%" width="100%">
-                                            <v-row class="fill-height" align="center">
-                                                <v-col align="center">
-                                                    <strong>English</strong><br>
-                                                    to + Somewhere<br>
-                                                    <strong>Japanese</strong><br>
-                                                    Somewhere + に(ni)
-                                                </v-col>
-                                            </v-row>
-                                        </v-sheet>
-                                    </v-carousel-item>
-                                    <v-carousel-item>
-                                        <v-sheet height="100%" width="100%">
-                                            <v-row class="fill-height" align="center">
-                                                <v-col align="center">
-                                                    <strong>English</strong><br>
-                                                    from + Something<br>
-                                                    <strong>Japanese</strong><br>
-                                                    Something + から(kara)
-                                                </v-col>
-                                            </v-row>
-                                        </v-sheet>
-                                    </v-carousel-item>
-                                    <v-carousel-item>
-                                        <v-sheet height="100%" width="100%">
-                                            <v-row class="fill-height" align="center">
-                                                <v-col align="center">
-                                                    <strong>English</strong><br>
-                                                    for + Noun<br>
-                                                    <strong>Japanese</strong><br>
-                                                    Noun + のために(notameni)
-                                                </v-col>
-                                            </v-row>
-                                        </v-sheet>
-                                    </v-carousel-item>
-                                    <v-carousel-item>
-                                        <v-sheet height="100%" width="100%">
-                                            <v-row class="fill-height" align="center">
-                                                <v-col align="center">
-                                                    <strong>English</strong><br>
-                                                    for + Verb<br>
-                                                    <strong>Japanese</strong><br>
-                                                    Verb + ために(tameni)
+                                                    わたしたちは<font color="red"><strong>どの</strong></font>レストランにいく？<br>
+                                                    watashitachi wa <font color="red"><strong>dono</strong></font> resutoran ni iku?<br>
+                                                    Which restaurant do we go to?
                                                 </v-col>
                                             </v-row>
                                         </v-sheet>
                                     </v-carousel-item>
                                 </v-carousel>
                             </v-card>
-                        </v-col>
-                    </v-row>
-
-                    <!-- Order -->
-                    <v-row justify="center">
-                        <v-col xs="12" md="6" lg="6">
-                            <v-card>
-                                <v-system-bar>Order</v-system-bar>
-                                <v-carousel delimiter-icon="mdi-minus" :show-arrows="false" width="100%" height="350">
-                                    <v-carousel-item>
-                                        <v-sheet height="100%" width="100%">
-                                            <v-row class="fill-height" align="center">
-                                                <v-col align="center">
-                                                    <strong>English</strong><br>
-                                                    Subject + Adverb + Verb + Object + Place + Time + .<br>
-                                                    <strong>Japanese</strong><br>
-                                                    Time + Subject + は(wa)/が(ga) + Place + に(ni)/で(de) + Object + を(o) + Adverb + Verb + 。
-                                                </v-col>
-                                            </v-row>
-                                        </v-sheet>
-                                    </v-carousel-item>
-                                </v-carousel>
-                            </v-card>
-                        </v-col>
-                    </v-row>
-
-                    <!-- Youtube -->
-                    <v-row justify="center">
-                        <v-col xs="12" md="6" lg="6">
-                            <v-btn href="https://www.youtube.com/channel/UCCYB5BH-9JRMebgRy0sVQIQ" block outlined>
-                                My Youtube for Japanese audio
-                            </v-btn>
                         </v-col>
                     </v-row>
                 </v-container>
             </v-main>
             <!-------------------------------------------------------------------------------->
 
+            <!-- ▼ Footer ▼ ------------------------------------------------------------------>
+            <main-footer></main-footer>
+            <!-------------------------------------------------------------------------------->
+
         </template>
     </v-app>
-    <!------------------------------------------------------------------------------------>
-
-    <!-- ▼ Style ▼ ----------------------------------------------------------------------->
-    <style>
-
-    </style>
     <!------------------------------------------------------------------------------------>
 
     <!-- ▼ Script Load ▼ ----------------------------------------------------------------->
@@ -249,6 +208,7 @@
     <script src="https://fum0000.github.io/MySite_1/Component/main-system-bar.js"></script>
     <script src="https://fum0000.github.io/MySite_1/Component/main-navigation.js"></script>
     <script src="https://fum0000.github.io/MySite_1/Component/main-footer.js"></script>
+    <script src="https://fum0000.github.io/MySite_1/Component/Card/card-double.js"></script>
     <!------------------------------------------------------------------------------------>
 
     <!-- Script Content ------------------------------------------------------------------>
@@ -262,16 +222,49 @@
                 // Determined
                 drawer: false,
                 // Myself
+                Switch: false,
+                List: [],
             },
             methods: {
                 Change_Drawer(_value) {
                     this.drawer = _value;
                 }
             },
+            created: function () {
+                let japanese = [
+                    "何",
+                    "いつ",
+                    "どこ",
+                    "だれ",
+                    "どれ(どっち)",
+                    "どう(どうやって)",
+                ];
+                let reading = [
+                    "nani",
+                    "itsu",
+                    "doko",
+                    "dare",
+                    "dore(docchi)",
+                    "dou(douyatte)",
+                ];
+                let english = [
+                    "What",
+                    "When",
+                    "Where",
+                    "Who",
+                    "Which",
+                    "How",
+                ];
+                for (let i = 0; i < japanese.length; i++) {
+                    let row = {};
+                    row.id = i;
+                    row.japanese = japanese[i];
+                    row.reading = reading[i];
+                    row.english = english[i];
+                    this.List.push(row);
+                }
+            },
         })
-        // -------------------------------------------------------------------------------
-
-        // Javascript --------------------------------------------------------------------
         // -------------------------------------------------------------------------------
 
     </script>
