@@ -35,48 +35,48 @@ Vue.component('main-navigation', {
 
             <v-list-group :value="false" prepend-icon="mdi-book-open-page-variant-outline">
                 <template v-slot:activator>
-                    <v-list-item-title>Basic Japanese</v-list-item-title>
+                    <v-list-item-title>Basic</v-list-item-title>
                 </template>
 
-                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/character.html">
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Basic/character.html">
                     <v-list-item-icon />
                     <v-list-item-title>Character</v-list-item-title>
                 </v-list-item>
-                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/grammar.html">
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Basic/grammar.html">
                     <v-list-item-icon />
                     <v-list-item-title>Grammar</v-list-item-title>
                 </v-list-item>
-                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/asking.html">
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Basic/asking.html">
                     <v-list-item-icon />
                     <v-list-item-title>Asking</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Basic/word_general.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Word - General</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Basic/word_verb.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Word - Verb</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Basic/word_adjective_i.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Word - Adjective - i</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Basic/word_adjective_na.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Word - Adjective - na</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Basic/word_adverb.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Word - Adverb</v-list-item-title>
                 </v-list-item>
             </v-list-group>
 
             <v-list-group :value="false" prepend-icon="mdi-library-outline">
                 <template v-slot:activator>
-                    <v-list-item-title>Word - Basic</v-list-item-title>
+                    <v-list-item-title>Word - Life</v-list-item-title>
                 </template>
-                
-                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_basic.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>Basic</v-list-item-title>
-                </v-list-item>
-                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_verb.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>Verb</v-list-item-title>
-                </v-list-item>
-                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_adjective.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>Adjective</v-list-item-title>
-                </v-list-item>
-                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_adjective_special.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>Special Adjective</v-list-item-title>
-                </v-list-item>
-                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_adverb.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>Adverb</v-list-item-title>
-                </v-list-item>
+
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_house.html">
                     <v-list-item-icon />
                     <v-list-item-title>House</v-list-item-title>
@@ -89,28 +89,6 @@ Vue.component('main-navigation', {
                     <v-list-item-icon />
                     <v-list-item-title>Body</v-list-item-title>
                 </v-list-item>
-            </v-list-group>
-
-            <v-list-group :value="false" prepend-icon="mdi-library-outline">
-                <template v-slot:activator>
-                    <v-list-item-title>Word - Nature</v-list-item-title>
-                </template>
-
-                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_nature.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>Nature</v-list-item-title>
-                </v-list-item>
-                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_plant.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>Plant</v-list-item-title>
-                </v-list-item>
-            </v-list-group>
-
-            <v-list-group :value="false" prepend-icon="mdi-library-outline">
-                <template v-slot:activator>
-                    <v-list-item-title>Word - Life</v-list-item-title>
-                </template>
-
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_vehicle.html">
                     <v-list-item-icon />
                     <v-list-item-title>Vehicle</v-list-item-title>
@@ -139,9 +117,9 @@ Vue.component('main-navigation', {
                     <v-list-item-icon />
                     <v-list-item-title>Time</v-list-item-title>
                 </v-list-item>
-                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_personal_computer.html">
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_computer.html">
                     <v-list-item-icon />
-                    <v-list-item-title>Personal computer</v-list-item-title>
+                    <v-list-item-title>Computer</v-list-item-title>
                 </v-list-item>
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_kitchen.html">
                     <v-list-item-icon />
@@ -150,6 +128,21 @@ Vue.component('main-navigation', {
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_game.html">
                     <v-list-item-icon />
                     <v-list-item-title>Game</v-list-item-title>
+                </v-list-item>
+            </v-list-group>
+
+            <v-list-group :value="false" prepend-icon="mdi-library-outline">
+                <template v-slot:activator>
+                    <v-list-item-title>Word - Nature</v-list-item-title>
+                </template>
+
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_nature.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Nature</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_plant.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Plant</v-list-item-title>
                 </v-list-item>
             </v-list-group>
 
@@ -177,17 +170,6 @@ Vue.component('main-navigation', {
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_cafe.html">
                     <v-list-item-icon />
                     <v-list-item-title>Cafe</v-list-item-title>
-                </v-list-item>
-            </v-list-group>
-
-            <v-list-group :value="false" prepend-icon="mdi-library-outline">
-                <template v-slot:activator>
-                    <v-list-item-title>Word - Talking</v-list-item-title>
-                </template>
-
-                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_hello_talk.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>Hello Talk</v-list-item-title>
                 </v-list-item>
             </v-list-group>
 

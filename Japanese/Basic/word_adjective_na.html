@@ -30,7 +30,7 @@
         <template>
 
             <!-- ▼ Header ▼ ------------------------------------------------------------------>
-            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Word - Adverb</main-system-bar>
+            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Basic > Word - Adjective_na</main-system-bar>
             <!-------------------------------------------------------------------------------->
 
             <!-- ▼ Navigation ▼ -------------------------------------------------------------->
@@ -98,40 +98,31 @@
             },
             created: function () {
                 let japanese = [
-                    "副詞",
-                    "とても(めっちゃ)",
-                    "たくさん(結構)",
-                    "少し",
-                    "いつも(よく)",
-                    "偶に",
-                    "速く(早く)",
-                    "ゆっくり(遅く)",
-                    "上手に",
-                    "本当に",
+                    "特別な",
+                    "綺麗な",
+                    "大切な",
+                    "変な",
+                    "シンプルな",
+                    "複雑な",
+                    "必要な",
                 ];
                 let reading = [
-                    "hukushi",
-                    "totemo(meccha)",
-                    "takusan(kekkou)",
-                    "sukoshi",
-                    "itsumo(yoku)",
-                    "tamani",
-                    "hayaku",
-                    "yukkuri(osoku)",
-                    "jouzuni",
-                    "hontouni",
+                    "tokubetu na",
+                    "kirei na",
+                    "taisetsu na",
+                    "hen na",
+                    "sinpru na",
+                    "hukuzatsu na",
+                    "hitsuyou na",
                 ];
                 let english = [
-                    "Adverb",
-                    "Very",
-                    "A lot",
-                    "A little",
-                    "Always",
-                    "Sometimes",
-                    "Fast",
-                    "Slowly",
-                    "Well",
-                    "Really",
+                    "Special ",
+                    "Beautiful",
+                    "Important",
+                    "Strange",
+                    "Simple",
+                    "Complex",
+                    "Necessary",
                 ];
                 for (let i = 0; i < japanese.length; i++) {
                     let row = {};

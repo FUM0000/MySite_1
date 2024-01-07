@@ -30,7 +30,7 @@
         <template>
 
             <!-- ▼ Header ▼ ------------------------------------------------------------------>
-            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Word - Adjective</main-system-bar>
+            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Basic > Word - Adverb</main-system-bar>
             <!-------------------------------------------------------------------------------->
 
             <!-- ▼ Navigation ▼ -------------------------------------------------------------->
@@ -98,52 +98,40 @@
             },
             created: function () {
                 let japanese = [
-                    "形容詞",
-                    "大きい",
-                    "小さい",
-                    "明るい",
-                    "暗い",
-                    "冷たい",
-                    "暖かい",
-                    "熱い(暑い)",
-                    "固い",
-                    "柔らかい",
-                    "速い(早い)",
-                    "遅い",
-                    "美しい",
-                    "ダサい",
+                    "副詞",
+                    "とても(めっちゃ)",
+                    "たくさん(結構)",
+                    "少し",
+                    "いつも(よく)",
+                    "偶に",
+                    "速く(早く)",
+                    "ゆっくり(遅く)",
+                    "上手に",
+                    "本当に",
                 ];
                 let reading = [
-                    "keiyoushi",
-                    "ookii",
-                    "chiisai",
-                    "akarui",
-                    "kurai",
-                    "tsumetai",
-                    "atatakai",
-                    "atsui",
-                    "katai",
-                    "yawarakai",
-                    "hayai",
-                    "osoi",
-                    "utsukushii",
-                    "dasai",
+                    "hukushi",
+                    "totemo(meccha)",
+                    "takusan(kekkou)",
+                    "sukoshi",
+                    "itsumo(yoku)",
+                    "tamani",
+                    "hayaku",
+                    "yukkuri(osoku)",
+                    "jouzuni",
+                    "hontouni",
                 ];
                 let english = [
-                    "Adjective",
-                    "Large",
-                    "Small",
-                    "Bright",
-                    "Dark",
-                    "Cold",
-                    "Warm",
-                    "Hot",
-                    "Hard",
-                    "Soft",
+                    "Adverb",
+                    "Very",
+                    "A lot",
+                    "A little",
+                    "Always",
+                    "Sometimes",
                     "Fast",
-                    "Slow",
-                    "Beautiful",
-                    "Lame",
+                    "Slowly",
+                    "Well",
+                    "Really",
                 ];
                 for (let i = 0; i < japanese.length; i++) {
                     let row = {};
