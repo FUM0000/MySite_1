@@ -45,7 +45,9 @@
 
         // Update-------------------------------------------------------------------------
         function Update() {
-           if (Cat) Cat.rotation.y += 0.01;
+           if (Cat) {
+                Cat.rotation.y += 0.01;
+           }
            Camera_Controller.update();
         }
         //--------------------------------------------------------------------------------
@@ -82,6 +84,14 @@
                     object.scale.set(0.01, 0.01, 0.01);
                     object.position.set(0, 0, 0);
 
+                    
+                    // Animation
+                    const mixer = new THREE.AnimationMixer(object);
+                    const animation = object.animations[0];
+                    const action = mixer.clipAction(animation);
+                    action.play();
+
+
                     //オブジェクトとすべての子孫に対してコールバックを実行
                     object.traverse((child) => {
                         if (child.isMesh) {
@@ -90,6 +100,15 @@
                         }
                     });
                     Scene.add(object);
+
+
+                    // Animation
+                    function animate() {
+                        requestAnimationFrame(animate);
+                        mixer.update(0.02); // 0.01は時間の経過を表します
+                        Render();
+                    }
+                    animate();
                 },
                 // (xhr) => { console.log((xhr.loaded / xhr.total) * 100 + '% loaded') },
                 // (error) => { console.log(error) }
