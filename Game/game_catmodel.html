@@ -75,11 +75,11 @@
             // FBX Model
             Loader = new FBXLoader();
             Loader.load(
-                './Model/Cat_1.fbx',
+                'https://fum0000.github.io/MySite_1/Game/Model/Cat_1.fbx',
                 function (object) {
                     Cat = object;
 
-                    object.scale.set(1, 1, 1);
+                    object.scale.set(0.01, 0.01, 0.01);
                     object.position.set(0, 0, 0);
 
                     //オブジェクトとすべての子孫に対してコールバックを実行
