@@ -1,6 +1,6 @@
 Vue.component('main-system-bar', {
     template: `
-    <v-system-bar color="#CFD8DC80" class="font-weight-black" app>
+    <v-system-bar color="#CFD8DC80" class="font-weight-black"style="height: 50px;" app>
         <v-row aline="center">
             <v-col cols="6">
                 <audio id="current_bgm" src="" paused loop></audio>
