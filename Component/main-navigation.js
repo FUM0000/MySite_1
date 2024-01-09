@@ -312,6 +312,7 @@ Vue.component('main-navigation', {
                 <v-list-item-icon><v-icon>mdi-youtube</v-icon></v-list-item-icon>
                 <v-list-item-title>Youtube_Walking</v-list-item-title>
             </v-list-item>
+            <v-list-item></v-list-item>
 
         </v-list>
 
