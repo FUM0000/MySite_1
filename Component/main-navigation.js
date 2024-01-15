@@ -102,10 +102,6 @@ Vue.component('main-navigation', {
                     <v-list-item-icon />
                     <v-list-item-title>Body</v-list-item-title>
                 </v-list-item>
-                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_company.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>Company</v-list-item-title>
-                </v-list-item>
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_computer.html">
                     <v-list-item-icon />
                     <v-list-item-title>Computer</v-list-item-title>
@@ -113,10 +109,6 @@ Vue.component('main-navigation', {
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_game.html">
                     <v-list-item-icon />
                     <v-list-item-title>Game</v-list-item-title>
-                </v-list-item>
-                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_gym.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>Gym</v-list-item-title>
                 </v-list-item>
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_house.html">
                     <v-list-item-icon />
@@ -126,29 +118,9 @@ Vue.component('main-navigation', {
                     <v-list-item-icon />
                     <v-list-item-title>Kitchen</v-list-item-title>
                 </v-list-item>
-                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_park.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>Park</v-list-item-title>
-                </v-list-item>
-                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_road.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>Road</v-list-item-title>
-                </v-list-item>
-                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_school.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>School</v-list-item-title>
-                </v-list-item>
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_time.html">
                     <v-list-item-icon />
                     <v-list-item-title>Time</v-list-item-title>
-                </v-list-item>
-                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_vehicle.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>Vehicle</v-list-item-title>
-                </v-list-item>
-                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_weather.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>Weather</v-list-item-title>
                 </v-list-item>
             </v-list-group>
 
@@ -195,6 +167,41 @@ Vue.component('main-navigation', {
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_vegetable.html">
                     <v-list-item-icon />
                     <v-list-item-title>Vegetable</v-list-item-title>
+                </v-list-item>
+            </v-list-group>
+
+            <v-list-group :value="false" prepend-icon="mdi-library-outline">
+                <template v-slot:activator>
+                    <v-list-item-title>Word - Outside</v-list-item-title>
+                </template>
+
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_company.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Company</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_gym.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Gym</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_park.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Park</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_road.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Road</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_school.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>School</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_vehicle.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Vehicle</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_weather.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Weather</v-list-item-title>
                 </v-list-item>
             </v-list-group>
 
