@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<!-- ▼ Head ▼ ---------------------------------------------------------------------------->
+
+<head>
+
+    <!-- Setting -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+
+    <!-- Vue -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="https://fum0000.github.io/MySite_1/common.css" rel="stylesheet" />
+    <link href="https://fum0000.github.io/MySite_1/Japanese/common_word_japanese.css" rel="stylesheet" />
+
+</head>
+<!---------------------------------------------------------------------------------------->
+
+<!-- ▼ Body ▼ ---------------------------------------------------------------------------->
+
+<body>
+
+    <!-- ▼ App ▼ ------------------------------------------------------------------------->
+    <v-app id="app">
+        <template>
+
+            <!-- ▼ Header ▼ ------------------------------------------------------------------>
+            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Vegetable > Onion</main-system-bar>
+            <!-------------------------------------------------------------------------------->
+
+            <!-- ▼ Navigation ▼ -------------------------------------------------------------->
+            <main-navigation :drawer="drawer" @change-drawer="Change_Drawer"></main-navigation>
+            <!-------------------------------------------------------------------------------->
+
+            <!-- ▼ Main ▼ -------------------------------------------------------------------->
+            <v-main id="main" class="blue-grey lighten-4">
+                <v-container fluid fill-height>
+
+                    <row>Soil : Clay, pH = 6.3~7.8</row>
+                    <row>Germination : 20℃</row>
+                    <row>Space : 12~15cm</row>
+                    <row>Appropriate temperature : 15~20℃</row>
+                    <row>Fertilizer : ① 3 weeks after planting ② Before it gets warm</row>
+                    <row>Harvest : Once the leaves have fallen, harvest on a sunny day for 2-3 days and dry on the spot. Early harvest if we eat leaves.</row>
+                    <row>Remarks : None</row>
+
+                    <row>Information : Origin = Central Asia, Nutritional/100g</row>
+                    <row></row>
+
+                </v-container>
+            </v-main>
+            <!-------------------------------------------------------------------------------->
+
+            <!-- ▼ Footer ▼ ------------------------------------------------------------------>
+            <main-footer></main-footer>
+            <!-------------------------------------------------------------------------------->
+
+        </template>
+    </v-app>
+    <!------------------------------------------------------------------------------------>
+
+    <!-- ▼ Script Load ▼ ----------------------------------------------------------------->
+    <!-- Main -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- Compornent -->
+    <script src="https://fum0000.github.io/MySite_1/common.js"></script>
+    <script src="https://fum0000.github.io/MySite_1/Component/main-system-bar.js"></script>
+    <script src="https://fum0000.github.io/MySite_1/Component/main-navigation.js"></script>
+    <script src="https://fum0000.github.io/MySite_1/Component/main-footer.js"></script>
+    <script src="https://fum0000.github.io/MySite_1/Component/Card/card-double.js"></script>
+    <!------------------------------------------------------------------------------------>
+
+    <!-- Script Content ------------------------------------------------------------------>
+    <script>
+
+        // Variable ----------------------------------------------------------------------
+        let vue = new Vue({
+            el: '#app',
+            vuetify: new Vuetify(),
+            data: {
+                // Determined
+                drawer: false,
+                // Myself
+            },
+            methods: {
+                Change_Drawer(_value) {
+                    this.drawer = _value;
+                }
+            },
+            created: function () {
+            },
+        })
+        // -------------------------------------------------------------------------------
+
+    </script>
+    <!------------------------------------------------------------------------------------>
+</body>
+<!---------------------------------------------------------------------------------------->
+
+</html>

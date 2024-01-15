@@ -267,6 +267,26 @@ Vue.component('main-navigation', {
                 </v-list-item>
             </v-list-group>
 
+            
+            <v-list-group :value="false" prepend-icon="mdi-sprout">
+                <template v-slot:activator>
+                    <v-list-item-title>Vegetable</v-list-item-title>
+                </template>
+
+                <v-list-item href="https://fum0000.github.io/MySite_1/Vegetable/onion.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Onion</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Vegetable/spinach.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Spinach</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Vegetable/chrysanthemum.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Chrysanthemum</v-list-item-title>
+                </v-list-item>
+            </v-list-group>
+
             <v-list-group :value="false" prepend-icon="mdi-music">
                 <template v-slot:activator>
                     <v-list-item-title>Music</v-list-item-title>
