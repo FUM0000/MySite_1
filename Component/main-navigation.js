@@ -87,9 +87,52 @@ Vue.component('main-navigation', {
                     <v-list-item-icon />
                     <v-list-item-title>Italian</v-list-item-title>
                 </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_seafood.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Seafood</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_seasoning.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Seasoning</v-list-item-title>
+                </v-list-item>
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_sushi.html">
                     <v-list-item-icon />
                     <v-list-item-title>Sushi</v-list-item-title>
+                </v-list-item>
+            </v-list-group>
+
+            <v-list-group :value="false" prepend-icon="mdi-library-outline">
+                <template v-slot:activator>
+                    <v-list-item-title>Word - Hobby</v-list-item-title>
+                </template>
+
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_art.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Art</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_music.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Music</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_outdoor.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Outdoor</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_reading.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Reading</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_sf.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>SF</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_sport.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Sport</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_travel.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Travel</v-list-item-title>
                 </v-list-item>
             </v-list-group>
 
@@ -148,7 +191,7 @@ Vue.component('main-navigation', {
                     <v-list-item-icon />
                     <v-list-item-title>Cafe</v-list-item-title>
                 </v-list-item>
-                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_clothing_store.html">
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_clothes_store.html">
                     <v-list-item-icon />
                     <v-list-item-title>Clothes</v-list-item-title>
                 </v-list-item>

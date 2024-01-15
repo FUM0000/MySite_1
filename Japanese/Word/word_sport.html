@@ -30,7 +30,7 @@
         <template>
 
             <!-- ▼ Header ▼ ------------------------------------------------------------------>
-            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Word - Food > General</main-system-bar>
+            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Word - Hobby > Sport</main-system-bar>
             <!-------------------------------------------------------------------------------->
 
             <!-- ▼ Navigation ▼ -------------------------------------------------------------->
@@ -97,63 +97,61 @@
                 }
             },
             created: function () {
-                let japanese = [
-                    "食べ物",
-                    "ご飯",
-                    "卵",
-                    "野菜",
-                    "肉",
-                    "魚",
-                    "人参",
-                    "玉ねぎ",
-                    "じゃがいも",
-                    "キャベツ",
-                    "レタス",
-                    "きのこ",
-                    "鶏肉",
-                    "豚肉",
-                    "牛肉",
-                    "ソーセージ",
-                    "ベーコン",
+                let japaneseSports = [
+                    "スポーツ",
+                    "サッカー",
+                    "野球",
+                    "テニス",
+                    "バスケットボール",
+                    "バレーボール",
+                    "ゴルフ",
+                    "スイミング",
+                    "陸上競技",
+                    "アメリカンフットボール",
+                    "ボクシング",
+                    "卓球",
+                    "柔道",
+                    "モータースポーツ",
+                    "サーフィン",
+                    "スキー",
                 ];
-                let reading = [
-                    "tabemono",
-                    "gohan",
-                    "tamago",
-                    "yasai",
-                    "niku",
-                    "sakana",
-                    "ninjin",
-                    "tamanegi",
-                    "jagaimo",
-                    "kyabetsu",
-                    "retasu",
-                    "kinoko",
-                    "toriniku",
-                    "butaniku",
-                    "gyuuniku",
-                    "so-se-ji",
-                    "be-kon",
+                let readingSports = [
+                    "spootsu",
+                    "sakkaa",
+                    "yakyuu",
+                    "tenisu",
+                    "basukettobooru",
+                    "barebooru",
+                    "gorufu",
+                    "suimingu",
+                    "rikujou kyougi",
+                    "amerikan futtobooru",
+                    "bokushingu",
+                    "takkyuu",
+                    "judo",
+                    "moootaa supootsu",
+                    "saafin",
+                    "sukii",
                 ];
-                let english = [
-                    "Food",
-                    "Rice",
-                    "Egg",
-                    "Vegetable",
-                    "Meat",
-                    "Fish",
-                    "Carrot",
-                    "Onion",
-                    "Potato",
-                    "Cabbage",
-                    "Lettuce",
-                    "Mushroom",
-                    "Chiken",
-                    "Pork",
-                    "Beef",
-                    "Sausage",
-                    "Bacon",
+                let englishSports = [
+                    "Sport",
+                    "Soccer",
+                    "Baseball",
+                    "Tennis",
+                    "Basketball",
+                    "Volleyball",
+                    "Golf",
+                    "Swimming",
+                    "Track and Field",
+                    "American Football",
+                    "Boxing",
+                    "Table Tennis",
+                    "Judo",
+                    "Motorsports",
+                    "Surfing",
+                    "Skiing",
                 ];
+
                 for (let i = 0; i < japanese.length; i++) {
                     let row = {};
                     row.id = i;
