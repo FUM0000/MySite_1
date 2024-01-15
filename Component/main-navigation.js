@@ -81,7 +81,7 @@ Vue.component('main-navigation', {
 
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_food.html">
                     <v-list-item-icon />
-                    <v-list-item-title>Food</v-list-item-title>
+                    <v-list-item-title>General</v-list-item-title>
                 </v-list-item>
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_italian.html">
                     <v-list-item-icon />
@@ -159,7 +159,7 @@ Vue.component('main-navigation', {
 
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_nature.html">
                     <v-list-item-icon />
-                    <v-list-item-title>Nature</v-list-item-title>
+                    <v-list-item-title>General</v-list-item-title>
                 </v-list-item>
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_plant.html">
                     <v-list-item-icon />
@@ -178,7 +178,7 @@ Vue.component('main-navigation', {
                 </v-list-item>
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_clothing_store.html">
                     <v-list-item-icon />
-                    <v-list-item-title>Clothing store</v-list-item-title>
+                    <v-list-item-title>Clothes</v-list-item-title>
                 </v-list-item>
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_hospital.html">
                     <v-list-item-icon />
@@ -191,6 +191,10 @@ Vue.component('main-navigation', {
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_supermarket.html">
                     <v-list-item-icon />
                     <v-list-item-title>Supermarket</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_vegetable.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Vegetable</v-list-item-title>
                 </v-list-item>
             </v-list-group>
 
