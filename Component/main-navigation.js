@@ -23,7 +23,7 @@ Vue.component('main-navigation', {
         <!-- Navigation -->
         <v-list nav dense>
 
-            <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/greeting.html">
+            <v-list-item href="https://fum0000.github.io/MySite_1/greeting.html">
                 <v-list-item-icon><v-icon>mdi-human-greeting-variant</v-icon></v-list-item-icon>
                 <v-list-item-title>Greeting</v-list-item-title>
             </v-list-item>
