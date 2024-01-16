@@ -324,18 +324,22 @@ Vue.component('main-navigation', {
                 </v-list-item>
             </v-list-group>
 
-            <v-list-group :value="false" prepend-icon="mdi-noodles">
+            <v-list-group :value="false" prepend-icon="mdi-chef-hat">
                 <template v-slot:activator>
                     <v-list-item-title>Cooking</v-list-item-title>
                 </template>
 
-                <v-list-item href="https://fum0000.github.io/MySite_1/Youtube/cooking_easy.html">
+                <v-list-item href="https://fum0000.github.io/MySite_1/Youtube/cooking_simple.html">
                     <v-list-item-icon />
-                    <v-list-item-title>Easy</v-list-item-title>
+                    <v-list-item-title>Simple</v-list-item-title>
                 </v-list-item>
                 <v-list-item href="https://fum0000.github.io/MySite_1/Youtube/cooking_normal.html">
                     <v-list-item-icon />
                     <v-list-item-title>Normal</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Youtube/cooking_intricate.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Intricate</v-list-item-title>
                 </v-list-item>
                 <v-list-item href="https://fum0000.github.io/MySite_1/Youtube/cooking_chinese.html">
                     <v-list-item-icon />
