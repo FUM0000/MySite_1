@@ -30,7 +30,7 @@
         <template>
 
             <!-- ▼ Header ▼ ------------------------------------------------------------------>
-            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Word - Hobby > Sport</main-system-bar>
+            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Word - Food > Chinese</main-system-bar>
             <!-------------------------------------------------------------------------------->
 
             <!-- ▼ Navigation ▼ -------------------------------------------------------------->
@@ -98,60 +98,54 @@
             },
             created: function () {
                 let japanese = [
-                    "スポーツ",
-                    "サッカー",
-                    "野球",
-                    "テニス",
-                    "バスケットボール",
-                    "バレーボール",
-                    "ゴルフ",
-                    "水泳",
-                    "陸上競技",
-                    "アメリカンフットボール",
-                    "ボクシング",
-                    "卓球",
-                    "柔道",
-                    "モータースポーツ",
-                    "サーフィン",
-                    "スキー",
+                    "中華料理",
+                    "箸",
+                    "餃子",
+                    "春巻き",
+                    "炒め物",
+                    "麻婆豆腐",
+                    "煮物",
+                    "焼売",
+                    "小籠包",
+                    "唐辛子",
+                    "五香粉",
+                    "醤油",
+                    "醤豆腐",
+                    "蒸し物",
                 ];
                 let reading = [
-                    "spootsu",
-                    "sakkaa",
-                    "yakyuu",
-                    "tenisu",
-                    "basukettobooru",
-                    "bareebooru",
-                    "gorufu",
-                    "suiei",
-                    "rikujou kyougi",
-                    "amerikan futtobooru",
-                    "bokushingu",
-                    "takkyuu",
-                    "juudou",
-                    "moootaa supootsu",
-                    "saafin",
-                    "sukii",
+                    "chuuka ryouri",
+                    "hashi",
+                    "gyoza",
+                    "harumaki",
+                    "itamemono",
+                    "maboodoufu",
+                    "nimono",
+                    "shumai",
+                    "shouronpou",
+                    "tougarashi",
+                    "uushianfen",
+                    "shouyu",
+                    "shou doufu",
+                    "mushimono",
                 ];
                 let english = [
-                    "Sport",
-                    "Soccer",
-                    "Baseball",
-                    "Tennis",
-                    "Basketball",
-                    "Volleyball",
-                    "Golf",
-                    "Swimming",
-                    "Track and Field",
-                    "American Football",
-                    "Boxing",
-                    "Table Tennis",
-                    "Judo",
-                    "Motorsports",
-                    "Surfing",
-                    "Skiing",
+                    "Chinese cuisine",
+                    "Chopsticks",
+                    "Dumplings",
+                    "Spring rolls",
+                    "Stir-fried dishes",
+                    "Mapo tofu",
+                    "Simmered dishes",
+                    "Shumai",
+                    "Soup dumplings",
+                    "Chili pepper",
+                    "Five-spice powder",
+                    "Soy sauce",
+                    "Soybean curd in soy sauce",
+                    "Steamed dishes",
                 ];
-
+                
                 for (let i = 0; i < japanese.length; i++) {
                     let row = {};
                     row.id = i;

@@ -83,6 +83,11 @@ Vue.component('main-navigation', {
                     <v-list-item-icon />
                     <v-list-item-title>General</v-list-item-title>
                 </v-list-item>
+
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_food_chinese.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Chinese</v-list-item-title>
+                </v-list-item>
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_italian.html">
                     <v-list-item-icon />
                     <v-list-item-title>Italian</v-list-item-title>
@@ -98,6 +103,10 @@ Vue.component('main-navigation', {
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_sushi.html">
                     <v-list-item-icon />
                     <v-list-item-title>Sushi</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_vegetable.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Vegetable</v-list-item-title>
                 </v-list-item>
             </v-list-group>
 
@@ -172,6 +181,10 @@ Vue.component('main-navigation', {
                     <v-list-item-title>Word - Nature</v-list-item-title>
                 </template>
 
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_animal.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Animal</v-list-item-title>
+                </v-list-item>
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_nature.html">
                     <v-list-item-icon />
                     <v-list-item-title>General</v-list-item-title>
@@ -206,10 +219,6 @@ Vue.component('main-navigation', {
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_supermarket.html">
                     <v-list-item-icon />
                     <v-list-item-title>Supermarket</v-list-item-title>
-                </v-list-item>
-                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_vegetable.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>Vegetable</v-list-item-title>
                 </v-list-item>
             </v-list-group>
 
