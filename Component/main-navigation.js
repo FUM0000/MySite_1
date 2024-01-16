@@ -181,17 +181,30 @@ Vue.component('main-navigation', {
                     <v-list-item-title>Word - Nature</v-list-item-title>
                 </template>
 
-                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_animal.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>Animal</v-list-item-title>
-                </v-list-item>
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_nature.html">
                     <v-list-item-icon />
                     <v-list-item-title>General</v-list-item-title>
                 </v-list-item>
+                
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_animal.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Animal</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_forest.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Forest</v-list-item-title>
+                </v-list-item>
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_plant.html">
                     <v-list-item-icon />
                     <v-list-item-title>Plant</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_river.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>River</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_sea.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Sea</v-list-item-title>
                 </v-list-item>
             </v-list-group>
 
