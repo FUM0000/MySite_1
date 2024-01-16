@@ -16,7 +16,6 @@
 
     <!-- CSS -->
     <link href="https://fum0000.github.io/MySite_1/common.css" rel="stylesheet" />
-    <link href="https://fum0000.github.io/MySite_1/Japanese/common_word_japanese.css" rel="stylesheet" />
 
 </head>
 <!---------------------------------------------------------------------------------------->
@@ -30,7 +29,7 @@
         <template>
 
             <!-- ▼ Header ▼ ------------------------------------------------------------------>
-            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Vegetable > Onion</main-system-bar>
+            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Cooking - Easy</main-system-bar>
             <!-------------------------------------------------------------------------------->
 
             <!-- ▼ Navigation ▼ -------------------------------------------------------------->
@@ -39,53 +38,13 @@
 
             <!-- ▼ Main ▼ -------------------------------------------------------------------->
             <v-main id="main" class="blue-grey lighten-4">
-                <v-container fluid fill-height>
+                <v-container>
                     <v-row justify="center">
-                        <v-col xs="12" md="6">
-                            <v-simple-table dark fixed-header class = "rounded-table">
-                                <template v-slot:default>
-                                <thead>
-                                    <tr>
-                                        <th class="text-left">Item</th>
-                                        <th class="text-left">Contents</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Soil</td>
-                                        <td>Clay<br>pH = 6.3~7.8</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Germination</td>
-                                        <td>20℃</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Space</td>
-                                        <td>12~15cm</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Appropriate temperature</td>
-                                        <td>15~20℃</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fertilizer</td>
-                                        <td>① 3 weeks after planting<br>② Before it gets warm</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Harvest</td>
-                                        <td>Once the leaves have fallen, harvest on a sunny day for 2-3 days and dry on the spot.<br>Early harvest if we eat leaves.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Remarks</td>
-                                        <td>None</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Information</td>
-                                        <td>Origin = Central Asia<br>Nutritional/100g = Coming soon</td>
-                                    </tr>
-                                </tbody>
-                                </template>
-                            </v-simple-table>
+                        <v-col class="youtube_col" xs="12" md="4">
+                            <iframe class="youtube" src="https://www.youtube-nocookie.com/embed/Pmhe1VvDm3I?si=RtuALkvuvGSTYI4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
+                        </v-col>
+                        <v-col class="youtube_col" xs="12" md="4">
+                            <iframe class="youtube" src="https://www.youtube-nocookie.com/embed/r9kSBTXWeNQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </v-col>
                     </v-row>
                 </v-container>
@@ -102,7 +61,7 @@
 
     <!-- ▼ Style ▼ ----------------------------------------------------------------------->
     <style>
-        
+
     </style>
     <!------------------------------------------------------------------------------------>
 
@@ -117,7 +76,6 @@
     <script src="https://fum0000.github.io/MySite_1/Component/main-system-bar.js"></script>
     <script src="https://fum0000.github.io/MySite_1/Component/main-navigation.js"></script>
     <script src="https://fum0000.github.io/MySite_1/Component/main-footer.js"></script>
-    <script src="https://fum0000.github.io/MySite_1/Component/Card/card-double.js"></script>
     <!------------------------------------------------------------------------------------>
 
     <!-- Script Content ------------------------------------------------------------------>
@@ -131,15 +89,19 @@
                 // Determined
                 drawer: false,
                 // Myself
+
             },
             methods: {
                 Change_Drawer(_value) {
                     this.drawer = _value;
                 }
             },
-            created: function () {
-            },
         })
+        // -------------------------------------------------------------------------------
+
+        // Javascript --------------------------------------------------------------------
+        $(".youtube").width($(".youtube_col").width());
+        $(".youtube").height($(".youtube_col").width() * (315 / 560));
         // -------------------------------------------------------------------------------
 
     </script>

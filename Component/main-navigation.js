@@ -326,20 +326,28 @@ Vue.component('main-navigation', {
 
             <v-list-group :value="false" prepend-icon="mdi-noodles">
                 <template v-slot:activator>
-                    <v-list-item-title>Dish</v-list-item-title>
+                    <v-list-item-title>Cooking</v-list-item-title>
                 </template>
 
-                <v-list-item href="https://fum0000.github.io/MySite_1/Youtube/dish_simple.html">
+                <v-list-item href="https://fum0000.github.io/MySite_1/Youtube/cooking_easy.html">
                     <v-list-item-icon />
-                    <v-list-item-title>Simple</v-list-item-title>
+                    <v-list-item-title>Easy</v-list-item-title>
                 </v-list-item>
-                <v-list-item href="https://fum0000.github.io/MySite_1/Youtube/dish_normal.html">
+                <v-list-item href="https://fum0000.github.io/MySite_1/Youtube/cooking_normal.html">
                     <v-list-item-icon />
                     <v-list-item-title>Normal</v-list-item-title>
                 </v-list-item>
-                <v-list-item href="https://fum0000.github.io/MySite_1/Youtube/dish_chinese.html">
+                <v-list-item href="https://fum0000.github.io/MySite_1/Youtube/cooking_chinese.html">
                     <v-list-item-icon />
                     <v-list-item-title>Chinese</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Youtube/cooking_pasta.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Pasta</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Youtube/cooking_ramen.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Ramen</v-list-item-title>
                 </v-list-item>
             </v-list-group>
 
