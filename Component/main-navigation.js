@@ -119,6 +119,10 @@ Vue.component('main-navigation', {
                     <v-list-item-icon />
                     <v-list-item-title>Art</v-list-item-title>
                 </v-list-item>
+                <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_math.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Math</v-list-item-title>
+                </v-list-item>
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Word/word_music.html">
                     <v-list-item-icon />
                     <v-list-item-title>Music</v-list-item-title>
@@ -293,22 +297,7 @@ Vue.component('main-navigation', {
                 </v-list-item>
             </v-list-group>
 
-            <v-list-group :value="false" prepend-icon="mdi-library-outline">
-                <template v-slot:activator>
-                    <v-list-item-title>Spanish</v-list-item-title>
-                </template>
-
-                <v-list-item href="https://fum0000.github.io/MySite_1/Spanish/dele_a1.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>DELE - A1</v-list-item-title>
-                </v-list-item>
-                <v-list-item href="https://fum0000.github.io/MySite_1/Spanish/dele_a2.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>DELE - A2</v-list-item-title>
-                </v-list-item>
-            </v-list-group>
-
-
+            
 
             <v-list-group :value="false" prepend-icon="mdi-gamepad-square-outline">
                 <template v-slot:activator>
