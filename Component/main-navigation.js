@@ -27,6 +27,10 @@ Vue.component('main-navigation', {
                 <v-list-item-icon><v-icon>mdi-human-greeting-variant</v-icon></v-list-item-icon>
                 <v-list-item-title>Greeting</v-list-item-title>
             </v-list-item>
+            <v-list-item href="https://fum0000.github.io/MySite_1/points_learning.html">
+                <v-list-item-icon><v-icon>mdi-human-greeting-variant</v-icon></v-list-item-icon>
+                <v-list-item-title>Learning Points</v-list-item-title>
+            </v-list-item>
 
             <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/word_limited_period.html">
                 <v-list-item-icon><v-icon>mdi-clock-alert-outline</v-icon></v-list-item-icon>
@@ -297,7 +301,7 @@ Vue.component('main-navigation', {
                 </v-list-item>
             </v-list-group>
 
-            
+
 
             <v-list-group :value="false" prepend-icon="mdi-gamepad-square-outline">
                 <template v-slot:activator>
