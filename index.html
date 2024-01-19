@@ -170,10 +170,10 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <!-- Compornent -->
-    <script src="https://fum0000.github.io/MySite_1/common.js"></script>
-    <script src="https://fum0000.github.io/MySite_1/Component/main-system-bar.js"></script>
-    <script src="https://fum0000.github.io/MySite_1/Component/main-navigation.js"></script>
-    <script src="https://fum0000.github.io/MySite_1/Component/main-footer.js"></script>
+    <script src="../MySite_1/common.js"></script>
+    <script src="../MySite_1/Component/main-system-bar.js"></script>
+    <script src="../MySite_1/Component/main-navigation.js"></script>
+    <script src="../MySite_1/Component/main-footer.js"></script>
     <!------------------------------------------------------------------------------------>
 
     <!-- Script Content ------------------------------------------------------------------>
@@ -318,8 +318,7 @@
                     let audio = $("#current_bgm")[0];
                     audio.currentTime = 0;
                     let playing = Get_PlayingBGM(); // I need to change here
-                    audio.pause();
-                    audio.src = "https://fum0000.github.io/MySite_1/Audio/" + this.List_BGM[_number];
+                    audio.src = "../MySite_1/Audio/" + this.List_BGM[_number];
                     playing ? audio.play() : audio.pause();
 
                     Change_BGM_Name(this.List_BGM[_number]);
