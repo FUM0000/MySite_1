@@ -17,7 +17,7 @@ Vue.component('main-navigation', {
 
         <!-- Home -->
         <v-btn href="https://fum0000.github.io/MySite_1/index.html" class="font-weight-black non-underline" block dark>
-            Home
+            Back to Home<v-icon>mdi-home</v-icon>
         </v-btn>
 
         <!-- Navigation -->
@@ -32,10 +32,10 @@ Vue.component('main-navigation', {
                 <v-list-item-title>Learning Points</v-list-item-title>
             </v-list-item>
 
-            <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/word_limited_period.html">
+            <!-- <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/word_limited_period.html">
                 <v-list-item-icon><v-icon>mdi-clock-alert-outline</v-icon></v-list-item-icon>
                 <v-list-item-title>Limited period word</v-list-item-title>
-            </v-list-item>
+            </v-list-item> -->
 
 
             <v-list-group :value="false" prepend-icon="mdi-book-open-page-variant-outline">
