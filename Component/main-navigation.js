@@ -223,7 +223,7 @@ Vue.component('main-navigation', {
                 </v-list-item>
             </v-list-group>
 
-            <v-list-group :value="false" prepend-icon="mdi-cart-outline">
+            <v-list-group :value="false" prepend-icon="mdi-cart">
                 <template v-slot:activator>
                     <v-list-item-title>Word - Shop</v-list-item-title>
                 </template>
