@@ -16,6 +16,7 @@
 
     <!-- CSS -->
     <link href="./Common/common.css" rel="stylesheet" />
+    <link href="./Common/common_word_japanese.css" rel="stylesheet" />
 
 </head>
 <!---------------------------------------------------------------------------------------->
@@ -29,7 +30,7 @@
         <template>
 
             <!-- ▼ Header ▼ ------------------------------------------------------------------>
-            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Greeting</main-system-bar>
+            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Kanji - Basic</main-system-bar>
             <!-------------------------------------------------------------------------------->
 
             <!-- ▼ Navigation ▼ -------------------------------------------------------------->
@@ -39,45 +40,16 @@
             <!-- ▼ Main ▼ -------------------------------------------------------------------->
             <v-main id="main" class="blue-grey lighten-4">
                 <v-container fluid fill-height>
-                    <!-- Greeting -->
-                    <v-row justify="center">
-                        <v-col xs="12" md="6" lg="6">
-                            <v-card>
-                                <v-system-bar>Greeting</v-system-bar>
-                                <v-carousel delimiter-icon="mdi-minus" :show-arrows="false" width="100%" height="200">
-                                    <v-carousel-item>
-                                        <v-sheet height="100%" width="100%">
-                                            <v-row class="fill-height" align="center" justify="center">
-                                                <v-col cols="10" align="center">
-                                                    Hello!<br>
-                                                    Welcome to the my website!
-                                                </v-col>
-                                            </v-row>
-                                        </v-sheet>
-                                    </v-carousel-item>
-                                    <v-carousel-item>
-                                        <v-sheet height="100%" width="100%">
-                                            <v-row class="fill-height" align="center" justify="center">
-                                                <v-col cols="10" align="center">
-                                                    You may be able to improve your Japanese ability under my simple
-                                                    idea here.
-                                                </v-col>
-                                            </v-row>
-                                        </v-sheet>
-                                    </v-carousel-item>
-                                    <v-carousel-item>
-                                        <v-sheet height="100%" width="100%">
-                                            <v-row class="fill-height" align="center" justify="center">
-                                                <v-col cols="10" align="center">
-                                                    So without further ado, let's recap what we should know beforehand!<br>
-                                                    <br>
-                                                    <v-btn rounded outlined href="./points_learning.html">Check Learning Points</v-btn>
-                                                </v-col>
-                                            </v-row>
-                                        </v-sheet>
-                                    </v-carousel-item>
-                                </v-carousel>
-                            </v-card>
+                    <v-row no-gutters><v-col cols="2" md="1" lg="1"></v-col><v-spacer></v-spacer><v-col cols="5" md="2" lg="2"><v-switch v-model="Switch" :label="`All Change`" inset hide-details="false"/></v-col></v-row>
+                    <v-row justify="center" class="ma-0">
+                        <v-col cols="12" md="3" lg="3" v-for="list in List" :key="list.id">
+                            <card-double-kanji :all_show="Switch">
+                                <template v-slot:first>{{ list.kanji }}
+                                </template>
+                                <template v-slot:second>{{ list.english }}<br>
+                                    <font size="5">{{ list.reading }}</font>
+                                </template>
+                            </card-double-kanji>
                         </v-col>
                     </v-row>
                 </v-container>
@@ -92,12 +64,6 @@
     </v-app>
     <!------------------------------------------------------------------------------------>
 
-    <!-- ▼ Style ▼ ----------------------------------------------------------------------->
-    <style>
-
-    </style>
-    <!------------------------------------------------------------------------------------>
-
     <!-- ▼ Script Load ▼ ----------------------------------------------------------------->
     <!-- Main -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
@@ -109,6 +75,7 @@
     <script src="./Component/main-system-bar.js"></script>
     <script src="./Component/main-navigation.js"></script>
     <script src="./Component/main-footer.js"></script>
+    <script src="./Component/Card/card-double-kanji.js"></script>
     <!------------------------------------------------------------------------------------>
 
     <!-- Script Content ------------------------------------------------------------------>
@@ -122,15 +89,98 @@
                 // Determined
                 drawer: false,
                 // Myself
-
+                List: [],
+                Switch: false,
             },
             methods: {
                 Change_Drawer(_value) {
                     this.drawer = _value;
-                },
-                test() {
-                    this.$refs.carousel.goToPage(this.$refs.carousel.getNextPage());
-                },
+                }
+            },
+            created: function () {
+                let kanji = [
+                    "漢字",
+                    "私",
+                    "日本",
+                    "人",
+                    "時間",
+                    "昨日",
+                    "今日",
+                    "明日",
+                    "朝",
+                    "昼",
+                    "夜",
+                    "食べ物",
+                    "ご飯",
+                    "食べる",
+                    "見る",
+                    "聞く",
+                    "触る",
+                    "話す",
+                    "歩く",
+                    "書く",
+                    "飲む",
+                    "走る",
+                    "洗う",
+                ];
+                let reading = [
+                    "kanji",
+                    "watashi",
+                    "nihon",
+                    "hito",
+                    "jikan",
+                    "kinou",
+                    "kyou",
+                    "ashita",
+                    "asa",
+                    "hiru",
+                    "yoru",
+                    "tabemono",
+                    "gohan",
+                    "taberu",
+                    "miru",
+                    "kiku",
+                    "sawaru",
+                    "hanasu",
+                    "aruku",
+                    "kaku",
+                    "nomu",
+                    "hashiru",
+                    "arau",
+                ];
+                let english = [
+                    "Kanji",
+                    "I",
+                    "Japan",
+                    "Person",
+                    "Time",
+                    "Yesterday",
+                    "Today",
+                    "Tomorrow",
+                    "Morning",
+                    "Afternoon",
+                    "Night",
+                    "Food",
+                    "Dish",
+                    "Eat",
+                    "Watch",
+                    "Hear, Listen",
+                    "Touch",
+                    "Talk",
+                    "Walk",
+                    "Write",
+                    "Drink",
+                    "Run",
+                    "Wash",
+                ];
+                for (let i = 0; i < kanji.length; i++) {
+                    let row = {};
+                    row.id = i;
+                    row.kanji = kanji[i];
+                    row.reading = reading[i];
+                    row.english = english[i];
+                    this.List.push(row);
+                }
             },
         })
         // -------------------------------------------------------------------------------

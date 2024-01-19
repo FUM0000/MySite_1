@@ -16,6 +16,10 @@
 
     <!-- CSS -->
     <link href="./Common/common.css" rel="stylesheet" />
+    <link href="./Common/common_word_japanese.css" rel="stylesheet" />
+
+    <!-- VueChartJs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 <!---------------------------------------------------------------------------------------->
@@ -29,7 +33,7 @@
         <template>
 
             <!-- ▼ Header ▼ ------------------------------------------------------------------>
-            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Greeting</main-system-bar>
+            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Vegetable > Onion</main-system-bar>
             <!-------------------------------------------------------------------------------->
 
             <!-- ▼ Navigation ▼ -------------------------------------------------------------->
@@ -39,45 +43,52 @@
             <!-- ▼ Main ▼ -------------------------------------------------------------------->
             <v-main id="main" class="blue-grey lighten-4">
                 <v-container fluid fill-height>
-                    <!-- Greeting -->
                     <v-row justify="center">
-                        <v-col xs="12" md="6" lg="6">
-                            <v-card>
-                                <v-system-bar>Greeting</v-system-bar>
-                                <v-carousel delimiter-icon="mdi-minus" :show-arrows="false" width="100%" height="200">
-                                    <v-carousel-item>
-                                        <v-sheet height="100%" width="100%">
-                                            <v-row class="fill-height" align="center" justify="center">
-                                                <v-col cols="10" align="center">
-                                                    Hello!<br>
-                                                    Welcome to the my website!
-                                                </v-col>
-                                            </v-row>
-                                        </v-sheet>
-                                    </v-carousel-item>
-                                    <v-carousel-item>
-                                        <v-sheet height="100%" width="100%">
-                                            <v-row class="fill-height" align="center" justify="center">
-                                                <v-col cols="10" align="center">
-                                                    You may be able to improve your Japanese ability under my simple
-                                                    idea here.
-                                                </v-col>
-                                            </v-row>
-                                        </v-sheet>
-                                    </v-carousel-item>
-                                    <v-carousel-item>
-                                        <v-sheet height="100%" width="100%">
-                                            <v-row class="fill-height" align="center" justify="center">
-                                                <v-col cols="10" align="center">
-                                                    So without further ado, let's recap what we should know beforehand!<br>
-                                                    <br>
-                                                    <v-btn rounded outlined href="./points_learning.html">Check Learning Points</v-btn>
-                                                </v-col>
-                                            </v-row>
-                                        </v-sheet>
-                                    </v-carousel-item>
-                                </v-carousel>
-                            </v-card>
+                        <v-col xs="12" md="6">
+                            <v-simple-table dark fixed-header class = "rounded-table">
+                                <template v-slot:default>
+                                <thead>
+                                    <tr>
+                                        <th class="text-left">Item</th>
+                                        <th class="text-left">Contents</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Soil</td>
+                                        <td>Clay<br>pH = 6.3~7.8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Germination</td>
+                                        <td>20℃</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Space</td>
+                                        <td>12~15cm</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Appropriate temperature</td>
+                                        <td>15~20℃</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fertilizer</td>
+                                        <td>① 3 weeks after planting<br>② Before it gets warm</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Harvest</td>
+                                        <td>Once the leaves have fallen, harvest on a sunny day for 2-3 days and dry on the spot.<br>Early harvest if we eat leaves.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Remarks</td>
+                                        <td>None</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Information</td>
+                                        <td>Origin = Central Asia<br><canvas id="myChart"></canvas></td>
+                                    </tr>
+                                </tbody>
+                                </template>
+                            </v-simple-table>
                         </v-col>
                     </v-row>
                 </v-container>
@@ -94,7 +105,7 @@
 
     <!-- ▼ Style ▼ ----------------------------------------------------------------------->
     <style>
-
+        
     </style>
     <!------------------------------------------------------------------------------------>
 
@@ -109,6 +120,7 @@
     <script src="./Component/main-system-bar.js"></script>
     <script src="./Component/main-navigation.js"></script>
     <script src="./Component/main-footer.js"></script>
+    <script src="./Component/Card/card-double.js"></script>
     <!------------------------------------------------------------------------------------>
 
     <!-- Script Content ------------------------------------------------------------------>
@@ -122,20 +134,44 @@
                 // Determined
                 drawer: false,
                 // Myself
-
             },
             methods: {
                 Change_Drawer(_value) {
                     this.drawer = _value;
-                },
-                test() {
-                    this.$refs.carousel.goToPage(this.$refs.carousel.getNextPage());
-                },
+                }
             },
         })
         // -------------------------------------------------------------------------------
 
-        // Javascript --------------------------------------------------------------------
+        // Variable ----------------------------------------------------------------------
+        const ctx = document.getElementById('myChart');
+        new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: [
+                    'Calories(80kcal)',
+                    'Protein(4g)',
+                    'Lipid(0.9g)',
+                    'Carbohydrates(18g)',
+                    'Potassium(570mg)',
+                    'Calcium(62mg)',
+                    'Magnesium(35mg)',
+                ],
+                datasets: [{
+                    label: 'Nutritional/100g (%)',
+                    data: [38, 20, 11, 41, 19, 29, 20],
+                    fill: true,
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    pointBackgroundColor: 'rgb(255, 99, 132)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgb(255, 99, 132)'
+                },]
+            },
+            options: {
+            }
+        });
         // -------------------------------------------------------------------------------
 
     </script>

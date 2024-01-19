@@ -16,6 +16,7 @@
 
     <!-- CSS -->
     <link href="./Common/common.css" rel="stylesheet" />
+    <link href="./Common/common_word_japanese.css" rel="stylesheet" />
 
 </head>
 <!---------------------------------------------------------------------------------------->
@@ -29,7 +30,7 @@
         <template>
 
             <!-- ▼ Header ▼ ------------------------------------------------------------------>
-            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Greeting</main-system-bar>
+            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Word - Nature > General</main-system-bar>
             <!-------------------------------------------------------------------------------->
 
             <!-- ▼ Navigation ▼ -------------------------------------------------------------->
@@ -39,45 +40,15 @@
             <!-- ▼ Main ▼ -------------------------------------------------------------------->
             <v-main id="main" class="blue-grey lighten-4">
                 <v-container fluid fill-height>
-                    <!-- Greeting -->
-                    <v-row justify="center">
-                        <v-col xs="12" md="6" lg="6">
-                            <v-card>
-                                <v-system-bar>Greeting</v-system-bar>
-                                <v-carousel delimiter-icon="mdi-minus" :show-arrows="false" width="100%" height="200">
-                                    <v-carousel-item>
-                                        <v-sheet height="100%" width="100%">
-                                            <v-row class="fill-height" align="center" justify="center">
-                                                <v-col cols="10" align="center">
-                                                    Hello!<br>
-                                                    Welcome to the my website!
-                                                </v-col>
-                                            </v-row>
-                                        </v-sheet>
-                                    </v-carousel-item>
-                                    <v-carousel-item>
-                                        <v-sheet height="100%" width="100%">
-                                            <v-row class="fill-height" align="center" justify="center">
-                                                <v-col cols="10" align="center">
-                                                    You may be able to improve your Japanese ability under my simple
-                                                    idea here.
-                                                </v-col>
-                                            </v-row>
-                                        </v-sheet>
-                                    </v-carousel-item>
-                                    <v-carousel-item>
-                                        <v-sheet height="100%" width="100%">
-                                            <v-row class="fill-height" align="center" justify="center">
-                                                <v-col cols="10" align="center">
-                                                    So without further ado, let's recap what we should know beforehand!<br>
-                                                    <br>
-                                                    <v-btn rounded outlined href="./points_learning.html">Check Learning Points</v-btn>
-                                                </v-col>
-                                            </v-row>
-                                        </v-sheet>
-                                    </v-carousel-item>
-                                </v-carousel>
-                            </v-card>
+                    <v-row no-gutters><v-col cols="2" md="1" lg="1"></v-col><v-spacer></v-spacer><v-col cols="5" md="2" lg="2"><v-switch v-model="Switch" :label="`All Change`" inset hide-details="false"/></v-col></v-row>
+                    <v-row justify="center" class="ma-0">
+                        <v-col cols="12" md="3" lg="3" v-for="list in List" :key="list.id">
+                            <card-double :all_show="Switch">
+                                <template v-slot:first>{{ list.japanese }}<br>
+                                    <font size="5">{{ list.reading }}</font>
+                                </template>
+                                <template v-slot:second>{{ list.english }}</template>
+                            </card-double>
                         </v-col>
                     </v-row>
                 </v-container>
@@ -92,12 +63,6 @@
     </v-app>
     <!------------------------------------------------------------------------------------>
 
-    <!-- ▼ Style ▼ ----------------------------------------------------------------------->
-    <style>
-
-    </style>
-    <!------------------------------------------------------------------------------------>
-
     <!-- ▼ Script Load ▼ ----------------------------------------------------------------->
     <!-- Main -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
@@ -109,6 +74,7 @@
     <script src="./Component/main-system-bar.js"></script>
     <script src="./Component/main-navigation.js"></script>
     <script src="./Component/main-footer.js"></script>
+    <script src="./Component/Card/card-double.js"></script>
     <!------------------------------------------------------------------------------------>
 
     <!-- Script Content ------------------------------------------------------------------>
@@ -122,20 +88,91 @@
                 // Determined
                 drawer: false,
                 // Myself
-
+                Switch: false,
+                List: [],
             },
             methods: {
                 Change_Drawer(_value) {
                     this.drawer = _value;
-                },
-                test() {
-                    this.$refs.carousel.goToPage(this.$refs.carousel.getNextPage());
-                },
+                }
+            },
+            created: function () {
+                let japanese = [
+                    "自然",
+                    "川",
+                    "山",
+                    "海",
+                    "緑",
+                    "ビーチ",
+                    "石",
+                    "岩",
+                    "砂",
+                    "木",
+                    "森",
+                    "草",
+                    "花",
+                    "虫",
+                    "動物",
+                    "鳥",
+                    "空",
+                    "青空",
+                    "雲",
+                    "太陽",
+                ];
+                let reading = [
+                    "sizen",
+                    "kawa",
+                    "yama",
+                    "umi",
+                    "midori",
+                    "bi-chi",
+                    "ishi",
+                    "iwa",
+                    "suna",
+                    "ki",
+                    "mori",
+                    "kusa",
+                    "hana",
+                    "mushi",
+                    "doubutsu",
+                    "tori",
+                    "sora",
+                    "aozora",
+                    "kumo",
+                    "taiyou",
+                ];
+                let english = [
+                    "Nature",
+                    "River",
+                    "Moutain",
+                    "Sea",
+                    "Green",
+                    "Beach",
+                    "Stone",
+                    "Rock",
+                    "Sand",
+                    "Tree",
+                    "Forest",
+                    "Grass",
+                    "Flower",
+                    "Insect",
+                    "Animal",
+                    "Bird",
+                    "Sky",
+                    "Blue sky",
+                    "Cloud",
+                    "Sun",
+                ];
+                for (let i = 0; i < japanese.length; i++) {
+                    let row = {};
+                    row.id = i;
+                    row.japanese = japanese[i];
+                    row.reading = reading[i];
+                    row.english = english[i];
+                    this.List.push(row);
+                }
             },
         })
-        // -------------------------------------------------------------------------------
-
-        // Javascript --------------------------------------------------------------------
         // -------------------------------------------------------------------------------
 
     </script>
