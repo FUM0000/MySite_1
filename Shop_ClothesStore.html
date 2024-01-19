@@ -16,7 +16,6 @@
 
     <!-- CSS -->
     <link href="./Common/common.css" rel="stylesheet" />
-    <link href="./Common/common_word_japanese.css" rel="stylesheet" />
 
 </head>
 <!---------------------------------------------------------------------------------------->
@@ -30,7 +29,7 @@
         <template>
 
             <!-- ▼ Header ▼ ------------------------------------------------------------------>
-            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Basic > Word - General</main-system-bar>
+            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Word - Shop > Clothes Store</main-system-bar>
             <!-------------------------------------------------------------------------------->
 
             <!-- ▼ Navigation ▼ -------------------------------------------------------------->
@@ -62,6 +61,7 @@
         </template>
     </v-app>
     <!------------------------------------------------------------------------------------>
+<link href="./Common/common_word_japanese.css" rel="stylesheet" />
 
     <!-- ▼ Script Load ▼ ----------------------------------------------------------------->
     <!-- Main -->
@@ -96,78 +96,66 @@
                     this.drawer = _value;
                 }
             },
-            created: function() {
+            created: function () {
                 let japanese = [
-                    "こんにちは",
-                    "ありがとう",
-                    "だいじょうぶ",
-                    "よろしく",
-                    "ちょうしはどう",
-                    "わたし",
-                    "あなた",
-                    "noun + と + noun",
-                    "これ",
-                    "それ",
-                    "noun + か + noun",
-                    "する",
-                    "べんきょう",
-                    "にほんご",
-                    "えいご",
-                    "きょう",
-                    "いま",
-                    "なに",
-                    "いつ",
-                    "どこ",
-                    "なんで",
-                    "どう",
+                    "服屋",
+                    "服",
+                    "トップス",
+                    "ボトムス",
+                    "シャツ",
+                    "Tシャツ",
+                    "ズボン",
+                    "スカート",
+                    "靴",
+                    "色",
+                    "店員",
+                    "会計",
+                    "綺麗",
+                    "かわいい",
+                    "かっこいい",
+                    "ダサい",
+                    "暗い",
+                    "明るい",
                 ];
                 let reading = [
-                    "konnichiwa",
-                    "arigatou",
-                    "daijoubu",
-                    "yoroshiku",
-                    "choushi wa dou",
-                    "watashi",
-                    "anata",
-                    "to",
-                    "kore",
-                    "sore",
-                    "ka",
-                    "suru",
-                    "benkyou",
-                    "nihongo",
-                    "eigo",
-                    "kyou",
-                    "ima",
-                    "nani",
-                    "itsu",
-                    "doko",
-                    "nande",
-                    "dou",
+                    "hukuya",
+                    "huku",
+                    "toppusu",
+                    "botomusu",
+                    "shatsu",
+                    "ti-shatsu",
+                    "zubon",
+                    "suka-to",
+                    "kutsu",
+                    "iro",
+                    "tennin",
+                    "kaikei",
+                    "kirei",
+                    "kawaii",
+                    "kakkoii",
+                    "dasai",
+                    "kurai",
+                    "akarui",
                 ];
                 let english = [
-                    "Hi",
-                    "Thank you.",
-                    "No problem.",
-                    "Nice to meet you.",
-                    "How are you?",
-                    "I",
-                    "You",
-                    "noun + and + noun",
-                    "This",
-                    "It",
-                    "noun + or + noun",
-                    "Do",
-                    "Study",
-                    "Japanese",
-                    "English",
-                    "Today",
-                    "Now",
-                    "What",
-                    "When",
-                    "Where",
-                    "Why",
-                    "How",
+                    "Clothing store",
+                    "Cloth",
+                    "Tops",
+                    "Bottoms",
+                    "Shirt",
+                    "T-Shirt",
+                    "Pants",
+                    "Skirts",
+                    "Shoes",
+                    "Color",
+                    "Clerk",
+                    "Bill",
+                    "Beautiful",
+                    "Cute",
+                    "Cool",
+                    "Tacky",
+                    "Dark",
+                    "Bright",
                 ];
                 for (let i = 0; i < japanese.length; i++) {
                     let row = {};

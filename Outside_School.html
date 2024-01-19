@@ -16,6 +16,7 @@
 
     <!-- CSS -->
     <link href="./Common/common.css" rel="stylesheet" />
+    <link href="./Common/common_word_japanese.css" rel="stylesheet" />
 
 </head>
 <!---------------------------------------------------------------------------------------->
@@ -29,7 +30,7 @@
         <template>
 
             <!-- ▼ Header ▼ ------------------------------------------------------------------>
-            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Dish - Normal</main-system-bar>
+            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Word - Outside > School</main-system-bar>
             <!-------------------------------------------------------------------------------->
 
             <!-- ▼ Navigation ▼ -------------------------------------------------------------->
@@ -38,16 +39,16 @@
 
             <!-- ▼ Main ▼ -------------------------------------------------------------------->
             <v-main id="main" class="blue-grey lighten-4">
-                <v-container>
-                    <v-row justify="center">
-                        <v-col class="youtube_col" xs="12" md="4">
-                            <iframe class="youtube rounded" src="https://www.youtube-nocookie.com/embed/vah2ClaAnyA" frameborder="0" allow="encrypted-media;" allowfullscreen></iframe>
-                        </v-col>
-                        <v-col class="youtube_col" xs="12" md="4">
-                            <iframe class="youtube rounded" src="https://www.youtube-nocookie.com/embed/3RXP73e0svs" frameborder="0" allow="encrypted-media;" allowfullscreen></iframe>
-                        </v-col>
-                        <v-col class="youtube_col" xs="12" md="4">
-                            <iframe class="youtube rounded" src="https://www.youtube-nocookie.com/embed/XtejDRvciOQ?si=am4k8e1Rdaus5HDM" frameborder="0" allow="encrypted-media;" allowfullscreen></iframe>
+                <v-container fluid fill-height>
+                    <v-row no-gutters><v-col cols="2" md="1" lg="1"></v-col><v-spacer></v-spacer><v-col cols="5" md="2" lg="2"><v-switch v-model="Switch" :label="`All Change`" inset hide-details="false"/></v-col></v-row>
+                    <v-row justify="center" class="ma-0">
+                        <v-col cols="12" md="3" lg="3" v-for="list in List" :key="list.id">
+                            <card-double :all_show="Switch">
+                                <template v-slot:first>{{ list.japanese }}<br>
+                                    <font size="5">{{ list.reading }}</font>
+                                </template>
+                                <template v-slot:second>{{ list.english }}</template>
+                            </card-double>
                         </v-col>
                     </v-row>
                 </v-container>
@@ -62,12 +63,6 @@
     </v-app>
     <!------------------------------------------------------------------------------------>
 
-    <!-- ▼ Style ▼ ----------------------------------------------------------------------->
-    <style>
-
-    </style>
-    <!------------------------------------------------------------------------------------>
-
     <!-- ▼ Script Load ▼ ----------------------------------------------------------------->
     <!-- Main -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
@@ -79,6 +74,7 @@
     <script src="./Component/main-system-bar.js"></script>
     <script src="./Component/main-navigation.js"></script>
     <script src="./Component/main-footer.js"></script>
+    <script src="./Component/Card/card-double.js"></script>
     <!------------------------------------------------------------------------------------>
 
     <!-- Script Content ------------------------------------------------------------------>
@@ -92,19 +88,79 @@
                 // Determined
                 drawer: false,
                 // Myself
-
+                Switch: false,
+                List: [],
             },
             methods: {
                 Change_Drawer(_value) {
                     this.drawer = _value;
                 }
             },
+            created: function () {
+                let japanese = [
+                    "学校",
+                    "門",
+                    "玄関",
+                    "下駄箱",
+                    "廊下",
+                    "教室",
+                    "机",
+                    "椅子",
+                    "電気",
+                    "黒板",
+                    "先生",
+                    "学生(生徒)",
+                    "テスト",
+                    "勉強",
+                    "部活",
+                    "放課後",
+                ];
+                let reading = [
+                    "gakkou",
+                    "mon",
+                    "genkan",
+                    "getabako",
+                    "rouka",
+                    "kyoushitsu",
+                    "tsukue",
+                    "isu",
+                    "denki",
+                    "kokuban",
+                    "sensei",
+                    "gakusei(seito)",
+                    "tesuto",
+                    "benkyou",
+                    "bukatsu",
+                    "houkago",
+                ];
+                let english = [
+                    "School",
+                    "Gate",
+                    "Entrance",
+                    "Shoe box",
+                    "Hallway",
+                    "Classroom",
+                    "Desk",
+                    "Chair",
+                    "Light",
+                    "Blackboard",
+                    "Teacher",
+                    "Student",
+                    "Test",
+                    "Study",
+                    "Club",
+                    "After school",
+                ];
+                for (let i = 0; i < japanese.length; i++) {
+                    let row = {};
+                    row.id = i;
+                    row.japanese = japanese[i];
+                    row.reading = reading[i];
+                    row.english = english[i];
+                    this.List.push(row);
+                }
+            },
         })
-        // -------------------------------------------------------------------------------
-
-        // Javascript --------------------------------------------------------------------
-        $(".youtube").width($(".youtube_col").width());
-        $(".youtube").height($(".youtube_col").width() * (315 / 560));
         // -------------------------------------------------------------------------------
 
     </script>
