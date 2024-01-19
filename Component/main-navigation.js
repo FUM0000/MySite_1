@@ -27,11 +27,8 @@ Vue.component('main-navigation', {
                 <v-list-item-icon><v-icon>mdi-human-greeting-variant</v-icon></v-list-item-icon>
                 <v-list-item-title>Greeting</v-list-item-title>
             </v-list-item>
-            <v-list-item href="https://fum0000.github.io/MySite_1/points_learning.html">
-                <v-list-item-icon><v-icon>mdi-human-greeting-variant</v-icon></v-list-item-icon>
-                <v-list-item-title>Learning Points</v-list-item-title>
-            </v-list-item>
 
+            <!-- Limited period word -->
             <!-- <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/word_limited_period.html">
                 <v-list-item-icon><v-icon>mdi-clock-alert-outline</v-icon></v-list-item-icon>
                 <v-list-item-title>Limited period word</v-list-item-title>
@@ -43,6 +40,10 @@ Vue.component('main-navigation', {
                     <v-list-item-title>Basic</v-list-item-title>
                 </template>
 
+                <v-list-item href="https://fum0000.github.io/MySite_1/points_learning.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Learning Points</v-list-item-title>
+                </v-list-item>
                 <v-list-item href="https://fum0000.github.io/MySite_1/Japanese/Basic/character.html">
                     <v-list-item-icon />
                     <v-list-item-title>Character</v-list-item-title>
