@@ -17,7 +17,7 @@ Vue.component('main-navigation', {
 
         <!-- Home -->
         <v-btn href="https://fum0000.github.io/MySite_1/index.html" class="font-weight-black non-underline" block dark>
-            Back to Home<v-icon>mdi-home</v-icon>
+            Back to Home  <v-icon>mdi-home</v-icon>
         </v-btn>
 
         <!-- Navigation -->
