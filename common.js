@@ -17,7 +17,7 @@ $(function() {
         else {
             $(this).removeClass("mdi-volume-variant-off");
             $(this).addClass("mdi-volume-source");
-            audio.src = "https://fum0000.github.io/MySite_1/Audio/" + Name;
+            audio.src = "../MySite_1/Audio/" + Name;
             audio.play();
         }
     });
