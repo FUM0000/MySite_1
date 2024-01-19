@@ -313,33 +313,18 @@
                     $(".limited_period").css("left", container_left_center - $(".limited_period").width * 0.5);
                     $(".limited_period").css("top", target_top * 1.45);
                 },
-                // Sound
-                // Change_BGM(_number) {
-                //     let audio = $("#current_bgm")[0];
-                //     audio.currentTime = 0;
-                //     let playing = Get_PlayingBGM(); // I need to change here
-                //     audio.src = "./Audio/" + this.List_BGM[_number];
-                //     playing ? audio.play() : audio.pause();
-
-                //     Change_BGM_Name(this.List_BGM[_number]);
-                // },
                 Change_BGM(_number) {
                     let audio = $("#current_bgm")[0];
-                    
                     audio.pause();
-
                     audio.oncanplaythrough = function() {
                         audio.currentTime = 0;
                         audio.src = "./Audio/" + this.List_BGM[_number];
                         Change_BGM_Name(this.List_BGM[_number]);
 
                         if (Get_PlayingBGM()) audio.play();
-                        audio.oncanplaythrough = null;  // イベントリスナーを解除
-                    }.bind(this);  // イベントハンドラ内でthisを正しく参照するためにbindを使用
-                    
-                    // イベントリスナーが設定された後に音声ファイルが読み込まれるとイベントが発火
-                    // もし音声ファイルがすでに読み込まれていれば、すぐに実行される
-                    audio.load();  // 新しい音声ファイルの読み込みを開始
+                        audio.oncanplaythrough = null;
+                    }.bind(this);
+                    audio.load();
                 }
 
                 // Play_Sound(_number) {
