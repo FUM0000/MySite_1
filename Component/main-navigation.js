@@ -23,10 +23,14 @@ Vue.component('main-navigation', {
         <!-- Navigation -->
         <v-list nav dense>
 
+
+
             <v-list-item href="./Greeting.html">
                 <v-list-item-icon><v-icon>mdi-human-greeting-variant</v-icon></v-list-item-icon>
                 <v-list-item-title>Greeting</v-list-item-title>
             </v-list-item>
+
+
 
             <!-- Limited period word -->
             <!-- <v-list-item href="./Word_LimitedPeriod.html">
@@ -35,7 +39,8 @@ Vue.component('main-navigation', {
             </v-list-item> -->
 
 
-            <v-list-group :value="false" prepend-icon="mdi-book-open-page-variant-outline">
+
+            <v-list-group :value="false" prepend-icon="mdi-book-account">
                 <template v-slot:activator>
                     <v-list-item-title>Basic</v-list-item-title>
                 </template>
@@ -78,8 +83,9 @@ Vue.component('main-navigation', {
                 </v-list-item>
             </v-list-group>
 
+
             
-            <v-list-group :value="false" prepend-icon="mdi-library-outline">
+            <v-list-group :value="false" prepend-icon="mdi-noodles">
                 <template v-slot:activator>
                     <v-list-item-title>Word - Food</v-list-item-title>
                 </template>
@@ -115,7 +121,7 @@ Vue.component('main-navigation', {
                 </v-list-item>
             </v-list-group>
 
-            <v-list-group :value="false" prepend-icon="mdi-library-outline">
+            <v-list-group :value="false" prepend-icon="mdi-tennis">
                 <template v-slot:activator>
                     <v-list-item-title>Word - Hobby</v-list-item-title>
                 </template>
@@ -158,7 +164,7 @@ Vue.component('main-navigation', {
                 </v-list-item>
             </v-list-group>
 
-            <v-list-group :value="false" prepend-icon="mdi-library-outline">
+            <v-list-group :value="false" prepend-icon="mdi-coffee">
                 <template v-slot:activator>
                     <v-list-item-title>Word - Life</v-list-item-title>
                 </template>
@@ -185,7 +191,7 @@ Vue.component('main-navigation', {
                 </v-list-item>
             </v-list-group>
 
-            <v-list-group :value="false" prepend-icon="mdi-library-outline">
+            <v-list-group :value="false" prepend-icon="mdi-nature-people">
                 <template v-slot:activator>
                     <v-list-item-title>Word - Nature</v-list-item-title>
                 </template>
@@ -217,7 +223,7 @@ Vue.component('main-navigation', {
                 </v-list-item>
             </v-list-group>
 
-            <v-list-group :value="false" prepend-icon="mdi-library-outline">
+            <v-list-group :value="false" prepend-icon="mdi-cart-outline">
                 <template v-slot:activator>
                     <v-list-item-title>Word - Shop</v-list-item-title>
                 </template>
@@ -232,7 +238,7 @@ Vue.component('main-navigation', {
                 </v-list-item>
             </v-list-group>
 
-            <v-list-group :value="false" prepend-icon="mdi-library-outline">
+            <v-list-group :value="false" prepend-icon="mdi-beach">
                 <template v-slot:activator>
                     <v-list-item-title>Word - Outside</v-list-item-title>
                 </template>
@@ -280,7 +286,7 @@ Vue.component('main-navigation', {
             </v-list-group>
 
 
-            <v-list-group :value="false" prepend-icon="mdi-library-outline">
+            <v-list-group :value="false" prepend-icon="mdi-book-open-page-variant">
                 <template v-slot:activator>
                     <v-list-item-title>Verb</v-list-item-title>
                 </template>
@@ -291,7 +297,7 @@ Vue.component('main-navigation', {
                 </v-list-item>
             </v-list-group>
             
-            <v-list-group :value="false" prepend-icon="mdi-library-outline">
+            <v-list-group :value="false" prepend-icon="mdi-ideogram-cjk">
                 <template v-slot:activator>
                     <v-list-item-title>Kanji</v-list-item-title>
                 </template>
@@ -317,7 +323,7 @@ Vue.component('main-navigation', {
 
 
 
-            <v-list-group :value="false" prepend-icon="mdi-gamepad-square-outline">
+            <v-list-group :value="false" prepend-icon="mdi-nintendo-game-boy">
                 <template v-slot:activator>
                     <v-list-item-title>Game</v-list-item-title>
                 </template>
