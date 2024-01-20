@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<!-- ▼ Head ▼ ---------------------------------------------------------------------------->
+
+<head>
+
+    <!-- Setting -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+
+    <!-- Vue -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="./Common/common.css" rel="stylesheet" />
+    <link href="./Common/common_word_japanese.css" rel="stylesheet" />
+
+    <!-- ChartJs -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+
+</head>
+<!---------------------------------------------------------------------------------------->
+
+<!-- ▼ Body ▼ ---------------------------------------------------------------------------->
+
+<body>
+
+    <!-- ▼ App ▼ ------------------------------------------------------------------------->
+    <v-app id="app">
+        <template>
+
+            <!-- ▼ Header ▼ ------------------------------------------------------------------>
+            <main-system-bar-spanish :drawer="drawer" @change-drawer="Change_Drawer">Vegetable > Chrysanthemum</main-system-bar-spanish>
+            <!-------------------------------------------------------------------------------->
+
+            <!-- ▼ Navigation ▼ -------------------------------------------------------------->
+            <main-navigation-spanish :drawer="drawer" @change-drawer="Change_Drawer"></main-navigation-spanish>
+            <!-------------------------------------------------------------------------------->
+
+            <!-- ▼ Main ▼ -------------------------------------------------------------------->
+            <v-main id="main" class="blue-grey lighten-4">
+                <v-container fluid fill-height>
+                    <v-row justify="center">
+                        <v-col xs="12" md="6">
+                            <v-simple-table dark fixed-header class = "rounded-table">
+                                <template v-slot:default>
+                                <thead>
+                                    <tr>
+                                        <th class="text-left">Item</th>
+                                        <th class="text-left">Contents</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Soil</td>
+                                        <td>Clay<br>pH = 6.0~6.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Germination</td>
+                                        <td>15~20℃</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Space</td>
+                                        <td>10~15cm</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Appropriate temperature</td>
+                                        <td>15~20℃</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fertilizer</td>
+                                        <td>When there are 5 true leaves</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Harvest</td>
+                                        <td>When it grows to about 20cm in height leave a couple of lower leaves and then pluck the stems with scissors.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Remarks</td>
+                                        <td>None</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Information</td>
+                                        <td>Origin = Mediterranean coast<br><canvas id="myChart" style="height: 400px; width: 650px;"></canvas></td>
+                                    </tr>
+                                </tbody>
+                                </template>
+                            </v-simple-table>
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </v-main>
+            <!-------------------------------------------------------------------------------->
+
+            <!-- ▼ Footer ▼ ------------------------------------------------------------------>
+            <!-- <main-footer></main-footer> -->
+            <!-------------------------------------------------------------------------------->
+
+        </template>
+    </v-app>
+    <!------------------------------------------------------------------------------------>
+
+    <!-- ▼ Style ▼ ----------------------------------------------------------------------->
+    <style>
+        
+    </style>
+    <!------------------------------------------------------------------------------------>
+
+    <!-- ▼ Script Load ▼ ----------------------------------------------------------------->
+    <!-- Main -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- Compornent -->
+    <script src="./Common/common.js"></script>
+    <script src="./Component/main-system-bar-spanish.js"></script>
+    <script src="./Component/main-navigation-spanish.js"></script>
+    <script src="./Component/main-footer.js"></script>
+    <script src="./Component/Card/card-double.js"></script>
+    <!------------------------------------------------------------------------------------>
+
+    <!-- Script Content ------------------------------------------------------------------>
+    <script>
+
+        // Variable ----------------------------------------------------------------------
+        let vue = new Vue({
+            el: '#app',
+            vuetify: new Vuetify(),
+            data: {
+                // Determined
+                drawer: false,
+                // Myself
+            },
+            methods: {
+                Change_Drawer(_value) {
+                    this.drawer = _value;
+                }
+            },
+        })
+        // -------------------------------------------------------------------------------
+
+        // Variable ----------------------------------------------------------------------
+        const ctx = document.getElementById('myChart');
+        new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: [
+                    'Calories(80kcal)',
+                    'Protein(4g)',
+                    'Lipid(0.9g)',
+                    'Carbohydrates(18g)',
+                    'Potassium(570mg)',
+                    'Calcium(62mg)',
+                    'Magnesium(35mg)',
+                ],
+                datasets: [{
+                    label: 'Nutritional/100g (twice average)',
+                    data: [31, 68, 56, 25, 47, 194, 69],
+                    fill: true,
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    pointBackgroundColor: 'rgb(255, 99, 132)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgb(255, 99, 132)'
+                },]
+            },
+            options: {
+                layout: {
+                    padding: {
+                        bottom: 20,
+                    }
+                },
+                legend: {
+                    display: false
+                },
+                scale: {
+                    ticks: {
+                        beginAtZero: true,
+                        max: 100,
+                        min: 0,
+                        stepSize: 20,
+                        fontSize: 10,
+                    },
+                    gridLines: {
+                        color: ['aqua', 'fuchsia', 'lime', 'purple', 'yellow']
+                    },
+                    pointLabels: {
+                        fontColor: 'white',
+                        fontSize: 12
+                    },
+                },
+                title: {
+                    display: true,
+                    text: "Nutritional/100g (twice average)",
+                    fontColor: 'white',
+                    fontSize: 14
+                },
+                tooltips: {
+                    callbacks: {
+                        title : () => null,
+                        label: function(tooltipItem, data) {
+                            let multiplication = 0;
+                            let unit = 'none';
+                            switch(data.labels[tooltipItem.index]) {
+                                case 'Calories(80kcal)': 
+                                    multiplication = 80;
+                                    unit = 'kcal';
+                                    break;
+                                case 'Protein(4g)':
+                                    multiplication = 4;
+                                    unit = 'g';
+                                    break;
+                                case 'Lipid(0.9g)':
+                                    multiplication = 0.9;
+                                    unit = 'g';
+                                    break;
+                                case 'Carbohydrates(18g)':
+                                    multiplication = 18;
+                                    unit = 'g';
+                                    break;
+                                case 'Potassium(570mg)':
+                                    multiplication = 570;
+                                    unit = 'mg';
+                                    break;
+                                case 'Calcium(62mg)':
+                                    multiplication = 62;
+                                    unit = 'mg';
+                                    break;
+                                case 'Magnesium(35mg)':
+                                    multiplication = 35;
+                                    unit = 'mg';
+                                    break;
+                            }
+                            return data.labels[tooltipItem.index] + ' : ' + Math.round(data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index] * multiplication * 0.01 * 10) / 10 + unit + ' (' + data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index] + '%)';
+                        }
+                    }
+                },
+            }
+        });
+        // -------------------------------------------------------------------------------
+
+    </script>
+    <!------------------------------------------------------------------------------------>
+</body>
+<!---------------------------------------------------------------------------------------->
+
+</html>
