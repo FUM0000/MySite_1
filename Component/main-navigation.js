@@ -319,6 +319,10 @@ Vue.component('main-navigation', {
                     <v-list-item-icon />
                     <v-list-item-title>Onion</v-list-item-title>
                 </v-list-item>
+                <v-list-item href="./Vegetable_Spinach.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Spinach</v-list-item-title>
+                </v-list-item>
             </v-list-group>
 
 
