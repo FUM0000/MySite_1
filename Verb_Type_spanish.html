@@ -43,14 +43,14 @@
                     <v-row justify="center">
                         <v-col xs="12" md="6" lg="6">
                             <v-card>
-                                <v-system-bar>Verb Type</v-system-bar>
+                                <v-system-bar>Tipo de Verbo</v-system-bar>
                                 <v-carousel delimiter-icon="mdi-minus" :show-arrows="false" width="100%" height="350">
                                     <v-carousel-item>
                                         <v-sheet height="100%" width="100%">
                                             <v-row class="fill-height" align="center">
                                                 <v-col align="center">
-                                                    There are two types of verbs in Japanese.<br>
-                                                    The rules for distinguishing between these two types of verbs are not rational, and many Japanese people does not fully understand and use them.<br>
+                                                    Hay dos tipos de verbos en japonés.<br>
+                                                    Las reglas para distinguir entre estos dos tipos de verbos no son racionales, y muchos japoneses no las comprenden completamente ni las utilizan.<br>
                                                 </v-col>
                                             </v-row>
                                         </v-sheet>
@@ -59,8 +59,8 @@
                                         <v-sheet height="100%" width="100%">
                                             <v-row class="fill-height" align="center">
                                                 <v-col align="center">
-                                                    Many linguists who look up this grammar on the Internet find that the more they understand it, the more difficult it becomes.<br>
-                                                    However, some verbs are easy to picture in your head with two different kinds of their meanings, so I will introduce those easy-to-understand verbs.
+                                                    Muchos lingüistas que buscan esta gramática en Internet encuentran que cuanto más la entienden, más difícil se vuelve.<br>
+                                                    Sin embargo, algunos verbos son fáciles de imaginar en tu mente con dos significados diferentes, así que presentaré esos verbos fáciles de entender.
                                                 </v-col>
                                             </v-row>
                                         </v-sheet>
@@ -69,8 +69,8 @@
                                         <v-sheet height="100%" width="100%">
                                             <v-row class="fill-height" align="center">
                                                 <v-col align="center">
-                                                    Please note that although those two types are similar in form, they are not different for conjugation, but for meaning.<br>
-                                                    Let's take a look at the characteristics and examples of each.
+                                                    Ten en cuenta que aunque esos dos tipos son similares en forma, no son diferentes en conjugación, sino en significado.<br>
+                                                    Veamos las características y ejemplos de cada uno.
                                                 </v-col>
                                             </v-row>
                                         </v-sheet>
@@ -79,13 +79,13 @@
                                         <v-sheet height="100%" width="100%">
                                             <v-row class="fill-height" align="center">
                                                 <v-col align="center">
-                                                    <strong>1. 自動詞(Jidoushi)</strong><br>
-                                                    <strong>Characteristics：</strong><br>
-                                                    <font color="red">Relationship "Subject = Verb".</font><br>
-                                                    ( Subject acts on itself )<br>
-                                                    <strong>2. 他動詞(Tadoushi)</strong><br>
-                                                    <strong>Characteristics：</strong><br>
-                                                    <font color="red">Relationship "Subject ≠ Verb".</font>
+                                                    <strong>1. 自動詞 (Jidoushi)</strong><br>
+                                                    <strong>Características：</strong><br>
+                                                    <font color="red">Relación "Sujeto = Verbo".</font><br>
+                                                    (El sujeto actúa sobre sí mismo)<br>
+                                                    <strong>2. 他動詞 (Tadoushi)</strong><br>
+                                                    <strong>Características：</strong><br>
+                                                    <font color="red">Relación "Sujeto ≠ Verbo".</font>
                                                 </v-col>
                                             </v-row>
                                         </v-sheet>
@@ -94,7 +94,7 @@
                                         <v-sheet height="100%" width="100%">
                                             <v-row class="fill-height" align="center">
                                                 <v-col align="center">
-                                                    Google search for images such as "open open open" will help you picture them in your mind.
+                                                    La búsqueda en Google de imágenes como "abrir abrir abrir" te ayudará a visualizarlos en tu mente.
                                                 </v-col>
                                             </v-row>
                                         </v-sheet>
@@ -103,9 +103,9 @@
                                         <v-sheet height="100%" width="100%">
                                             <v-row class="fill-height" align="center">
                                                 <v-col align="center">
-                                                    Japanese people learn these by habituation and awareness.
-                                                    Ideally, Japanese learners should do the same.<br>
-                                                    If you learn them together with the sounds (particles) that precede the verbs, you will find it easier to use them in your daily life and your familiarity with them will be accelerated.
+                                                    Los japoneses aprenden estos por hábito y conciencia.
+                                                    Idealmente, los aprendices de japonés deberían hacer lo mismo.<br>
+                                                    Si los aprendes junto con los sonidos (partículas) que preceden a los verbos, te resultará más fácil usarlos en tu vida diaria y tu familiaridad con ellos se acelerará.
                                                 </v-col>
                                             </v-row>
                                         </v-sheet>
@@ -114,7 +114,7 @@
                                         <v-sheet height="100%" width="100%">
                                             <v-row class="fill-height" align="center">
                                                 <v-col align="center">
-                                                    The two types of verbs introduced in this article are parts of the Japanese language that Japanese people are also familiar with.
+                                                    Los dos tipos de verbos introducidos en este artículo son partes del idioma japonés con las que los japoneses también están familiarizados.
                                                 </v-col>
                                             </v-row>
                                         </v-sheet>
@@ -127,9 +127,9 @@
                         <v-col xs="12" md="6" lg="6">
                             <v-card>
                                 <v-card-title>
-                                    Example
+                                    Ejemplo
                                     <v-spacer></v-spacer>
-                                    <v-text-field v-model="Search" append-icon="mdi-magnify" label="Search" single-line hide-details></v-text-field>
+                                    <v-text-field v-model="Search" append-icon="mdi-magnify" label="Buscar" single-line hide-details></v-text-field>
                                 </v-card-title>
                                 <v-data-table :headers="Headers" :items="Desserts" :search="Search" item-key="jidoushi"
                                     multi-sort :sort-by="['parts_of_speech']" :sort-asc="[true]" show-select dense
@@ -138,7 +138,7 @@
                         </v-col>
                     </v-row>
                 </v-container>
-            </v-main>
+            </v-main>            
             <!-------------------------------------------------------------------------------->
 
             <!-- ▼ Footer ▼ ------------------------------------------------------------------>
@@ -223,33 +223,34 @@
                     "止(と)める",
                 ];
                 let meaning_jidoushi = [
-                    "Open",
-                    "Close",
-                    "Fall",
-                    "Enter",
-                    "Leave",
-                    "Broken",
-                    "Fly",
-                    "Fall over",
-                    "Go around",
-                    "Get on",
-                    "Disappear",
-                    "Stop",
+                    "Abrir",
+                    "Cerrar",
+                    "Caer",
+                    "Entrar",
+                    "Salir",
+                    "Romper",
+                    "Volar",
+                    "Caer",
+                    "Dar la vuelta",
+                    "Subir",
+                    "Desaparecer",
+                    "Detenerse",
                 ];
                 let meaning_tadoushi = [
-                    "Open",
-                    "Close",
-                    "Drop",
-                    "Put in",
-                    "Take out",
-                    "Brake",
-                    "Fly",
-                    "Knock down",
-                    "Turn",
-                    "Put on",
-                    "Erase",
-                    "Stop",
+                    "Abrir",
+                    "Cerrar",
+                    "Soltar",
+                    "Poner",
+                    "Sacar",
+                    "Frenar",
+                    "Volar",
+                    "Derribar",
+                    "Girar",
+                    "Poner",
+                    "Borrar",
+                    "Detener",
                 ];
+
                 for (let i = 0; i < jidoushi.length; i++) {
                     let row = {};
                     row.jidoushi = jidoushi[i];

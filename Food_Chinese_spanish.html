@@ -47,7 +47,7 @@
                                 <template v-slot:first>{{ list.japanese }}<br>
                                     <font size="5">{{ list.reading }}</font>
                                 </template>
-                                <template v-slot:second>{{ list.english }}</template>
+                                <template v-slot:second>{{ list.spanish }}</template>
                             </card-double>
                         </v-col>
                     </v-row>
@@ -148,7 +148,7 @@
                     row.id = i;
                     row.japanese = japanese[i];
                     row.reading = reading[i];
-                    row.english = english[i];
+                    row.spanish = spanish[i];
                     this.List.push(row);
                 }
             },

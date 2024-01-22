@@ -46,7 +46,7 @@
                             <card-double-kanji :all_show="Switch">
                                 <template v-slot:first>{{ list.kanji }}
                                 </template>
-                                <template v-slot:second>{{ list.english }}<br>
+                                <template v-slot:second>{{ list.spanish }}<br>
                                     <font size="5">{{ list.reading }}</font>
                                 </template>
                             </card-double-kanji>
@@ -178,7 +178,7 @@
                     row.id = i;
                     row.kanji = kanji[i];
                     row.reading = reading[i];
-                    row.english = english[i];
+                    row.spanish = spanish[i];
                     this.List.push(row);
                 }
             },
