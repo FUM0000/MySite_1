@@ -25,6 +25,19 @@ Vue.component('main-navigation', {
 
 
 
+            <v-list-group :value="false" prepend-icon="mdi-hand-heart-outline">
+                <template v-slot:activator>
+                    <v-list-item-title>Language</v-list-item-title>
+                </template>
+                
+                <v-list-item href="./index_spanish.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Español</v-list-item-title>
+                </v-list-item>
+            </v-list-group>
+
+
+
             <v-list-item href="./Greeting.html">
                 <v-list-item-icon><v-icon>mdi-human-greeting-variant</v-icon></v-list-item-icon>
                 <v-list-item-title>Greeting</v-list-item-title>
@@ -428,19 +441,10 @@ Vue.component('main-navigation', {
 
 
 
-            <v-list-group :value="false" prepend-icon="mdi-hand-heart-outline">
-                <template v-slot:activator>
-                    <v-list-item-title>Language</v-list-item-title>
-                </template>
-                
-                <v-list-item href="./index_spanish.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>Español</v-list-item-title>
-                </v-list-item>
-            </v-list-group>
-
-
-
+            <v-list-item></v-list-item>
+            <v-list-item></v-list-item>
+            <v-list-item></v-list-item>
+            <v-list-item></v-list-item>
             <v-list-item></v-list-item>
 
         </v-list>
