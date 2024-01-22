@@ -1,6 +1,6 @@
 
 let Name_Store = localStorage.getItem("BGM_Name");
-let Name = Name_Store == null ? "clair_de_lune.mp3" : Name_Store;
+let Name = Name_Store == null ? "clair_de_lune.wav" : Name_Store;
 let Playing = false;
 
 $(function() {
