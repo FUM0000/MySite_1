@@ -303,7 +303,7 @@
             UI_Home.style.width = 100;
             UI_Home.style.height = 100;
             UI_Home.style.backgroundColor = "#ffffff00";
-            UI_Home.innerHTML = "<b>" + "Home" + "</b>";
+            UI_Home.innerHTML = "<b>" + "Inicio" + "</b>";
             UI_Home.style.top = 20 + 'px';
             UI_Home.style.left = (window.innerWidth - 70) + 'px';
             document.body.appendChild(UI_Home);
@@ -394,15 +394,15 @@
         // Add Score----------------------------------------------------------------------
         function Add_Score(_point) {
             Score += _point;
-            UI_Score.innerHTML = "<b>" + "Score : " + Math.floor(Score) + "</b>";
+            UI_Score.innerHTML = "<b>" + "Puntaje : " + Math.floor(Score) + "</b>";
         }
         //--------------------------------------------------------------------------------
 
         // GameOver-----------------------------------------------------------------------
         function GameOver() {
             Game_Play = false;
-            UI_GameOver.innerHTML = "<b><font color='red'>GameOver</font></b>";
-            UI_Restart.innerHTML = "<b><font color='red'>Restart</font></b>";
+            UI_GameOver.innerHTML = "<b><font color='red'>JuegoTerminado</font></b>";
+            UI_Restart.innerHTML = "<b><font color='red'>Reanudar</font></b>";
 
             setTimeout(function () {
                 Can_Retry = true;

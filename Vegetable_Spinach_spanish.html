@@ -34,7 +34,7 @@
         <template>
 
             <!-- ▼ Header ▼ ------------------------------------------------------------------>
-            <main-system-bar-spanish :drawer="drawer" @change-drawer="Change_Drawer">Vegetable > Spinach</main-system-bar-spanish>
+            <main-system-bar-spanish :drawer="drawer" @change-drawer="Change_Drawer">Verdura > Espinaca</main-system-bar-spanish>
             <!-------------------------------------------------------------------------------->
 
             <!-- ▼ Navigation ▼ -------------------------------------------------------------->
@@ -50,42 +50,42 @@
                                 <template v-slot:default>
                                 <thead>
                                     <tr>
-                                        <th class="text-left">Item</th>
-                                        <th class="text-left">Contents</th>
+                                        <th class="text-left">Artículo</th>
+                                        <th class="text-left">Contenido</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Soil</td>
-                                        <td>Clay<br>pH = 6.0~6.5</td>
+                                        <td>Suelo</td>
+                                        <td>pH = 6.0~6.5</td>
                                     </tr>
                                     <tr>
-                                        <td>Germination</td>
+                                        <td>Germinación</td>
                                         <td>15~20℃</td>
                                     </tr>
                                     <tr>
-                                        <td>Space</td>
+                                        <td>Espacio</td>
                                         <td>5~8cm</td>
                                     </tr>
                                     <tr>
-                                        <td>Appropriate temperature</td>
+                                        <td>Temperatura adecuada</td>
                                         <td>15~20℃</td>
                                     </tr>
                                     <tr>
-                                        <td>Fertilizer</td>
-                                        <td>① When there are 4 true leaves<br>② When the leaves are yellowish in color</td>
+                                        <td>Fertilizante</td>
+                                        <td>① Cuando hay 4 hojas verdaderas<br>② Cuando las hojas son de color amarillento</td>
                                     </tr>
                                     <tr>
-                                        <td>Harvest</td>
-                                        <td>When it grows to about 20cm in height</td>
+                                        <td>Cosecha</td>
+                                        <td>Cuando crece hasta unos 20 cm de altura.</td>
                                     </tr>
                                     <tr>
-                                        <td>Remarks</td>
-                                        <td>None</td>
+                                        <td>Comentarios</td>
+                                        <td>Ninguno</td>
                                     </tr>
                                     <tr>
-                                        <td>Information</td>
-                                        <td>Origin = Iran<br><canvas id="myChart" style="height: 400px; width: 500px;"></canvas></td>
+                                        <td>Información</td>
+                                        <td>Origen = Irán<br><canvas id="myChart" style="height: 400px; width: 500px;"></canvas></td>
                                     </tr>
                                 </tbody>
                                 </template>
@@ -150,16 +150,16 @@
             type: 'radar',
             data: {
                 labels: [
-                    'Calories(80kcal)',
-                    'Protein(4g)',
-                    'Lipid(0.9g)',
-                    'Carbohydrates(18g)',
-                    'Potassium(570mg)',
-                    'Calcium(62mg)',
-                    'Magnesium(35mg)',
+                    'Calorías(80kcal)',
+                    'Proteínas(4g)',
+                    'Lípidos(0.9g)',
+                    'Carbohidratos(18g)',
+                    'Potasio(570mg)',
+                    'Calcio(62mg)',
+                    'Magnesio(35mg)',
                 ],
                 datasets: [{
-                    label: 'Nutritional/100g (twice average)',
+                    label: 'Nutricional/100g (dos veces la media)',
                     data: [29, 65, 56, 22, 86, 111, 114],
                     fill: true,
                     backgroundColor: 'rgba(255, 99, 132, 0.2)',
@@ -197,7 +197,7 @@
                 },
                 title: {
                     display: true,
-                    text: "Nutritional/100g (twice average)",
+                    text: 'Nutricional/100g (dos veces la media)',
                     fontColor: 'white',
                     fontSize: 14
                 },
@@ -208,31 +208,31 @@
                             let multiplication = 0;
                             let unit = 'none';
                             switch(data.labels[tooltipItem.index]) {
-                                case 'Calories(80kcal)': 
+                                case 'Calorías(80kcal)': 
                                     multiplication = 80;
                                     unit = 'kcal';
                                     break;
-                                case 'Protein(4g)':
+                                case 'Proteínas(4g)':
                                     multiplication = 4;
                                     unit = 'g';
                                     break;
-                                case 'Lipid(0.9g)':
+                                case 'Lípidos(0.9g)':
                                     multiplication = 0.9;
                                     unit = 'g';
                                     break;
-                                case 'Carbohydrates(18g)':
+                                case 'Carbohidratos(18g)':
                                     multiplication = 18;
                                     unit = 'g';
                                     break;
-                                case 'Potassium(570mg)':
+                                case 'Potasio(570mg)':
                                     multiplication = 570;
                                     unit = 'mg';
                                     break;
-                                case 'Calcium(62mg)':
+                                case 'Calcio(62mg)':
                                     multiplication = 62;
                                     unit = 'mg';
                                     break;
-                                case 'Magnesium(35mg)':
+                                case 'Magnesio(35mg)':
                                     multiplication = 35;
                                     unit = 'mg';
                                     break;
