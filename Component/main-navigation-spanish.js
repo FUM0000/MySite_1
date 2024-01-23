@@ -177,6 +177,25 @@ Vue.component('main-navigation-spanish', {
                 </v-list-item>
             </v-list-group>
 
+            <v-list-group :value="false" prepend-icon="mdi-tennis">
+                <template v-slot:activator>
+                    <v-list-item-title>Palabra - Japolés</v-list-item-title>
+                </template>
+
+                <v-list-item href="./Japalish_Level_1_spanish.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Nivel 1</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="./Japalish_Level_2_spanish.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Nivel 2</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="./Japalish_Level_3_spanish.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Nivel 3</v-list-item-title>
+                </v-list-item>
+            </v-list-group>
+
             <v-list-group :value="false" prepend-icon="mdi-coffee">
                 <template v-slot:activator>
                     <v-list-item-title>Palabra - Vida</v-list-item-title>

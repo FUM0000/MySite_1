@@ -177,6 +177,25 @@ Vue.component('main-navigation', {
                 </v-list-item>
             </v-list-group>
 
+            <v-list-group :value="false" prepend-icon="mdi-tennis">
+                <template v-slot:activator>
+                    <v-list-item-title>Word - Japalish</v-list-item-title>
+                </template>
+
+                <v-list-item href="./Japalish_Level_1.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Level 1</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="./Japalish_Level_2.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Level 2</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="./Japalish_Level_3.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Level 3</v-list-item-title>
+                </v-list-item>
+            </v-list-group>
+
             <v-list-group :value="false" prepend-icon="mdi-coffee">
                 <template v-slot:activator>
                     <v-list-item-title>Word - Life</v-list-item-title>
