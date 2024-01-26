@@ -181,7 +181,7 @@ Vue.component('main-navigation-spanish', {
                 </v-list-item>
             </v-list-group>
 
-            <v-list-group :value="false" prepend-icon="mdi-tennis">
+            <v-list-group :value="false" prepend-icon="mdi-syllabary-katakana">
                 <template v-slot:activator>
                     <v-list-item-title>Palabra - Japolés</v-list-item-title>
                 </template>
