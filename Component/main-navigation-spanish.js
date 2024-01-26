@@ -78,6 +78,10 @@ Vue.component('main-navigation-spanish', {
                     <v-list-item-icon />
                     <v-list-item-title>Palabra - Palabra general</v-list-item-title>
                 </v-list-item>
+                <v-list-item href="./Basic_Conversation_spanish.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Palabra - Conversación</v-list-item-title>
+                </v-list-item>
                 <v-list-item href="./Basic_Verb_spanish.html">
                     <v-list-item-icon />
                     <v-list-item-title>Palabra - Verbo</v-list-item-title>
@@ -282,6 +286,10 @@ Vue.component('main-navigation-spanish', {
                 <v-list-item href="./Outside_Company_spanish.html">
                     <v-list-item-icon />
                     <v-list-item-title>Empresa</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="./Outside_Direction_spanish.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Dirección</v-list-item-title>
                 </v-list-item>
                 <v-list-item href="./Outside_Gym_spanish.html">
                     <v-list-item-icon />

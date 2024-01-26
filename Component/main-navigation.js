@@ -78,6 +78,10 @@ Vue.component('main-navigation', {
                     <v-list-item-icon />
                     <v-list-item-title>Word - General Word</v-list-item-title>
                 </v-list-item>
+                <v-list-item href="./Basic_Conversation.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Word - Conversation</v-list-item-title>
+                </v-list-item>
                 <v-list-item href="./Basic_Verb.html">
                     <v-list-item-icon />
                     <v-list-item-title>Word - Verb</v-list-item-title>
@@ -282,6 +286,10 @@ Vue.component('main-navigation', {
                 <v-list-item href="./Outside_Company.html">
                     <v-list-item-icon />
                     <v-list-item-title>Company</v-list-item-title>
+                </v-list-item>
+                <v-list-item href="./Outside_Direction.html">
+                    <v-list-item-icon />
+                    <v-list-item-title>Direction</v-list-item-title>
                 </v-list-item>
                 <v-list-item href="./Outside_Gym.html">
                     <v-list-item-icon />
