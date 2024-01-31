@@ -385,7 +385,7 @@ Vue.component('main-navigation', {
 
             <v-list-group :value="false" prepend-icon="mdi-chef-hat">
                 <template v-slot:activator>
-                    <v-list-item-title>Cooking(Youtube)</v-list-item-title>
+                    <v-list-item-title>Cooking</v-list-item-title>
                 </template>
 
                 <v-list-item href="./Youtube_Cooking_Simple.html">
@@ -418,7 +418,7 @@ Vue.component('main-navigation', {
 
             <v-list-group :value="false" prepend-icon="mdi-music">
                 <template v-slot:activator>
-                    <v-list-item-title>Music(Youtube)</v-list-item-title>
+                    <v-list-item-title>Music</v-list-item-title>
                 </template>
 
                 <v-list-item href="./Youtube_Music_UtadaHikaru.html">
