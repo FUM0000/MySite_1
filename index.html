@@ -98,7 +98,7 @@
                     </transition>
                     <v-spacer></v-spacer>
                     <transition name="fade-page">
-                        <v-btn :ripple="false" style="cursor: default;" class="limited_period" color="primary" v-show="show_page" outlined>FUM's WEB SITE</v-btn>
+                        <v-text class="text-h6 site_tittle" v-show="show_page"><font color="#2B91F0">WELCOME</font></v-text>
                     </transition>
                 </v-container>
             </v-main>
@@ -307,8 +307,8 @@
                     $(".item-15").css("left", target_left);
                     $(".item-15").css("top", target_top);
                     // Limited Period
-                    $(".limited_period").css("left", container_left_center - $(".limited_period").width * 0.5);
-                    $(".limited_period").css("top", target_top * 1.45);
+                    $(".site_tittle").css("left", container_left_center - $(".site_tittle").width * 0.5);
+                    $(".site_tittle").css("top", target_top * 1.45);
                 },
                 Change_BGM(_number) {
                     let audio = $("#current_bgm")[0];
@@ -336,7 +336,7 @@
             mounted() {
                 // Layout
                 $("[class^='item-']").css("position", "absolute");
-                $(".limited_period").css("position", "absolute");
+                $(".site_tittle").css("position", "absolute");
                 this.Resize();
                 $(window).ready(() => { this.show_page = true; });
                 $(window).resize(() => { this.Resize(); });
@@ -345,8 +345,8 @@
                 $("[class^='item-']").each(function () {
                     $(this).css("animation", "animation_katakata " + (Math.random() * (1.0 - 0.5) + 0.5).toFixed(2) + "s" + " infinite");
                 });
-                $(".limited_period").css("transition", "2s");
-                $(".limited_period").css("animation", "animation_huwahuwa .8s infinite");
+                $(".site_tittle").css("transition", "2s");
+                $(".site_tittle").css("animation", "animation_huwahuwa .8s infinite");
             }
         })
 
