@@ -2,26 +2,17 @@ Vue.component('main-navigation-spanish', {
     template: `
     <v-navigation-drawer class="blue-grey lighten-5" v-model="drawer_local" app right>
 
-        <!-- Logo -->
-        <v-list-item class="px-2 non-underline">
-            <v-spacer></v-spacer>
-            <v-icon color="blue-grey darken-3" x-large>mdi-alpha-f</v-icon>
-            <v-spacer></v-spacer>
-            <v-icon color="blue-grey darken-3" x-large>mdi-alpha-u</v-icon>
-            <v-spacer></v-spacer>
-            <v-icon color="blue-grey darken-3" x-large>mdi-alpha-m</v-icon>
-            <v-spacer></v-spacer>
-        </v-list-item>
-
-        <v-divider></v-divider>
-
-        <!-- Home -->
-        <v-btn href="./index_spanish.html" class="font-weight-black non-underline" block dark>
-            Volver al Inicio&nbsp;<v-icon>mdi-home</v-icon>
+        <v-btn :ripple="false" style="cursor: default;" class="font-weight-black non-underline" block dark>
+            MENÚ
         </v-btn>
 
         <!-- Navigation -->
         <v-list nav dense>
+            <!-- Home -->
+            <v-list-item href="./index_spanish.html">
+                <v-list-item-icon><v-icon>mdi-home</v-icon></v-list-item-icon>
+                <v-list-item-title>Inicio</v-list-item-title>
+            </v-list-item>
 
 
 
@@ -38,9 +29,9 @@ Vue.component('main-navigation-spanish', {
 
 
 
-            <v-list-item href="./Greeting_spanish.html">
+            <v-list-item href="./Introduction_spanish.html">
                 <v-list-item-icon><v-icon>mdi-human-greeting-variant</v-icon></v-list-item-icon>
-                <v-list-item-title>Saludo</v-list-item-title>
+                <v-list-item-title>Introducción</v-list-item-title>
             </v-list-item>
 
 
