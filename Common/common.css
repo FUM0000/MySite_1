@@ -1,11 +1,9 @@
-body {
-    background: #CFD8DC;
+
+html::-webkit-scrollbar{
+    display:none;
 }
 
-.rounded {
-  border-radius: 100px;
-  overflow: hidden;
-}
+body { background: #CFD8DC; }
 
 table thead tr:first-child th {
     border-top-left-radius: 10px;
@@ -16,18 +14,7 @@ table tbody tr:last-child td {
     border-bottom-right-radius: 10px;
 }
 
-/* System Bar */
-/* Arrow */
-/* @keyframes animation_arrow_1 {
-    0% { transform:
-        rotate(90deg)
-        translateY(0px); }
-    50% { transform: 
-            rotate(90deg)
-            translateY(2px);
-        }
-    100% { transform: 
-        rotate(90deg)
-        translateY(0px);
-    }
-} */
+.rounded {
+  border-radius: 100px;
+  overflow: hidden;
+}
