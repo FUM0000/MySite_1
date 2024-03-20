@@ -443,6 +443,10 @@ Vue.component('main-navigation', {
                         <v-list-item-icon />
                         <v-list-item-title>Eggplant</v-list-item-title>
                     </v-list-item>
+                    <v-list-item href="./Vegetable_MiniTomato.html">
+                        <v-list-item-icon />
+                        <v-list-item-title>Mini Tomato</v-list-item-title>
+                    </v-list-item>
                     <v-list-item href="./Vegetable_Onion.html">
                         <v-list-item-icon />
                         <v-list-item-title>Onion</v-list-item-title>

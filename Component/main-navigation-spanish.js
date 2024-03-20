@@ -435,10 +435,6 @@ Vue.component('main-navigation-spanish', {
                     </template>
 
 
-                    <v-list-item href="./Vegetable_Chrysanthemum_spanish.html">
-                        <v-list-item-icon />
-                        <v-list-item-title>Crí­san­temo</v-list-item-title>
-                    </v-list-item>
                     <v-list-item href="./Vegetable_Eggplant_spanish.html">
                         <v-list-item-icon />
                         <v-list-item-title>Berenjena</v-list-item-title>
@@ -447,9 +443,17 @@ Vue.component('main-navigation-spanish', {
                         <v-list-item-icon />
                         <v-list-item-title>Cebolla</v-list-item-title>
                     </v-list-item>
+                    <v-list-item href="./Vegetable_Chrysanthemum_spanish.html">
+                        <v-list-item-icon />
+                        <v-list-item-title>Crí­san­temo</v-list-item-title>
+                    </v-list-item>
                     <v-list-item href="./Vegetable_Spinach_spanish.html">
                         <v-list-item-icon />
                         <v-list-item-title>Espinaca</v-list-item-title>
+                    </v-list-item>
+                    <v-list-item href="./Vegetable_MiniTomato_spanish.html">
+                        <v-list-item-icon />
+                        <v-list-item-title>Mini Tomate</v-list-item-title>
                     </v-list-item>
                 </v-list-group sub-group>
                 <!-- ▲ Vegetable ▲ -------------------------------------------------------------------------------->
