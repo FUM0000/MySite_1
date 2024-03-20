@@ -401,26 +401,62 @@ Vue.component('main-navigation', {
             <!-- ▲ Japanese ▲ --------------------------------------------------------------------------------->
             
 
-            <!-- ▼ Vegetable ▼ -------------------------------------------------------------------------------->
+            <!-- ▼ Plant ▼ ------------------------------------------------------------------------------------>
             <v-list-group :value="false" prepend-icon="mdi-sprout">
                 <template v-slot:activator>
-                    <v-list-item-title>Vegetable</v-list-item-title>
+                    <v-list-item-title>Plant</v-list-item-title>
                 </template>
 
-                <v-list-item href="./Vegetable_Chrysanthemum.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>Chrysanthemum</v-list-item-title>
-                </v-list-item>
-                <v-list-item href="./Vegetable_Onion.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>Onion</v-list-item-title>
-                </v-list-item>
-                <v-list-item href="./Vegetable_Spinach.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>Spinach</v-list-item-title>
-                </v-list-item>
+
+                <!-- ▼ Flower ▼ ----------------------------------------------------------------------------------->
+                <v-list-group sub-group :value="false">
+                    <template v-slot:activator>
+                        <v-list-item-title>Flower</v-list-item-title>
+                        
+                        <v-list-item-icon>
+                            <v-icon>mdi-flower</v-icon>
+                        </v-list-item-icon>
+                    </template>
+
+
+                    
+                </v-list-group sub-group>
+                <!-- ▲ Flower ▲ ----------------------------------------------------------------------------------->
+
+
+                <!-- ▼ Vegetable ▼ -------------------------------------------------------------------------------->
+                <v-list-group sub-group :value="false">
+                    <template v-slot:activator>
+                        <v-list-item-title>Vegetable</v-list-item-title>
+                        
+                        <v-list-item-icon>
+                            <v-icon>mdi-carrot</v-icon>
+                        </v-list-item-icon>
+                    </template>
+
+
+                    <v-list-item href="./Vegetable_Chrysanthemum.html">
+                        <v-list-item-icon />
+                        <v-list-item-title>Chrysanthemum</v-list-item-title>
+                    </v-list-item>
+                    <v-list-item href="./Vegetable_Eggplant.html">
+                        <v-list-item-icon />
+                        <v-list-item-title>Eggplant</v-list-item-title>
+                    </v-list-item>
+                    <v-list-item href="./Vegetable_Onion.html">
+                        <v-list-item-icon />
+                        <v-list-item-title>Onion</v-list-item-title>
+                    </v-list-item>
+                    <v-list-item href="./Vegetable_Spinach.html">
+                        <v-list-item-icon />
+                        <v-list-item-title>Spinach</v-list-item-title>
+                    </v-list-item>
+                </v-list-group sub-group>
+                <!-- ▲ Vegetable ▲ -------------------------------------------------------------------------------->
+
+                
             </v-list-group>
-            <!-- ▲ Vegetable ▲ -------------------------------------------------------------------------------->
+            <!-- ▲ Plant ▲ ------------------------------------------------------------------------------------>
 
 
             <!-- ▼ Game ▼ ------------------------------------------------------------------------------------->

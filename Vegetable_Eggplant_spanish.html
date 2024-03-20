@@ -36,11 +36,11 @@
         <template>
 
             <!-- ▼ Header ▼ ------------------------------------------------------------------>
-            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Vegetable > Chrysanthemum</main-system-bar>
+            <main-system-bar-spanish :drawer="drawer" @change-drawer="Change_Drawer">Verdura > Berenjena</main-system-bar-spanish>
             <!-------------------------------------------------------------------------------->
 
             <!-- ▼ Navigation ▼ -------------------------------------------------------------->
-            <main-navigation :drawer="drawer" @change-drawer="Change_Drawer"></main-navigation>
+            <main-navigation-spanish :drawer="drawer" @change-drawer="Change_Drawer"></main-navigation-spanish>
             <!-------------------------------------------------------------------------------->
 
             <!-- ▼ Main ▼ -------------------------------------------------------------------->
@@ -52,42 +52,42 @@
                                 <template v-slot:default>
                                 <thead>
                                     <tr>
-                                        <th class="text-left">Item</th>
-                                        <th class="text-left">Contents</th>
+                                        <th class="text-left">Artículo</th>
+                                        <th class="text-left">Contenido</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Soil</td>
-                                        <td>Clay, pH = 6.0~6.5</td>
+                                        <td>Suelo</td>
+                                        <td>Suelo, pH = 6.0~6.5</td>
                                     </tr>
                                     <tr>
-                                        <td>Germination</td>
-                                        <td>15~20℃</td>
+                                        <td>Germinación</td>
+                                        <td>20~30℃</td>
                                     </tr>
                                     <tr>
-                                        <td>Space</td>
-                                        <td>10~15cm</td>
+                                        <td>Espacio</td>
+                                        <td>50cm</td>
                                     </tr>
                                     <tr>
-                                        <td>Appropriate temperature</td>
-                                        <td>15~20℃</td>
+                                        <td>Temperatura adecuada</td>
+                                        <td>16~28℃</td>
                                     </tr>
                                     <tr>
-                                        <td>Fertilizer</td>
-                                        <td>When there are 5 true leaves</td>
+                                        <td>Fertilizante</td>
+                                        <td>Cada 2 semanas después de la primera cosecha.</td>
                                     </tr>
                                     <tr>
-                                        <td>Harvest</td>
-                                        <td>When it grows to about 20cm in height leave a couple of lower leaves and then pluck the stems with scissors.</td>
+                                        <td>Cosecha</td>
+                                        <td>Elija berenjenas jóvenes del número 1 al 3.</td>
                                     </tr>
                                     <tr>
-                                        <td>Remarks</td>
-                                        <td>Antioxidant effect, prevention of arteriosclerosis, prevention of wrinkles. It is more effective when eaten raw.</td>
+                                        <td>Comentarios</td>
+                                        <td>Previene la hipertensión arterial, alivia la hinchazón y previene el cansancio estival.</td>
                                     </tr>
                                     <tr>
-                                        <td>Information</td>
-                                        <td>Origin = Mediterranean coast<br><canvas id="myChart" style="height: 400px; width: 650px;"></canvas></td>
+                                        <td>Información</td>
+                                        <td>Origen = costa mediterránea<br><canvas id="myChart" style="height: 400px; width: 650px;"></canvas></td>
                                     </tr>
                                 </tbody>
                                 </template>
@@ -120,10 +120,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <!-- Compornent -->
     <script src="./Common/common.js"></script>
-    <script src="./Component/main-system-bar.js"></script>
-    <script src="./Component/main-navigation.js"></script>
+    <script src="./Component/main-system-bar-spanish.js"></script>
+    <script src="./Component/main-navigation-spanish.js"></script>
     <script src="./Component/main-footer.js"></script>
-    <script src="./Component/Card/card-double.js"></script>
+    <script src="./Component/Card/card-double-spanish.js"></script>
     <!------------------------------------------------------------------------------------>
 
     <!-- Script Content ------------------------------------------------------------------>
@@ -152,17 +152,17 @@
             type: 'radar',
             data: {
                 labels: [
-                    'Calories(80kcal)',
-                    'Protein(4g)',
-                    'Lipid(0.9g)',
-                    'Carbohydrates(18g)',
-                    'Potassium(570mg)',
-                    'Calcium(62mg)',
-                    'Magnesium(35mg)',
+                    'Calorías(80kcal)',
+                    'Proteínas(4g)',
+                    'Lípidos(0.9g)',
+                    'Carbohidratos(18g)',
+                    'Potasio(570mg)',
+                    'Calcio(62mg)',
+                    'Magnesio(35mg)',
                 ],
                 datasets: [{
-                    label: 'Nutritional/100g (twice average)',
-                    data: [31, 68, 56, 25, 47, 194, 69],
+                    label: 'Nutricional/100g (dos veces la media)',
+                    data: [21, 25, 11, 25, 32, 32, 46],
                     fill: true,
                     backgroundColor: 'rgba(255, 99, 132, 0.2)',
                     borderColor: 'rgb(255, 99, 132)',
@@ -199,7 +199,7 @@
                 },
                 title: {
                     display: true,
-                    text: "Nutritional/100g (twice average)",
+                    text: 'Nutricional/100g (dos veces la media)',
                     fontColor: 'white',
                     fontSize: 14
                 },
@@ -210,31 +210,31 @@
                             let multiplication = 0;
                             let unit = 'none';
                             switch(data.labels[tooltipItem.index]) {
-                                case 'Calories(80kcal)': 
+                                case 'Calorías(80kcal)': 
                                     multiplication = 80;
                                     unit = 'kcal';
                                     break;
-                                case 'Protein(4g)':
+                                case 'Proteínas(4g)':
                                     multiplication = 4;
                                     unit = 'g';
                                     break;
-                                case 'Lipid(0.9g)':
+                                case 'Lípidos(0.9g)':
                                     multiplication = 0.9;
                                     unit = 'g';
                                     break;
-                                case 'Carbohydrates(18g)':
+                                case 'Carbohidratos(18g)':
                                     multiplication = 18;
                                     unit = 'g';
                                     break;
-                                case 'Potassium(570mg)':
+                                case 'Potasio(570mg)':
                                     multiplication = 570;
                                     unit = 'mg';
                                     break;
-                                case 'Calcium(62mg)':
+                                case 'Calcio(62mg)':
                                     multiplication = 62;
                                     unit = 'mg';
                                     break;
-                                case 'Magnesium(35mg)':
+                                case 'Magnesio(35mg)':
                                     multiplication = 35;
                                     unit = 'mg';
                                     break;

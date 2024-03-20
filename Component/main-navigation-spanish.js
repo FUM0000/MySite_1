@@ -401,26 +401,62 @@ Vue.component('main-navigation-spanish', {
             <!-- ▲ Japanese ▲ --------------------------------------------------------------------------------->
             
 
-            <!-- ▼ Vegetable ▼ -------------------------------------------------------------------------------->
+            <!-- ▼ Plant ▼ ------------------------------------------------------------------------------------>
             <v-list-group :value="false" prepend-icon="mdi-sprout">
                 <template v-slot:activator>
-                    <v-list-item-title>Verdura</v-list-item-title>
+                    <v-list-item-title>Planta</v-list-item-title>
                 </template>
 
-                <v-list-item href="./Vegetable_Chrysanthemum_spanish.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>Crí­san­temo</v-list-item-title>
-                </v-list-item>
-                <v-list-item href="./Vegetable_Onion_spanish.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>Cebolla</v-list-item-title>
-                </v-list-item>
-                <v-list-item href="./Vegetable_Spinach_spanish.html">
-                    <v-list-item-icon />
-                    <v-list-item-title>Espinaca</v-list-item-title>
-                </v-list-item>
+
+                <!-- ▼ Flower ▼ ----------------------------------------------------------------------------------->
+                <v-list-group sub-group :value="false">
+                    <template v-slot:activator>
+                        <v-list-item-title>Flor</v-list-item-title>
+                        
+                        <v-list-item-icon>
+                            <v-icon>mdi-flower</v-icon>
+                        </v-list-item-icon>
+                    </template>
+
+
+                    
+                </v-list-group sub-group>
+                <!-- ▲ Flower ▲ ----------------------------------------------------------------------------------->
+
+
+                <!-- ▼ Vegetable ▼ -------------------------------------------------------------------------------->
+                <v-list-group sub-group :value="false">
+                    <template v-slot:activator>
+                        <v-list-item-title>Verdura</v-list-item-title>
+                        
+                        <v-list-item-icon>
+                            <v-icon>mdi-carrot</v-icon>
+                        </v-list-item-icon>
+                    </template>
+
+
+                    <v-list-item href="./Vegetable_Chrysanthemum_spanish.html">
+                        <v-list-item-icon />
+                        <v-list-item-title>Crí­san­temo</v-list-item-title>
+                    </v-list-item>
+                    <v-list-item href="./Vegetable_Eggplant_spanish.html">
+                        <v-list-item-icon />
+                        <v-list-item-title>Berenjena</v-list-item-title>
+                    </v-list-item>
+                    <v-list-item href="./Vegetable_Onion_spanish.html">
+                        <v-list-item-icon />
+                        <v-list-item-title>Cebolla</v-list-item-title>
+                    </v-list-item>
+                    <v-list-item href="./Vegetable_Spinach_spanish.html">
+                        <v-list-item-icon />
+                        <v-list-item-title>Espinaca</v-list-item-title>
+                    </v-list-item>
+                </v-list-group sub-group>
+                <!-- ▲ Vegetable ▲ -------------------------------------------------------------------------------->
+                
+
             </v-list-group>
-            <!-- ▲ Vegetable ▲ -------------------------------------------------------------------------------->
+            <!-- ▲ Plant ▲ ------------------------------------------------------------------------------------>
 
 
             <!-- ▼ Game ▼ ------------------------------------------------------------------------------------->
