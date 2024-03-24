@@ -404,7 +404,7 @@ Vue.component('main-navigation', {
             <!-- ▼ Plant ▼ ------------------------------------------------------------------------------------>
             <v-list-group :value="false" prepend-icon="mdi-sprout">
                 <template v-slot:activator>
-                    <v-list-item-title>Plant</v-list-item-title>
+                    <v-list-item-title>Growing Plants</v-list-item-title>
                 </template>
 
 

@@ -20,10 +20,6 @@
     <link href="./Common/common.css" rel="stylesheet" />
     <link href="./Common/common_word_japanese.css" rel="stylesheet" />
 
-    <!-- ChartJs -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
-
 </head>
 <!---------------------------------------------------------------------------------------->
 
@@ -86,8 +82,8 @@
                                         <td>Antioxidant effect, improves constipation, reduces risk of heart disease, beauty effect.</td>
                                     </tr>
                                     <tr>
-                                        <td>Information</td>
-                                        <td>Origin = Mediterranean coast<br><canvas id="myChart" style="height: 400px; width: 650px;"></canvas></td>
+                                        <td>Origin</td>
+                                        <td>South America</td>
                                     </tr>
                                 </tbody>
                                 </template>
@@ -144,107 +140,6 @@
                 }
             },
         })
-        // -------------------------------------------------------------------------------
-
-        // Variable ----------------------------------------------------------------------
-        const ctx = document.getElementById('myChart');
-        new Chart(ctx, {
-            type: 'radar',
-            data: {
-                labels: [
-                    'Calories(80kcal)',
-                    'Protein(4g)',
-                    'Lipid(0.9g)',
-                    'Carbohydrates(18g)',
-                    'Potassium(570mg)',
-                    'Calcium(62mg)',
-                    'Magnesium(35mg)',
-                ],
-                datasets: [{
-                    label: 'Nutritional/100g (twice average)',
-                    data: [31, 68, 56, 25, 47, 194, 69],
-                    fill: true,
-                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                    borderColor: 'rgb(255, 99, 132)',
-                    pointBackgroundColor: 'rgb(255, 99, 132)',
-                    pointBorderColor: '#fff',
-                    pointHoverBackgroundColor: '#fff',
-                    pointHoverBorderColor: 'rgb(255, 99, 132)'
-                },]
-            },
-            options: {
-                layout: {
-                    padding: {
-                        bottom: 20,
-                    }
-                },
-                legend: {
-                    display: false
-                },
-                scale: {
-                    ticks: {
-                        beginAtZero: true,
-                        max: 100,
-                        min: 0,
-                        stepSize: 20,
-                        fontSize: 10,
-                    },
-                    gridLines: {
-                        color: ['aqua', 'fuchsia', 'lime', 'purple', 'yellow']
-                    },
-                    pointLabels: {
-                        fontColor: 'white',
-                        fontSize: 12
-                    },
-                },
-                title: {
-                    display: true,
-                    text: "Nutritional/100g (twice average)",
-                    fontColor: 'white',
-                    fontSize: 14
-                },
-                tooltips: {
-                    callbacks: {
-                        title : () => null,
-                        label: function(tooltipItem, data) {
-                            let multiplication = 0;
-                            let unit = 'none';
-                            switch(data.labels[tooltipItem.index]) {
-                                case 'Calories(80kcal)': 
-                                    multiplication = 80;
-                                    unit = 'kcal';
-                                    break;
-                                case 'Protein(4g)':
-                                    multiplication = 4;
-                                    unit = 'g';
-                                    break;
-                                case 'Lipid(0.9g)':
-                                    multiplication = 0.9;
-                                    unit = 'g';
-                                    break;
-                                case 'Carbohydrates(18g)':
-                                    multiplication = 18;
-                                    unit = 'g';
-                                    break;
-                                case 'Potassium(570mg)':
-                                    multiplication = 570;
-                                    unit = 'mg';
-                                    break;
-                                case 'Calcium(62mg)':
-                                    multiplication = 62;
-                                    unit = 'mg';
-                                    break;
-                                case 'Magnesium(35mg)':
-                                    multiplication = 35;
-                                    unit = 'mg';
-                                    break;
-                            }
-                            return data.labels[tooltipItem.index] + ' : ' + Math.round(data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index] * multiplication * 0.01 * 10) / 10 + unit + ' (' + data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index] + '%)';
-                        }
-                    }
-                },
-            }
-        });
         // -------------------------------------------------------------------------------
 
     </script>

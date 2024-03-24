@@ -32,11 +32,11 @@
         <template>
 
             <!-- ▼ Header ▼ ------------------------------------------------------------------>
-            <main-system-bar-spanish :drawer="drawer" @change-drawer="Change_Drawer">Verdura > Espinaca</main-system-bar-spanish>
+            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Vegetable > Burdock</main-system-bar>
             <!-------------------------------------------------------------------------------->
 
             <!-- ▼ Navigation ▼ -------------------------------------------------------------->
-            <main-navigation-spanish :drawer="drawer" @change-drawer="Change_Drawer"></main-navigation-spanish>
+            <main-navigation :drawer="drawer" @change-drawer="Change_Drawer"></main-navigation>
             <!-------------------------------------------------------------------------------->
 
             <!-- ▼ Main ▼ -------------------------------------------------------------------->
@@ -48,42 +48,42 @@
                                 <template v-slot:default>
                                 <thead>
                                     <tr>
-                                        <th class="text-left">Artículo</th>
-                                        <th class="text-left">Contenido</th>
+                                        <th class="text-left">Item</th>
+                                        <th class="text-left">Contents</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Suelo</td>
-                                        <td>pH = 6.0~6.5</td>
+                                        <td>Soil</td>
+                                        <td>Well-drained, pH = 6.5~7.0</td>
                                     </tr>
                                     <tr>
-                                        <td>Germinación</td>
-                                        <td>15~20℃</td>
+                                        <td>Germination</td>
+                                        <td>20~25℃</td>
                                     </tr>
                                     <tr>
-                                        <td>Espacio</td>
-                                        <td>5~8cm</td>
+                                        <td>Space</td>
+                                        <td>3~8cm, 10~15cm</td>
                                     </tr>
                                     <tr>
-                                        <td>Temperatura adecuada</td>
-                                        <td>15~20℃</td>
+                                        <td>Appropriate temperature</td>
+                                        <td>20~25℃</td>
                                     </tr>
                                     <tr>
-                                        <td>Fertilizante</td>
-                                        <td>① Cuando hay 4 hojas verdaderas<br>② Cuando las hojas son de color amarillento</td>
+                                        <td>Fertilizer</td>
+                                        <td>La primera vez es cuando hay dos o tres hojas verdaderas, y la segunda un mes después.</td>
                                     </tr>
                                     <tr>
-                                        <td>Cosecha</td>
-                                        <td>Cuando crece hasta unos 20 cm de altura.</td>
+                                        <td>Harvest</td>
+                                        <td>When the roots reach about 1 cm in diameter.</td>
                                     </tr>
                                     <tr>
-                                        <td>Comentarios</td>
-                                        <td>Efecto antioxidante, prevención de la hipertensión arterial, prevención de la anemia, alivio del estreñimiento.</td>
+                                        <td>Remarks</td>
+                                        <td>Increased gut flora, Waste elimination, Cancer prevention, Arteriosclerosis prevention.</td>
                                     </tr>
                                     <tr>
-                                        <td>Origen</td>
-                                        <td>Asia occidental</td>
+                                        <td>Origin</td>
+                                        <td>North Eurasia</td>
                                     </tr>
                                 </tbody>
                                 </template>
@@ -116,10 +116,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <!-- Compornent -->
     <script src="./Common/common.js"></script>
-    <script src="./Component/main-system-bar-spanish.js"></script>
-    <script src="./Component/main-navigation-spanish.js"></script>
+    <script src="./Component/main-system-bar.js"></script>
+    <script src="./Component/main-navigation.js"></script>
     <script src="./Component/main-footer.js"></script>
-    <script src="./Component/Card/card-double-spanish.js"></script>
+    <script src="./Component/Card/card-double.js"></script>
     <!------------------------------------------------------------------------------------>
 
     <!-- Script Content ------------------------------------------------------------------>
