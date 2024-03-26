@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<!-- ▼ Head ▼ ---------------------------------------------------------------------------->
+
+<head>
+
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+
+    <!-- Setting -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+
+    <!-- Vue -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="./Common/common.css" rel="stylesheet" />
+
+</head>
+<!---------------------------------------------------------------------------------------->
+
+<!-- ▼ Body ▼ ---------------------------------------------------------------------------->
+
+<body>
+
+    <!-- ▼ App ▼ ------------------------------------------------------------------------->
+    <v-app id="app">
+        <template>
+
+            <!-- ▼ Header ▼ ------------------------------------------------------------------>
+            <main-system-bar :drawer="drawer" @change-drawer="Change_Drawer">Verb > Type</main-system-bar>
+            <!-------------------------------------------------------------------------------->
+
+            <!-- ▼ Navigation ▼ -------------------------------------------------------------->
+            <main-navigation :drawer="drawer" @change-drawer="Change_Drawer"></main-navigation>
+            <!-------------------------------------------------------------------------------->
+
+            <!-- ▼ Main ▼ -------------------------------------------------------------------->
+            <v-main id="main" class="blue-grey lighten-4">
+                <v-container fluid fill-height>
+                    <v-row justify="center">
+                        <v-col xs="12" md="6" lg="6">
+                            <v-card>
+                                <v-card-title>
+                                    Vegetable Table(Nutritional value per 100g)
+                                    <v-spacer></v-spacer>
+                                    <v-text-field v-model="Search" append-icon="mdi-magnify" label="Search" single-line hide-details></v-text-field>
+                                </v-card-title>
+                                <v-data-table :headers="Headers" :items="Desserts" :search="Search" item-key="vegetable"
+                                    multi-sort :sort-by="['parts_of_speech']" :sort-asc="[true]" show-select dense
+                                    :mobile-breakpoint="0" :items-per-page="-1"></v-data-table>
+                            </v-card>
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </v-main>
+            <!-------------------------------------------------------------------------------->
+
+            <!-- ▼ Footer ▼ ------------------------------------------------------------------>
+            <main-footer></main-footer>
+            <!-------------------------------------------------------------------------------->
+
+        </template>
+    </v-app>
+    <!------------------------------------------------------------------------------------>
+
+    <!-- ▼ Style ▼ ----------------------------------------------------------------------->
+    <style>
+
+    </style>
+    <!------------------------------------------------------------------------------------>
+
+    <!-- ▼ Script Load ▼ ----------------------------------------------------------------->
+    <!-- Main -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- Compornent -->
+    <script src="./Common/common.js"></script>
+    <script src="./Component/main-system-bar.js"></script>
+    <script src="./Component/main-navigation.js"></script>
+    <script src="./Component/main-footer.js"></script>
+    <!------------------------------------------------------------------------------------>
+
+    <!-- Script Content ------------------------------------------------------------------>
+    <script>
+
+        // Variable ----------------------------------------------------------------------
+        let vue = new Vue({
+            el: '#app',
+            vuetify: new Vuetify(),
+            data: {
+                // Determined
+                drawer: false,
+                // Myself
+                Search: '',
+                Headers: [
+                    { text: 'Vegetable', value: 'vegetable' },
+                ],
+                Desserts: [],
+            },
+            methods: {
+                Change_Drawer(_value) {
+                    this.drawer = _value;
+                }
+            },
+            created: function () {
+                let vegetable = [
+                    "Burdock",
+                    "Chrysanthemum",
+                    "Eggplant",
+                    "Konegi",
+                    "Mini Tomato",
+                    "Onion",
+                    "Spinach",
+                ];
+                for (let i = 0; i < vegetable.length; i++) {
+                    let row = {};
+                    row.vegetable = vegetable[i];
+                    this.Desserts.push(row);
+                }
+            },
+        })
+        // -------------------------------------------------------------------------------
+
+        // Javascript --------------------------------------------------------------------
+        // -------------------------------------------------------------------------------
+
+    </script>
+    <!------------------------------------------------------------------------------------>
+</body>
+<!---------------------------------------------------------------------------------------->
+
+</html>
