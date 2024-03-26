@@ -435,6 +435,11 @@ Vue.component('main-navigation-spanish', {
                     </template>
 
 
+                    <v-list-item href="./Vegetable_Database_spanish.html">
+                        <v-list-item-icon />
+                        <v-list-item-title>Base de datos</v-list-item-title>
+                    </v-list-item>
+
                     <v-list-item href="./Vegetable_Burdock_spanish.html">
                         <v-list-item-icon />
                         <v-list-item-title>Bardana</v-list-item-title>
