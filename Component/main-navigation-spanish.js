@@ -455,6 +455,10 @@ Vue.component('main-navigation-spanish', {
                         <v-list-item-icon />
                         <v-list-item-title>Espinaca</v-list-item-title>
                     </v-list-item>
+                    <v-list-item href="./Vegetable_Konegi_spanish.html">
+                        <v-list-item-icon />
+                        <v-list-item-title>Konegi</v-list-item-title>
+                    </v-list-item>
                     <v-list-item href="./Vegetable_MiniTomato_spanish.html">
                         <v-list-item-icon />
                         <v-list-item-title>Mini Tomate</v-list-item-title>
